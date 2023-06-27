@@ -2,6 +2,8 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { useRouter } from 'next/navigation'
+// These styles apply to every route in the application
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Arif Özkan NextJS',
