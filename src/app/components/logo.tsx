@@ -1,13 +1,15 @@
-import { LightningBoltIcon } from '@heroicons/react/solid';
+// import { LightningBoltIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
 export default function Logo() {
     return (
-        <header className="h-15 shadow-sm dark:border-gray-700">
-            <div className="container  px-4 sm:px-6 py-4 flex justify-between items-center">
-                {/* Logo */}
-                {/* <LightningBoltIcon /> */}
-            </div>
-        </header>
+        <Link href="/" legacyBehavior>
+            <a className="my-2 flex items-center space-x-1 text-indigo-500">
+                {/* <LightningBoltIcon className="h-8 w-8 flex-shrink-0 mr-3" /> */}
+                <span className="font-bold text-3xl font-sans tracking-tight whitespace-nowrap">
+                    Logo Gelecek
+                </span>
+            </a>
+        </Link>
     );
 }

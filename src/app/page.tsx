@@ -6,11 +6,11 @@ import { useRouter } from 'next/navigation';
 import '../styles/globals.css';
 import { Inter } from 'next/font/google';
 import MyProfilePic from './components/profilePic';
+import { ThemeProvider } from 'next-themes';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Page() {
-    const router = useRouter();
     return (
         <>
             <h1 className={inter.className}>Hello, Welcome my Page</h1>
