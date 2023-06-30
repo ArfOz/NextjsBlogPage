@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Page() {
     return (
-        <>
+        <div className="p-4">
             <h1 className={inter.className}>Hello, Welcome my Page</h1>
             <p>
                 My name is <span>Arif Özkan</span>
@@ -24,6 +24,6 @@ export default function Page() {
             </div>
 
             <MyProfilePic />
-        </>
+        </div>
     );
 }
