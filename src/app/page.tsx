@@ -1,7 +1,4 @@
 'use client';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 // These styles apply to every route in the application
 import '../styles/globals.css';
 import { Inter } from 'next/font/google';

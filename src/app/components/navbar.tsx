@@ -10,6 +10,9 @@ export default function Navbar() {
                 <div className="prose prose-xl mx-auto justify-center grow basis-1">
                     <Link href="/">Arif Özkan</Link>
                 </div>
+                <div className="prose prose-xl mx-auto justify-center grow basis-1">
+                    <Link href="/todos">Todos</Link>
+                </div>
                 <div className="prose prose-xl mx-auto flex flex-row justify-center items-center space-x-3 p-4 grow-0 basis-9">
                     <Link href="https://github.com/ArfOz/">
                         <FaGithub />
