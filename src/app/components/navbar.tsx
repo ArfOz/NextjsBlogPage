@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa';
-import Logo from './themChanger';
 import ThemeChanger from './themChanger';
 
 export default function Navbar() {
@@ -25,7 +24,6 @@ export default function Navbar() {
                     </Link>
                     <ThemeChanger />
                 </div>
-                {/* <div className="prose prose-xl mx-auto flex flex-row justify-between space-x-3"></div> */}
             </div>
         </nav>
     );
