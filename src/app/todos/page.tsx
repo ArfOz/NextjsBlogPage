@@ -6,7 +6,7 @@ export default function Page() {
                 <li>History</li>
                 <li>Project History</li>
                 <li>Known Technologies</li>
-                {/* <li>Photos</li> */}
+                <li>Photos</li>
                 <li>Social Login</li>
                 <li>Email to my email adress</li>
                 <li>Contact(Footer)</li>
