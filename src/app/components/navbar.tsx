@@ -21,7 +21,9 @@ export default function Navbar() {
                         <FaLinkedin />
                     </Link>
                 </div>
-                <ThemeChanger />
+                <div className="prose prose-xl mx-auto flex flex-row justify-between space-x-3">
+                    <ThemeChanger />
+                </div>
             </div>
         </nav>
     );

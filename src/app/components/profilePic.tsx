@@ -7,7 +7,8 @@ export default function MyProfilePic() {
                 src="/images/profileLinkedin.jpg"
                 width={200}
                 height={200}
-                alt="Arif Özkan" priority={true}
+                alt="Arif Özkan"
+                priority={true}
             />
         </section>
     );
