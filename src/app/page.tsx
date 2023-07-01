@@ -30,11 +30,11 @@ export default function Page() {
             <h2 className="self-center">History</h2>
             <ul>
                 <li>
-                    2020(May)-2021() -&gt; Internship at Clarusway Online Career
-                    IT Training School
+                    2020(May)-2021(Feb) -&gt; Internship at Clarusway Online
+                    Career IT Training School
                 </li>
                 <li>
-                    2021(Mar)-2022(Feb) -&gt; Full Stack Web Developer at
+                    2021(Mar)-2022(Dec) -&gt; Full Stack Web Developer at
                     Ekip.co(Nodejs, Django, React js, Nestjs)
                 </li>
                 <li>
