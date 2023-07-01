@@ -1,7 +1,7 @@
 export default function Page() {
     return (
         <div className="p-4">
-            <ol>
+            <ul className="list-disc mx-4">
                 <li>Experience</li>
                 <li>History</li>
                 <li>Project History</li>
@@ -13,7 +13,8 @@ export default function Page() {
                 <li>
                     Update with nextjs features(Loading page, error page ....)
                 </li>
-            </ol>
+                <li>Multi language support</li>
+            </ul>
         </div>
     );
 }
