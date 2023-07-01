@@ -13,6 +13,7 @@ export default function Page() {
                 <li>
                     Update with nextjs features(Loading page, error page ....)
                 </li>
+                <li>Multi language support</li>
             </ol>
         </div>
     );
