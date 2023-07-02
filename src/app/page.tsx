@@ -41,6 +41,41 @@ export default function Page() {
                     2022(Dec)-2023(Now) -&gt; Project Manager - Backend
                     Developer at Meta.Sentez(Nestjs)
                 </li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+                consequuntur doloremque neque consequatur in laboriosam, ab,
+                cum, minima alias nobis hic corrupti molestiae minus eos. Sint
+                obcaecati suscipit, esse consequuntur magni aliquid quas eum
+                distinctio impedit est saepe voluptas possimus facere. Iure,
+                quaerat ex quasi nulla dolor blanditiis! Temporibus sit nam
+                tempora earum, soluta, voluptate error quam iure odio eos
+                eveniet accusantium doloremque exercitationem minus beatae
+                laborum porro nemo obcaecati. Minus eius eum accusamus
+                exercitationem, id laudantium consequuntur velit ex molestiae.
+                Vero odit error harum eligendi nobis quae maiores. Natus,
+                voluptatum laboriosam nulla asperiores inventore quia nihil
+                magni aliquam vitae? Aspernatur a reiciendis obcaecati
+                architecto fugiat deserunt nobis reprehenderit, vel fugit
+                molestias sunt dolores maiores expedita officiis accusantium,
+                sit illum mollitia distinctio tenetur delectus ducimus facilis.
+                Distinctio ipsum autem exercitationem beatae inventore mollitia
+                veniam cum in doloremque voluptates voluptatem iusto labore
+                dolorem nesciunt, soluta reprehenderit explicabo ad, dolor
+                sapiente odit accusantium corporis! Enim possimus cum, autem
+                sint rerum qui, commodi, debitis optio est iusto id labore
+                impedit molestias quasi non eveniet adipisci laboriosam expedita
+                harum ratione! Ad dicta, fugit tenetur repudiandae quisquam
+                minus voluptatum corporis adipisci voluptate. Quaerat,
+                temporibus! Doloribus adipisci reprehenderit deleniti sapiente
+                nam officiis, dolor dignissimos explicabo dolorum. Lorem, ipsum
+                dolor sit amet consectetur adipisicing elit. Expedita corrupti
+                animi, nulla molestiae non aut totam ad autem excepturi
+                doloremque illo, inventore incidunt ipsam temporibus laboriosam
+                nemo voluptatum voluptatibus impedit beatae, magnam voluptates
+                hic! Natus nesciunt, ducimus dolorum, odit quis quo earum error,
+                fugit inventore dolores autem explicabo quisquam corporis?Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Unde, non
+                atque. Dolore in sequi repudiandae dignissimos vitae, porro
+                possimus quaerat?
             </ul>
             <MyProfilePic />
         </div>
