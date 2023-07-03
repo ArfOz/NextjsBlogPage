@@ -3,7 +3,6 @@ import React from 'react';
 export default function Footer() {
     return (
         <footer
-            // className="bg-gray-50 flex md:flex-row flex-col justify-around items-start p-2"
             className="bg-slate-600
              text-3xl text-white text-center
              fixed
