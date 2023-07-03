@@ -1,6 +1,6 @@
 export default function Page() {
     return (
-        <div className="p-4">
+        <div className="p-4 mb-16">
             <ul className="list-disc mx-4">
                 <li>Experience</li>
                 <li>History</li>
