@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function ContactUs() {
     const [fullname, setFullname] = useState('');
@@ -43,6 +43,16 @@ export default function ContactUs() {
     };
 
     //   const [form, setForm] = useState(false);
+
+    useEffect(() => {
+        fetch('api/sendemail', {
+            method: 'POST',
+            body: JSON.stringify({ ASDASD: 'ASDASDAS' }),
+        }).then((res) => {
+            console.log('useeefect içi', res);
+            // console.log(res);
+        });
+    }, []);
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
