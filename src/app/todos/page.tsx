@@ -1,11 +1,11 @@
 export default function Page() {
     return (
-        <div className="p-4">
+        <div className="p-4 mb-16">
             <ul className="list-disc mx-4">
-                <li>Experience</li>
-                <li>History</li>
-                <li>Project History</li>
-                <li>Known Technologies</li>
+                <li>
+                    Experience, history, project history, Known technologies
+                    added(have to be detailed)
+                </li>
                 <li>Photos</li>
                 <li>Social Login</li>
                 <li>Email to my email adress</li>

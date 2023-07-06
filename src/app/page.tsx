@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Page() {
     return (
-        <div className="flex flex-col p-4">
+        <div className="flex flex-col p-4 mb-24">
             <h1 className="text-center">Hello, Welcome my Page</h1>
             <p className="text-justify">
                 My name is <span>Arif Özkan</span>. Now I live in Switzerland.
@@ -26,7 +26,6 @@ export default function Page() {
                 <li>Wednesday: 13:20-14:50</li>
                 <li>Thursday: 13:20-15:55</li>
             </ul>
-
             <h2 className="self-center">History</h2>
             <ul>
                 <li>
@@ -42,6 +41,7 @@ export default function Page() {
                     Developer at Meta.Sentez(Nestjs)
                 </li>
             </ul>
+
             <MyProfilePic />
         </div>
     );
