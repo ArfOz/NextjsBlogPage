@@ -115,7 +115,7 @@ export default function ContactUs() {
                     </p>
                 </div>
                 <h1 className="text-4xl font-bold mt-4 dark:text-gray-50 text-gray-700">
-                    Lets talk about your projects.
+                    Contact Me
                 </h1>
                 <p className="text-sm text-gray-700 mt-4 font-light dark:text-gray-200">
                     Fill the form and send in your queries. I will respond as
