@@ -9,7 +9,12 @@ export default function ContactUs() {
     const [message, setMessage] = useState('');
 
     //   Form validation
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState({
+        fullname: '',
+        email: '',
+        subject: '',
+        message: '',
+    });
 
     //   Setting button text
     const [buttonText, setButtonText] = useState('Send');
@@ -147,7 +152,7 @@ export default function ContactUs() {
                     name="fullname"
                     className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
                 />
-                {errors?.fullname && (
+                {errors.fullname && (
                     <p className="text-red-500">Fullname cannot be empty.</p>
                 )}
 
