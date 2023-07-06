@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import { MailData } from '../api/sendemail/types';
 
 export default function ContactUs() {
     const [fullname, setFullname] = useState('');
@@ -44,15 +45,21 @@ export default function ContactUs() {
 
     //   const [form, setForm] = useState(false);
 
-    useEffect(() => {
-        fetch('api/sendemail', {
-            method: 'POST',
-            body: JSON.stringify({ ASDASD: 'ASDASDAS' }),
-        }).then((res) => {
-            console.log('useeefect içi', res);
-            // console.log(res);
-        });
-    }, []);
+    // useEffect(() => {
+    //     const data = {
+    //         Fullname:fullname,
+    //         Email: email,
+    //         Subject:subject,
+    //         Message:message
+    //     }
+    //     fetch('api/sendemail', {
+    //         method: 'POST',
+    //         body: JSON.stringify(data),
+    //     }).then((res) => {
+    //         console.log('useeefect içi', res);
+    //         // console.log(res);
+    //     });
+    // }, []);
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
@@ -61,18 +68,23 @@ export default function ContactUs() {
 
         if (isValidForm) {
             setButtonText('Sending');
-            const res = await fetch('/api/sendgrid', {
+            const data: MailData = {
+                Email: email,
+                Fullname: fullname,
+                Subject: subject,
+                Message: message,
+            };
+            const res = await fetch('api/sendemail', {
                 body: JSON.stringify({
-                    email: email,
-                    fullname: fullname,
-                    subject: subject,
-                    message: message,
+                    data,
                 }),
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 method: 'POST',
             });
+
+            console.log('arif', res);
 
             const { error }: any = await res.json();
             if (error) {
@@ -97,7 +109,7 @@ export default function ContactUs() {
             setMessage('');
             setSubject('');
         }
-        console.log(fullname, email, subject, message);
+        // console.log(fullname, email, subject, message);
     };
     return (
         <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 lg:px-40  md:h-96">

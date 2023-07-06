@@ -1,3 +1,4 @@
+import { MailData } from './types';
 // import React from 'react';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { SendMail } from './nodemailer';
@@ -5,9 +6,9 @@ import { NextResponse } from 'next/server';
 
 // import { NextResponse } from 'next/server';
 export async function POST(req: Request) {
-    console.log('bodyyyyyyyyyy', req.body);
-    // const res = await SendMail();
-    console.log('ressssssss', await req.json());
+    console.log('bodyyyyyyyyyy', await req.body);
+    const data: MailData = await req.json();
+    const res = await SendMail(data);
     return NextResponse.json({ message: 'Hello from Next.js!' });
 }
 

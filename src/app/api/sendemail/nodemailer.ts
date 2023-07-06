@@ -1,4 +1,7 @@
 'use strict';
+
+import { MailData } from './types';
+
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
@@ -13,17 +16,21 @@ const transporter = nodemailer.createTransport({
 });
 
 // async..await is not allowed in global scope, must use a wrapper
-export async function SendMail() {
+export async function SendMail(data: MailData) {
     // send mail with defined transport object
-    const info = await transporter.sendMail({
+    const res = await transporter.sendMail({
         from: 'arfoz1245@gmail.com', // sender address
         to: 'arifozkan1245@gmail.com', // list of receivers
-        subject: 'Hello ✔', // Subject line
-        text: 'Hello world?', // plain text body
-        html: '<b>Hello world?</b>', // html body
+        subject: data.Subject, // Subject line
+        text: data.Fullname, // plain text body
+        html: data.Message, // html body
     });
+    if (res.Error) {
+        console.log(res.Error);
+    }
 
-    console.log('Message sent: %s', info.messageId);
+    return res;
+
     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 
     //
@@ -32,5 +39,3 @@ export async function SendMail() {
     //       <https://github.com/forwardemail/preview-email>
     //
 }
-
-SendMail().catch(console.error);
