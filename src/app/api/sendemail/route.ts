@@ -6,10 +6,10 @@ import { NextResponse } from 'next/server';
 
 // import { NextResponse } from 'next/server';
 export async function POST(req: Request) {
-    console.log('bodyyyyyyyyyy', await req.body);
     const data: MailData = await req.json();
     const res = await SendMail(data);
-    return NextResponse.json({ message: 'Hello from Next.js!' });
+
+    return NextResponse.json({ Data: res });
 }
 
 // export async function POST(request: Request) {

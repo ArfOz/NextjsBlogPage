@@ -68,27 +68,22 @@ export default function ContactUs() {
 
         if (isValidForm) {
             setButtonText('Sending');
-            const data: MailData = {
+            let data: MailData = {
                 Email: email,
                 Fullname: fullname,
                 Subject: subject,
                 Message: message,
             };
             const res = await fetch('api/sendemail', {
-                body: JSON.stringify({
-                    data,
-                }),
+                body: JSON.stringify(data),
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 method: 'POST',
             });
 
-            console.log('arif', res);
-
-            const { error }: any = await res.json();
-            if (error) {
-                console.log(error);
+            const response = await res.json();
+            if (response.Data.Error) {
                 setShowSuccessMessage(false);
                 setShowFailureMessage(true);
                 setButtonText('Send');
