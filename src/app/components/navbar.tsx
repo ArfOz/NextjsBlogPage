@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa';
 import ThemeChanger from './themChanger';
+import LanguageChanger from './languageChanger';
 
 export default function Navbar() {
     return (
@@ -23,6 +24,7 @@ export default function Navbar() {
                         <FaLinkedin />
                     </Link>
                     <ThemeChanger />
+                    <LanguageChanger />
                 </div>
             </div>
         </nav>
