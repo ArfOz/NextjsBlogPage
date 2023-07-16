@@ -2,6 +2,13 @@
     "name": "Arif Özkan",
     "title": "Merhabalar sayfama hoşgeldiniz",
     "navbar": {
-        "todos": "yapılacaklar"
+        "todos": "Yapılacaklar"
+    },
+    "home": {
+        "context": " Merhabalar ben Arif Özkan. Şu an İsviçre'de yaşıyorum. İsviçreye gelmeden önce Türkiye'de yaklaşık 2 sene bıyunca Ekip.co firmasında Full Stack Developer olarak çalıştım. İsviçre'ye geldikten sonra Ekip.co'dan ayrıldım ve birkaç arkadaş bir projeye başladık. Bu projede backend developer ve proje yönetcisi görevlerini yaptım. Şu an N çalışma iznine sahip olmakla birlikte yakın zamanda B çalışma iznini alacağım. Anlık olarak çalışmayı düşünüyorum. Bu süre zarfında hem proje hem kendimi geliştirmeye çalışırken aynı zamanda Fransızca kursuna gidiyorum. <br /> Fransızca Seviyesi: A2(DELF) <br />İngilizce Seviyesi: B2(IELTS)",
+        "course_title": "Fransızca Kurs Saatleri",
+        "course_times": "<li>Pazartesi: 13:20-15:55</li><li>Çarşamba: 13:20-14:50</li><li>Perşembe: 13:20-15:55</li>",
+        "working_history_title": "Tecrübelerim",
+        "working_history": "<li>2020(Mayıs)-2021(Şubat) -&gt; Eğitim Clarusway Online Career IT Training School </li><li> 2021(Mart)-2022(Aralık) -&gt; Full Stack Web Developer Ekip.co(Nodejs, Django, React js, Nestjs) </li> <li> 2022(Aralık)-2023(Günümüze Kadar) -&gt; Proje Yönetcisi - Backend Developer Meta.Sentez(Nestjs) </li>"
     }
 }

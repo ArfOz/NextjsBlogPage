@@ -1,14 +1,21 @@
 import Link from 'next/link';
 import { FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa';
 import ThemeChanger from './themChanger';
-import LanguageChanger from './languageChanger';
+import LanguageChanger from './languageChanger/languageChanger.js';
+import { fallbackLng, languages } from '@/i18n/settings';
+import { useTranslation } from '@/i18n';
+import { LanguageBase } from './languageChanger';
 
-export default function Navbar() {
+export default function Navbar({ lng }) {
+    if (languages.indexOf(lng) < 0) lng = fallbackLng;
+
     return (
         <nav className="bg-slate-600 sticky top-0 drop-shadow-xl z-10 ">
             <div className="prose prose-xl mx-auto flex flex-col sm:flex-row items-center">
                 <div className="prose prose-xl mx-auto justify-center grow basis-1">
-                    <Link href="/">Arif Özkan</Link>
+                    <Link href="/" locale="en">
+                        Arif Özkan
+                    </Link>
                 </div>
                 <div className="prose prose-xl mx-auto justify-center grow basis-1">
                     <Link href="/todos">Todos</Link>
@@ -24,7 +31,11 @@ export default function Navbar() {
                         <FaLinkedin />
                     </Link>
                     <ThemeChanger />
-                    <LanguageChanger />
+
+                    <LanguageBase
+                        className="prose prose-xl mx-auto flex flex-col sm:flex-row items-center"
+                        lng={lng}
+                    />
                 </div>
             </div>
         </nav>
