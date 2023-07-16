@@ -1,6 +1,6 @@
+import { use } from 'react';
 import { useTranslation } from '@/i18n';
 import LanguageChanger from './languageChanger';
-import { use } from 'react';
 
 async function getTrans(lng) {
     const { t } = await useTranslation(lng, 'common');
