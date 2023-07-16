@@ -22,7 +22,7 @@ export default function RootLayout({
                 <ThemeProvider enableSystem={true} attribute="class">
                     <Navbar lng={lng} />
                     {children}
-                    <Footer />
+                    <Footer lng={lng} />
                 </ThemeProvider>
             </body>
         </html>

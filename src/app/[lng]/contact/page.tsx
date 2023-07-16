@@ -1,8 +1,19 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { MailData } from '../api/sendemail/types';
+import React, { useEffect, useState, use } from 'react';
+import { MailData } from '../sendemail/types';
+import { useTranslation } from '../../../i18n';
 
-export default function ContactUs() {
+async function getTrans(lng: string) {
+    const { t } = await useTranslation(lng, 'common');
+    return t;
+}
+
+export default function ContactUs({
+    params: { lng },
+}: {
+    params: { lng: string };
+}) {
+    const t = use(getTrans(lng));
     const [fullname, setFullname] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
@@ -17,7 +28,9 @@ export default function ContactUs() {
     });
 
     //   Setting button text
-    const [buttonText, setButtonText] = useState('Send');
+    const [buttonText, setButtonText] = useState(
+        t('contact.right_send_button')
+    );
 
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const [showFailureMessage, setShowFailureMessage] = useState(false);
@@ -116,16 +129,14 @@ export default function ContactUs() {
             <div className="mx-auto mb-10 md:mt-20">
                 <div className="badge bg-green-500 inline-block rounded-xl">
                     <p className="font-light text-base px-4 py-1 text-gray-50">
-                        Lets talk
+                        {t('contact.left_title')}
                     </p>
                 </div>
                 <h1 className="text-4xl font-bold mt-4 dark:text-gray-50 text-gray-700">
-                    Contact Me
+                    {t('contact.left_small_title')}
                 </h1>
                 <p className="text-sm text-gray-700 mt-4 font-light dark:text-gray-200">
-                    Fill the form and send in your queries. I will respond as
-                    soon as I can. Alternatively, You can reach out to me at my
-                    email address.
+                    {t('contact.left_details')}
                 </p>
             </div>
             <form
@@ -133,14 +144,15 @@ export default function ContactUs() {
                 className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-slate-800"
             >
                 <h1 className="text-2xl font-bold dark:text-gray-50">
-                    Send a message
+                    {t('contact.right_title')}
                 </h1>
 
                 <label
                     htmlFor="fullname"
                     className="text-gray-500 font-light mt-8 dark:text-gray-50"
                 >
-                    Full name
+                    {t('contact.right_fullname')}
+
                     <span className="text-red-500 dark:text-gray-50">*</span>
                 </label>
                 <input
@@ -160,7 +172,8 @@ export default function ContactUs() {
                     htmlFor="email"
                     className="text-gray-500 font-light mt-4 dark:text-gray-50"
                 >
-                    E-mail<span className="text-red-500">*</span>
+                    {t('contact.right_email')}
+                    <span className="text-red-500">*</span>
                 </label>
                 <input
                     type="email"
@@ -179,7 +192,8 @@ export default function ContactUs() {
                     htmlFor="subject"
                     className="text-gray-500 font-light mt-4 dark:text-gray-50"
                 >
-                    Subject<span className="text-red-500">*</span>
+                    {t('contact.right_subject')}
+                    <span className="text-red-500">*</span>
                 </label>
                 <input
                     type="text"
@@ -197,7 +211,8 @@ export default function ContactUs() {
                     htmlFor="message"
                     className="text-gray-500 font-light mt-4 dark:text-gray-50"
                 >
-                    Message<span className="text-red-500">*</span>
+                    {t('contact.right_message')}
+                    <span className="text-red-500">*</span>
                 </label>
                 <textarea
                     name="message"

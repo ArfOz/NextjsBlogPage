@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useTranslation } from '../../../i18n';
 import { use } from 'react';
 
-async function getTrans(lng) {
+async function getTrans(lng: string) {
     const { t } = await useTranslation(lng, 'common');
     return t;
 }

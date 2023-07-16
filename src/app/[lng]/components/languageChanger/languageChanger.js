@@ -8,6 +8,7 @@ import ReactFlagsSelect from 'react-flags-select';
 export default function LanguageSwitcher({ t, lng, path = '' }) {
     const router = useRouter();
     const currentPathname = usePathname();
+
     const onSelectChange = async (e) => {
         const lang = Object.keys(languageObj).find(
             (key) => languageObj[key] === e
@@ -28,16 +29,15 @@ export default function LanguageSwitcher({ t, lng, path = '' }) {
     };
 
     return (
-        <div className="text-gray-400">
-            <ReactFlagsSelect
-                countries={['US', 'TR']}
-                customLabels={{
-                    US: 'ENGLISH',
-                    TR: 'TÜRKÇE',
-                }}
-                selected={languageObj[lng].toUpperCase()}
-                onSelect={onSelectChange}
-            />
-        </div>
+        <ReactFlagsSelect
+            className="inline-flex font-extrabold"
+            countries={['US', 'TR']}
+            customLabels={{
+                US: 'ENGLISH',
+                TR: 'TÜRKÇE',
+            }}
+            selected={languageObj[lng].toUpperCase()}
+            onSelect={onSelectChange}
+        />
     );
 }
