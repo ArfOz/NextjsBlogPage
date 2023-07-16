@@ -1,3 +1,4 @@
+'use client';
 import { createInstance } from 'i18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
 import { initReactI18next } from 'react-i18next';
@@ -10,7 +11,7 @@ const initI18next = async (lng, ns) => {
         .use(initReactI18next)
         .use(
             resourcesToBackend((language, namespace) =>
-                import(`../../public/locales/${language}/${namespace}.json`)
+                import(`../../locales/${language}/${namespace}.json`)
             )
         )
         .init(getOptions(lng, ns));
