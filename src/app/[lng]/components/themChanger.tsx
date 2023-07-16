@@ -17,9 +17,7 @@ export default function ThemeChanger() {
 
         const currentTheme = theme === 'system' ? systemTheme : theme;
 
-        console.log('render içiiiii');
         if (currentTheme === 'dark') {
-            console.log('darkkkkkkkkk');
             return (
                 <SunIcon
                     className="w-10 h-10 text-yellow-500 "
@@ -28,7 +26,6 @@ export default function ThemeChanger() {
                 />
             );
         } else {
-            console.log('lighttttttttt');
             return (
                 <MoonIcon
                     className="w-10 h-10 text-gray-900 "
