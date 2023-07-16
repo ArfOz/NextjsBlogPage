@@ -37,7 +37,9 @@
         "src/app/[lng]/components/navbar.jsx",
         "src/app/[lng]/page.jsx",
         "src/app/[lng]/components/languageChanger/languageChanger.js",
-        "src/app/[lng]/components/languageChanger/index.jsx"
+        "src/app/[lng]/components/languageChanger/index.jsx",
+        "src/app/[lng]/headtssx",
+        "src/app/[lng]/headtssx"
     ],
     "exclude": ["node_modules"]
 }
