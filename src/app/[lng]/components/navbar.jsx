@@ -20,10 +20,10 @@ export default function Navbar({ lng }) {
         <nav className="bg-slate-400 sticky top-0 drop-shadow-xl z-10 ">
             <div className="prose prose-xl mx-auto flex flex-col sm:flex-row items-center">
                 <div className="prose prose-xl mx-auto justify-center grow basis-1">
-                    <Link href="/">Arif Özkan</Link>
+                    <Link href={`/${lng}`}>Arif Özkan</Link>
                 </div>
                 <div className="prose prose-xl mx-auto justify-center grow basis-1">
-                    <Link href="/todos">{t('navbar.todos')}</Link>
+                    <Link href={`/${lng}/todos`}>{t('navbar.todos')}</Link>
                 </div>
                 <div className="prose prose-xl mx-auto flex flex-row justify-center items-center space-x-3 p-4 grow-0 basis-9">
                     <Link href="https://github.com/ArfOz/">
