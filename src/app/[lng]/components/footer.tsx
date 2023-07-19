@@ -27,7 +27,7 @@ export default function Footer({ lng }: { lng: string }) {
             </p>
             <ul className="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-gray-800 sm:mt-0">
                 <li>
-                    <a href="/contact" className="hover:underline">
+                    <a href={`/${lng}/contact`} className="hover:underline">
                         {t('contact.link')}
                     </a>
                 </li>
