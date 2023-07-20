@@ -20,13 +20,6 @@ export default function Page({ params: { lng } }) {
 
     return (
         <div className="flex flex-col p-4 mb-24">
-            <Head>
-                <title>{t('title')}</title>
-                <meta
-                    content="width=device-width, initial-scale=1"
-                    name="viewport"
-                />
-            </Head>
             <h1 className="text-center">{t('title')}</h1>
 
             <p className="text-justify">{parse(t('home.context'))}</p>
