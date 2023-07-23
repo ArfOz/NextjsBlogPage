@@ -39,7 +39,8 @@
         "src/app/[lng]/components/languageChanger/languageChanger.js",
         "src/app/[lng]/components/languageChanger/index.jsx",
         "src/app/[lng]/headtssx",
-        "src/app/[lng]/headtssx"
+        "src/app/[lng]/headtssx",
+        "src/app/not-found.jsx"
     ],
     "exclude": ["node_modules"]
 }

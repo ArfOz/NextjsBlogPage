@@ -1,11 +1,10 @@
 'use client';
+import { use } from 'react';
 import { Inter } from 'next/font/google';
 import MyProfilePic from './components/profilePic';
 import { fallbackLng, languages } from '../../i18n/settings';
 import { useTranslation } from '../../i18n';
-import { use } from 'react';
 import parse from 'html-react-parser';
-import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 

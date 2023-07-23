@@ -5,7 +5,6 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import { dir } from 'i18next';
 import { languages } from '@/i18n/settings';
-import { Head } from 'next/document';
 import { useTranslation } from '@/i18n';
 import { use } from 'react';
 
