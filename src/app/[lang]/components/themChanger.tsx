@@ -2,7 +2,6 @@
 import { useTheme } from 'next-themes';
 import { SunIcon, MoonIcon } from '@heroicons/react/24/solid';
 import { useEffect, useState } from 'react';
-import Logo from './logo';
 
 export default function ThemeChanger() {
     const { systemTheme, theme, setTheme } = useTheme();

@@ -1,29 +1,26 @@
 import Link from 'next/link';
 import { FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa';
+import { Locale } from '../../../../i18n-config';
+import { getDictionary } from '../../../../get-dictionary';
 import ThemeChanger from './themChanger';
-import LanguageChanger from './languageChanger/languageChanger.js';
-import { fallbackLng, languages } from '@/i18n/settings';
-import { useTranslation } from '@/i18n';
-import { LanguageBase } from './languageChanger';
-import { use } from 'react';
+import LanguageSwitcher from './languageChanger/languageChanger';
 
-async function getTrans(lng) {
-    const { t } = await useTranslation(lng, 'common');
-    return t;
-}
-
-export default function Navbar({ lng }) {
-    if (languages.indexOf(lng) < 0) lng = fallbackLng;
-    const t = use(getTrans(lng));
-
+export default async function Navbar({
+    lang,
+}: {
+    lang: Locale;
+}): Promise<JSX.Element> {
+    const dictionary = await getDictionary(lang);
     return (
         <nav className="bg-slate-400 sticky top-0 drop-shadow-xl z-10 ">
             <div className="prose prose-xl mx-auto flex flex-col sm:flex-row items-center">
                 <div className="prose prose-xl mx-auto justify-center grow basis-1">
-                    <Link href={`/${lng}`}>Arif Özkan</Link>
+                    <Link href={`/${lang}`}>Arif Özkan</Link>
                 </div>
                 <div className="prose prose-xl mx-auto justify-center grow basis-1">
-                    <Link href={`/${lng}/todos`}>{t('navbar.todos')}</Link>
+                    <Link href={`/${lang}/todos`}>
+                        {dictionary['navbar'].todos}
+                    </Link>
                 </div>
                 <div className="prose prose-xl mx-auto flex flex-row justify-center items-center space-x-3 p-4 grow-0 basis-9">
                     <Link href="https://github.com/ArfOz/">
@@ -37,7 +34,7 @@ export default function Navbar({ lng }) {
                     </Link>
                     <ThemeChanger />
 
-                    <LanguageBase lng={lng} />
+                    <LanguageSwitcher lang={lang} />
                 </div>
             </div>
         </nav>

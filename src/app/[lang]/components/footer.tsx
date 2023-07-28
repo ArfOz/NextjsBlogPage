@@ -1,14 +1,12 @@
-import { useTranslation } from '@/i18n';
-import { fallbackLng, languages } from '@/i18n/settings';
-import React, { use } from 'react';
+import { getDictionary } from '../../../../get-dictionary';
+import { Locale } from '../../../../i18n-config';
 
-async function getTrans(lng: string) {
-    const { t } = await useTranslation(lng, 'common');
-    return t;
-}
-export default function Footer({ lng }: { lng: string }) {
-    if (languages.indexOf(lng) < 0) lng = fallbackLng;
-    const t = use(getTrans(lng));
+export default async function Footer({
+    lang,
+}: {
+    lang: Locale;
+}): Promise<JSX.Element> {
+    const dictionary = await getDictionary(lang);
     return (
         <footer
             className="bg-slate-400
@@ -27,8 +25,8 @@ export default function Footer({ lng }: { lng: string }) {
             </p>
             <ul className="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-gray-800 sm:mt-0">
                 <li>
-                    <a href={`/${lng}/contact`} className="hover:underline">
-                        {t('contact.link')}
+                    <a href={`/${lang}/contact`} className="hover:underline">
+                        {dictionary['contact'].link}
                     </a>
                 </li>
             </ul>
