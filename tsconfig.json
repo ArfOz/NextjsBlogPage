@@ -41,7 +41,9 @@
         "src/app/[lng]/headtssx",
         "src/app/[lng]/headtssx",
         "src/app/not-found.jsx",
-        "src/app/[lang]/not-found.js"
+        "src/app/[lang]/not-found.tsx",
+        "src/app/layouttsx",
+        "src/app/[lang]/components/lang-notfound.js"
     ],
     "exclude": ["node_modules"]
 }
