@@ -7,7 +7,7 @@ import Footer from './components/footer';
 
 import { i18n, Locale } from '../../../i18n-config';
 import { getDictionary } from '../../../get-dictionary';
-import LangNotFound from './components/lang-notfound';
+import LangNotFound from '../not-found';
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));

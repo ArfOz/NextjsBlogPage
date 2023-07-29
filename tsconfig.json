@@ -43,7 +43,7 @@
         "src/app/not-found.jsx",
         "src/app/[lang]/not-found.tsx",
         "src/app/layouttsx",
-        "src/app/[lang]/components/lang-notfound.js"
+        "src/app/not-found.js"
     ],
     "exclude": ["node_modules"]
 }
