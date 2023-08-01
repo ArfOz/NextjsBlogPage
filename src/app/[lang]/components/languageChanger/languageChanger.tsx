@@ -11,9 +11,10 @@ export default async function LanguageSwitcher({ lang }: { lang: Locale }) {
     type Values = (typeof languageObj)[keyof typeof languageObj];
 
     const onSelectChange = async (e: Values) => {
-        let lng = Object.keys(languageObj).find((key) => {
-            return languageObj[key] === e;
-        });
+        let lng =
+            Object.keys(languageObj).find((key) => {
+                return languageObj[key] === e;
+            }) || 'en';
         const currentPathLocale = i18n.locales.find(
             (locale) =>
                 currentPathname === `/${locale}` ||
