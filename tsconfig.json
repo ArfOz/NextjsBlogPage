@@ -29,7 +29,7 @@
         "**/*.tsx",
         "src/app/page.js",
         ".next/types/**/*.ts",
-        "src/sendemail/route.ts",
+        "src/app/api/sendemail/route.ts",
         "src/app/index.jsx",
         "src/app/_app.jsx",
         "src/app/layout.jsx",

@@ -10,6 +10,6 @@ const dictionaries = {
         import('./locales/tr/common.json').then((module) => module.default),
 };
 
-export const getDictionary = async (locale: Locale) => {
+export const getDictionary = (locale: Locale) => {
     return locale == 'en' ? dictionaries.en() : dictionaries.tr();
 };

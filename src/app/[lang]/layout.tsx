@@ -18,12 +18,9 @@ export default async function RootLayout({
     params,
 }: {
     children: React.ReactNode;
-    params: { lang: Locale };
+    params: { lang: any };
 }) {
     const dictionary = await getDictionary(params.lang);
-    // if (!i18n.locales.includes(params.lang)) {
-    //     return <LangNotFound />;
-    // }
 
     return (
         <html lang={params.lang}>
