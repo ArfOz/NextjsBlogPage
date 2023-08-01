@@ -1,30 +1,29 @@
 'use client';
-import React, { useEffect, use } from 'react';
-import { languages, languageObj } from '../../../../i18n/settings';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import ReactFlagsSelect from 'react-flags-select';
+import { Locale, languageObj, i18n } from '../../../../../i18n-config';
 
-export default function LanguageSwitcher({ t, lng, path = '' }) {
+export default async function LanguageSwitcher({ lang }: { lang: Locale }) {
     const router = useRouter();
     const currentPathname = usePathname();
 
-    const onSelectChange = async (e) => {
-        const lang = Object.keys(languageObj).find(
-            (key) => languageObj[key] === e
-        );
+    type Values = (typeof languageObj)[keyof typeof languageObj];
 
-        const currentPathLocale = languages.find(
+    const onSelectChange = async (e: Values) => {
+        let lng = Object.keys(languageObj).find((key) => {
+            return languageObj[key] === e;
+        });
+        const currentPathLocale = i18n.locales.find(
             (locale) =>
                 currentPathname === `/${locale}` ||
                 currentPathname.startsWith(`/${locale}/`)
         );
-
         if (currentPathLocale) {
             // replace the locale in the current pathname
-            router.push(currentPathname.replace(currentPathLocale, lang));
+            router.push(currentPathname.replace(currentPathLocale, lng));
         } else {
-            router.push(`/${lang}${currentPathname}`);
+            router.push(`/${lng}${currentPathname}`);
         }
     };
 
@@ -36,7 +35,7 @@ export default function LanguageSwitcher({ t, lng, path = '' }) {
                 US: 'ENGLISH',
                 TR: 'TÜRKÇE',
             }}
-            selected={languageObj[lng].toUpperCase()}
+            selected={languageObj[lang].toUpperCase()}
             onSelect={onSelectChange}
         />
     );

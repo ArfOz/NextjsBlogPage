@@ -1,23 +1,13 @@
-'use client';
-import React, { useEffect, useState, use } from 'react';
-import { MailData } from '../sendemail/types';
-import { useTranslation } from '../../../i18n';
+import React, { useState } from 'react';
+import { MailData } from '../../api/sendemail/types';
+import { DictionaryType } from './dictionary.type';
 
-async function getTrans(lng: string) {
-    const { t } = await useTranslation(lng, 'common');
-    return t;
-}
-
-export default function ContactUs({
-    params: { lng },
-}: {
-    params: { lng: string };
-}) {
-    const t = use(getTrans(lng));
+const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
     const [fullname, setFullname] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+    const [form, setForm] = useState(false);
 
     //   Form validation
     const [errors, setErrors] = useState({
@@ -29,7 +19,7 @@ export default function ContactUs({
 
     //   Setting button text
     const [buttonText, setButtonText] = useState(
-        t('contact.right_send_button')
+        dictionary['contact']['right_send_button']
     );
 
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
@@ -61,82 +51,66 @@ export default function ContactUs({
         return isValid;
     };
 
-    //   const [form, setForm] = useState(false);
-
-    // useEffect(() => {
-    //     const data = {
-    //         Fullname:fullname,
-    //         Email: email,
-    //         Subject:subject,
-    //         Message:message
-    //     }
-    //     fetch('api/sendemail', {
-    //         method: 'POST',
-    //         body: JSON.stringify(data),
-    //     }).then((res) => {
-    //         console.log('useeefect içi', res);
-    //         // console.log(res);
-    //     });
-    // }, []);
-
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = async (e: { preventDefault: () => void }) => {
         e.preventDefault();
+        try {
+            let isValidForm = handleValidation();
+            if (isValidForm) {
+                setButtonText('Sending');
+                let data: MailData = {
+                    Email: email,
+                    Fullname: fullname,
+                    Subject: subject,
+                    Message: message,
+                };
 
-        let isValidForm = handleValidation();
+                const res = await fetch('http://localhost:3000/api/sendemail', {
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    method: 'POST',
+                });
 
-        if (isValidForm) {
-            setButtonText('Sending');
-            let data: MailData = {
-                Email: email,
-                Fullname: fullname,
-                Subject: subject,
-                Message: message,
-            };
-            const res = await fetch('api/sendemail', {
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                method: 'POST',
-            });
-
-            const response = await res.json();
-            if (response.Data.Error) {
-                setShowSuccessMessage(false);
-                setShowFailureMessage(true);
+                const response = await res.json();
+                if (response.Data.Error) {
+                    setShowSuccessMessage(false);
+                    setShowFailureMessage(true);
+                    setButtonText('Send');
+                    // Reset form fields
+                    setFullname('');
+                    setEmail('');
+                    setMessage('');
+                    setSubject('');
+                    return;
+                }
+                setShowSuccessMessage(true);
+                setShowFailureMessage(false);
                 setButtonText('Send');
-
                 // Reset form fields
                 setFullname('');
                 setEmail('');
                 setMessage('');
                 setSubject('');
-                return;
             }
-            setShowSuccessMessage(true);
-            setShowFailureMessage(false);
-            setButtonText('Send');
-            // Reset form fields
-            setFullname('');
-            setEmail('');
-            setMessage('');
-            setSubject('');
+        } catch (error) {
+            console.log(error);
         }
-        // console.log(fullname, email, subject, message);
     };
+
     return (
         <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 lg:px-40  md:h-96">
             <div className="mx-auto mb-10 md:mt-20">
                 <div className="badge bg-green-500 inline-block rounded-xl">
                     <p className="font-light text-base px-4 py-1 text-gray-50">
-                        {t('contact.left_title')}
+                        {dictionary['contact']['left_title']}
                     </p>
                 </div>
                 <h1 className="text-4xl font-bold mt-4 dark:text-gray-50 text-gray-700">
-                    {t('contact.left_small_title')}
+                    {dictionary['contact']['left_small_title']}
                 </h1>
                 <p className="text-sm text-gray-700 mt-4 font-light dark:text-gray-200">
-                    {t('contact.left_details')}
+                    {dictionary['contact']['left_details']}
                 </p>
             </div>
             <form
@@ -144,14 +118,14 @@ export default function ContactUs({
                 className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-slate-800"
             >
                 <h1 className="text-2xl font-bold dark:text-gray-50">
-                    {t('contact.right_title')}
+                    {dictionary['contact']['right_title']}
                 </h1>
 
                 <label
                     htmlFor="fullname"
                     className="text-gray-500 font-light mt-8 dark:text-gray-50"
                 >
-                    {t('contact.right_fullname')}
+                    {dictionary['contact']['right_fullname']}
 
                     <span className="text-red-500 dark:text-gray-50">*</span>
                 </label>
@@ -172,7 +146,7 @@ export default function ContactUs({
                     htmlFor="email"
                     className="text-gray-500 font-light mt-4 dark:text-gray-50"
                 >
-                    {t('contact.right_email')}
+                    {dictionary['contact']['right_email']}
                     <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -192,7 +166,7 @@ export default function ContactUs({
                     htmlFor="subject"
                     className="text-gray-500 font-light mt-4 dark:text-gray-50"
                 >
-                    {t('contact.right_subject')}
+                    {dictionary['contact']['right_subject']}
                     <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -211,7 +185,7 @@ export default function ContactUs({
                     htmlFor="message"
                     className="text-gray-500 font-light mt-4 dark:text-gray-50"
                 >
-                    {t('contact.right_message')}
+                    {dictionary['contact']['right_message']}
                     <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -263,4 +237,6 @@ export default function ContactUs({
             </form>
         </div>
     );
-}
+};
+
+export default Form;
