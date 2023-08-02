@@ -7,6 +7,14 @@ const nextConfig = {
         appDir: true,
         serverActions: true,
     },
+    async rewrites() {
+        return [
+            {
+                source: '/api/*',
+                destination: 'http://localhost:3000/*',
+            },
+        ];
+    },
 };
 
 module.exports = nextConfig;
