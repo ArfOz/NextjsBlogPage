@@ -64,7 +64,7 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
                     Message: message,
                 };
 
-                const res = await fetch('http://localhost:3000/api/sendemail', {
+                const res = await fetch('/api/sendemail', {
                     body: JSON.stringify(data),
                     headers: {
                         'Content-Type': 'application/json',
