@@ -24,8 +24,3 @@ export async function POST(req: Request) {
         }
     );
 }
-
-// export async function POST(request: Request) {
-//     console.log('selammmm', await request.json());
-//     return NextResponse.json({ hello: request.body });
-// }
