@@ -10,7 +10,7 @@ export default async function Todos({
             <ul className="list-disc mx-4">
                 -------------------Only in English-------------------
                 <li>Photos</li>
-                <li>Social Login</li>
+                <li>Live Weather</li>
                 <li>
                     Update with nextjs features(Loading page, error page ....)
                 </li>

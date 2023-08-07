@@ -28,7 +28,6 @@ export default async function Page({
             </h2>
             <ul>{parse(dictionary['home']['working_history'])}</ul>
             <MyProfilePic />
-            {dictionary['home'].context}
         </div>
     );
 }
