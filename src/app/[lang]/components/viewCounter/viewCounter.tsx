@@ -7,10 +7,8 @@ export default function ViewCounter({ lang }: { lang: Locale }) {
     useEffect(() => {
         async function getView(lang: Locale) {
             const res = (await getViews(lang)).toString();
-            console.log(res);
             setViews(res);
         }
-        console.log('arif');
         getView(lang);
     }, [lang]);
 
