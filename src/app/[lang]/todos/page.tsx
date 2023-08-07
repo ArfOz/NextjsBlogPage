@@ -9,11 +9,9 @@ export default async function Todos({
         <div className="p-4 mb-16">
             <ul className="list-disc mx-4">
                 -------------------Only in English-------------------
-                <li>Photos</li>
+                <li>French Translation</li>(High Priority)
                 <li>Live Weather</li>
-                <li>
-                    Update with nextjs features(Loading page, error page ....)
-                </li>
+                <li>Photos</li>
             </ul>
         </div>
     );
