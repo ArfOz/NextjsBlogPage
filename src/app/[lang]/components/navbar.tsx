@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaMedium, FaEye } from 'react-icons/fa';
 import { Locale } from '../../../../i18n-config';
 import { getDictionary } from '../../../../get-dictionary';
 import ThemeChanger from './themChanger';
 import LanguageSwitcher from './languageChanger/languageChanger';
+import ViewCounter from './viewCounter/viewCounter';
 
 export default async function Navbar({
     lang,
@@ -35,6 +36,10 @@ export default async function Navbar({
                     <ThemeChanger />
 
                     <LanguageSwitcher lang={lang} />
+                    <div className="prose prose-xl mx-auto flex flex-row justify-center items-center space-x-2 p-4">
+                        <FaEye />
+                        <ViewCounter lang={lang} />
+                    </div>
                 </div>
             </div>
         </nav>
