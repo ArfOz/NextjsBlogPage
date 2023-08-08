@@ -1,11 +1,11 @@
 {
     "name": "Arif Özkan",
-    "title": "Merhabalar sayfama hoşgeldiniz",
+    "title": "Bonjour Bienvenue sur ma page",
     "navbar": {
-        "todos": "Yapılacaklar"
+        "todos": "Choses à faire"
     },
     "home": {
-        "context": " Merhabalar ben Arif Özkan. Şu an İsviçre'de yaşıyorum. İsviçreye gelmeden önce Türkiye'de yaklaşık 2 sene boyunca Ekip.co firmasında Full Stack Developer olarak çalıştım. İsviçre'ye geldikten sonra Ekip.co'dan ayrıldım ve birkaç arkadaş bir projeye başladık. Bu projede backend developer ve proje yönetcisi görevlerini yaptım. Şu an N çalışma iznine sahip olmakla birlikte yakın zamanda B çalışma iznini alacağım. Anlık olarak çalışmayı düşünüyorum. Bu süre zarfında hem projeme devam ediyorum hem de Fransızca kursuna gidiyorum. <br /> Fransızca Seviyesi: A2(DELF) <br />İngilizce Seviyesi: B2(IELTS)",
+        "context": "Bonjour, Je suis Arif Ozkan. Je vis actuellement en Suisse. İsviçreye gelmeden önce Türkiye'de yaklaşık 2 sene boyunca Ekip.co firmasında Full Stack Developer olarak çalıştım. İsviçre'ye geldikten sonra Ekip.co'dan ayrıldım ve birkaç arkadaş bir projeye başladık. Bu projede backend developer ve proje yönetcisi görevlerini yaptım. Şu an N çalışma iznine sahip olmakla birlikte yakın zamanda B çalışma iznini alacağım. Anlık olarak çalışmayı düşünüyorum. Bu süre zarfında hem projeme devam ediyorum hem de Fransızca kursuna gidiyorum. <br /> Fransızca Seviyesi: A2(DELF) <br />İngilizce Seviyesi: B2(IELTS)",
         "course_title": "Fransızca Kurs Saatleri",
         "course_times": "<li>Pazartesi: 13:20-15:55</li><li>Çarşamba: 13:20-14:50</li><li>Perşembe: 13:20-15:55</li>",
         "working_history_title": "Tecrübelerim",
