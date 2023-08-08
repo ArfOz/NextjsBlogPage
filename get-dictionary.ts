@@ -8,8 +8,14 @@ const dictionaries = {
         import('./locales/en/common.json').then((module) => module.default),
     tr: () =>
         import('./locales/tr/common.json').then((module) => module.default),
+    fr: () =>
+        import('./locales/fr/common.json').then((module) => module.default),
 };
 
 export const getDictionary = (locale: Locale) => {
-    return locale == 'en' ? dictionaries.en() : dictionaries.tr();
+    return locale == 'en'
+        ? dictionaries.en()
+        : locale == 'tr'
+        ? dictionaries.tr()
+        : dictionaries.fr();
 };

@@ -1,6 +1,6 @@
 'use strict';
 
-import { MailData } from './types';
+import { MailData } from '../app/api/sendemail/types';
 
 const nodemailer = require('nodemailer');
 

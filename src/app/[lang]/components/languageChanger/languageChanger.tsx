@@ -31,10 +31,11 @@ export default async function LanguageSwitcher({ lang }: { lang: Locale }) {
     return (
         <ReactFlagsSelect
             className="inline-flex font-extrabold"
-            countries={['US', 'TR']}
+            countries={['US', 'TR', 'FR']}
             customLabels={{
                 US: 'ENGLISH',
                 TR: 'TÜRKÇE',
+                FR: 'FRANÇAIS',
             }}
             selected={languageObj[lang].toUpperCase()}
             onSelect={onSelectChange}
