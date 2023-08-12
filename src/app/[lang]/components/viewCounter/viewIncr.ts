@@ -1,6 +1,6 @@
 'use client';
 import React, { use, useEffect } from 'react';
-import { Locale } from '../../../../../i18n-config';
+import { Locale } from 'i18n-config';
 
 // const view = async (lang: any) => {
 //     await fetch('/api/incr', {

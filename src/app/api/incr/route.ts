@@ -1,6 +1,6 @@
 import { incrViews, isNewUser } from '@/libs/upstash.redis';
 import { NextResponse } from 'next/server';
-import { Locale, i18n } from '../../../../i18n-config';
+import { Locale, i18n } from 'i18n-config';
 
 export interface BodyType {
     lang: Locale;

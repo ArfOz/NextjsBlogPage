@@ -11,9 +11,9 @@ import {
     ThemeChanger,
     ViewCounter,
     Navigate,
+    DictionaryType,
 } from '@components/index';
 import { getDictionary } from 'get-dictionary';
-import { DictionaryType } from '@/app/[lang]/components/types/dictionary.type';
 
 const navigation: [Navigate] = [{ name: 'todos', href: '/todos' }];
 
