@@ -2,7 +2,7 @@
 import './styles/globals.css';
 import { ThemeProvider } from 'next-themes';
 import Navbar from './components/navbar/navbar';
-import Footer from './components/footer';
+import Footer from './components/footer/footer';
 // import { dir } from 'i18next';
 
 import { i18n, Locale } from '../../../i18n-config';

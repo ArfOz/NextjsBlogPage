@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { FaLinkedin, FaGithub, FaMedium, FaEye, FaHome } from 'react-icons/fa';
-import ThemeChanger from '../themChanger';
+import ThemeChanger from '../themchanger/themChanger';
 import LanguageSwitcher from '../languageChanger/languageChanger';
 import ViewCounter from '../viewCounter/viewCounter';
 import { getDictionary } from '../../../../../get-dictionary';
