@@ -1,7 +1,7 @@
 'use client';
 import './styles/globals.css';
 import { ThemeProvider } from 'next-themes';
-import Navbar from './components/navbar';
+import Navbar from './components/navbar/navbar';
 import Footer from './components/footer';
 // import { dir } from 'i18next';
 

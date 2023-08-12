@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import ReactFlagsSelect from 'react-flags-select';
 import { Locale, languageObj, i18n } from '../../../../../i18n-config';
 
-export default async function LanguageSwitcher({ lang }: { lang: Locale }) {
+export default function LanguageSwitcher({ lang }: { lang: Locale }) {
     const router = useRouter();
     const currentPathname = usePathname();
 
@@ -30,7 +30,7 @@ export default async function LanguageSwitcher({ lang }: { lang: Locale }) {
 
     return (
         <ReactFlagsSelect
-            className="inline-flex font-extrabold"
+            className="inline-flex font-extrabold via-rose-600 text-neutral-600"
             countries={['US', 'TR', 'FR']}
             customLabels={{
                 US: 'ENGLISH',
