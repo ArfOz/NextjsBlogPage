@@ -1,9 +1,7 @@
-import { getDictionary } from '../../../get-dictionary';
-import { Locale } from '../../../i18n-config';
-import MyProfilePic from './components/profilePic';
-
+import { getDictionary } from 'get-dictionary';
+import { Locale } from 'i18n-config';
+import { MyProfilePic, ReportIncr } from '@components/index';
 import parse from 'html-react-parser';
-import { ReportIncr } from './components/viewCounter/viewIncr';
 
 export default async function Page({
     params: { lang },
@@ -12,7 +10,7 @@ export default async function Page({
 }) {
     const dictionary = await getDictionary(lang);
     return (
-        <div className="flex flex-col p-4 mb-24">
+        <div className="flex flex-col p-4 mb-24 w-full">
             <ReportIncr lang={lang} />
             <h1 className="text-center">{dictionary['title']}</h1>
 

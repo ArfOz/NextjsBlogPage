@@ -1,15 +1,12 @@
 'use client';
-import { getDictionary } from '../../../../get-dictionary';
-import { Locale } from '../../../../i18n-config';
+import { getDictionary } from 'get-dictionary';
+import { Locale } from 'i18n-config';
 import Form from './form';
 
-async function getTrans(lng: Locale) {
-    return await getDictionary(lng);
-}
 export default async function ContactUs({
     params: { lang },
 }: {
-    params: { lang: any };
+    params: { lang: Locale };
 }) {
     const dictionary = await getDictionary(lang);
 

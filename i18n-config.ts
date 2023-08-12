@@ -4,9 +4,9 @@ interface languageObj {
 
 export const i18n = {
     defaultLocale: 'en',
-    locales: ['en', 'tr'],
+    locales: ['en', 'tr', 'fr'],
 } as const;
 
-export const languageObj: languageObj = { en: 'US', tr: 'TR' };
+export const languageObj: languageObj = { en: 'US', tr: 'TR', fr: 'FR' };
 
 export type Locale = (typeof i18n)['locales'][number];

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { MailData } from '../../api/sendemail/types';
-import { DictionaryType } from './dictionary.type';
+import { MailData } from '@api/index';
+import { DictionaryType } from '../components/index';
 
 const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
     const [fullname, setFullname] = useState('');

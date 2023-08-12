@@ -1,6 +1,6 @@
 'use strict';
 
-import { MailData } from './types';
+import { MailData } from '../app/api/sendemail/types';
 
 const nodemailer = require('nodemailer');
 
@@ -20,8 +20,8 @@ export async function SendMail(data: MailData) {
     // send mail with defined transport object
     try {
         const res = await transporter.sendMail({
-            from: 'arfoz1245@gmail.com', // sender address
-            to: 'arifozkan1245@gmail.com', // list of receivers
+            from: process.env.EMAIL_ADDRESS, // sender address
+            to: process.env.EMAIL_ADDRESS_TO, // list of receivers
             subject: data.Subject, // Subject line
             text: `${data.Fullname} from ${data.Message} Email:${data.Email}`, // html body
         });

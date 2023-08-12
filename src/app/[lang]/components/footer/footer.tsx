@@ -1,11 +1,7 @@
-import { getDictionary } from '../../../../get-dictionary';
-import { Locale } from '../../../../i18n-config';
+import { getDictionary } from 'get-dictionary';
+import { Locale } from 'i18n-config';
 
-export default async function Footer({
-    lang,
-}: {
-    lang: Locale;
-}): Promise<JSX.Element> {
+export async function Footer({ lang }: { lang: Locale }): Promise<JSX.Element> {
     const dictionary = await getDictionary(lang);
     return (
         <footer
@@ -20,10 +16,10 @@ export default async function Footer({
              justify-between
              "
         >
-            <p className="text-sm sm:text-center dark:text-gray-800">
+            <p className="flex flex-wrap sm:text-center items-center mt-3 text-sm font-medium dark:text-gray-800 sm:mt-0">
                 &copy; 2023 Arif Özkan ÖZTÜRK. All rights reserved.
             </p>
-            <ul className="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-gray-800 sm:mt-0">
+            <ul className="flex flex-wrap sm:text-center items-center mt-3 text-sm font-medium dark:text-gray-800 sm:mt-0">
                 <li>
                     <a href={`/${lang}/contact`} className="hover:underline">
                         {dictionary['contact'].link}
