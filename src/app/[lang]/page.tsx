@@ -1,9 +1,7 @@
-import { getDictionary } from '../../../get-dictionary';
-import { Locale } from '../../../i18n-config';
-import MyProfilePic from './components/profilePic';
-
+import { getDictionary } from 'get-dictionary';
+import { Locale } from 'i18n-config';
+import { MyProfilePic, ReportIncr } from '@components/index';
 import parse from 'html-react-parser';
-import { ReportIncr } from './components/viewCounter/viewIncr';
 
 export default async function Page({
     params: { lang },

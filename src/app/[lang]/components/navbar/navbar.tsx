@@ -1,17 +1,19 @@
 'use client';
 
+import Link from 'next/link';
 import { Fragment, use } from 'react';
 import { usePathname } from 'next/navigation';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { FaLinkedin, FaGithub, FaMedium, FaEye, FaHome } from 'react-icons/fa';
-import ThemeChanger from '../themchanger/themChanger';
-import LanguageSwitcher from '../languageChanger/languageChanger';
-import ViewCounter from '../viewCounter/viewCounter';
-import { getDictionary } from '../../../../../get-dictionary';
-import Link from 'next/link';
-import { Navigate } from './navigate.type';
-import { DictionaryType } from '../../contact/dictionary.type';
+import {
+    LanguageSwitcher,
+    ThemeChanger,
+    ViewCounter,
+    Navigate,
+} from '@components/index';
+import { getDictionary } from 'get-dictionary';
+import { DictionaryType } from '@/app/[lang]/components/types/dictionary.type';
 
 const navigation: [Navigate] = [{ name: 'todos', href: '/todos' }];
 
@@ -19,22 +21,7 @@ function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ');
 }
 
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={1.5}
-    stroke="currentColor"
-    className="w-6 h-6"
->
-    <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-    />
-</svg>;
-
-export default function Navbar({ lang }: { lang: any }) {
+export function Navbar({ lang }: { lang: any }) {
     const pathname = usePathname();
     const dictionary: DictionaryType = use(getDictionary(lang));
 
@@ -170,43 +157,3 @@ export default function Navbar({ lang }: { lang: any }) {
         </Disclosure>
     );
 }
-
-// export default async function Navbar({
-//     lang,
-// }: {
-//     lang: Locale;
-// }): Promise<JSX.Element> {
-//     const dictionary = await getDictionary(lang);
-//     return (
-//         <nav className="bg-slate-400 sticky top-0 drop-shadow-xl z-10 ">
-//             <div className="prose prose-xl mx-auto flex flex-col sm:flex-row items-center">
-//                 <div className="prose prose-xl mx-auto justify-center grow basis-1">
-//                     <Link href={`/${lang}`}>Arif Özkan</Link>
-//                 </div>
-//                 <div className="prose prose-xl mx-auto justify-center grow basis-1">
-//                     <Link href={`/${lang}/todos`}>
-//                         {dictionary['navbar'].todos}
-//                     </Link>
-//                 </div>
-//                 <div className="prose prose-xl mx-auto flex flex-row justify-center items-center space-x-3 p-4 grow-0 basis-9">
-// <Link href="https://github.com/ArfOz/">
-//     <FaGithub />
-// </Link>
-// <Link href="https://medium.com/@arfoz1245">
-//     <FaMedium />
-// </Link>
-// <Link href="https://www.linkedin.com/in/arifozkanozturk/">
-//     <FaLinkedin />
-// </Link>
-// <ThemeChanger />
-
-// <LanguageSwitcher lang={lang} />
-// <div className="prose prose-xl mx-auto flex flex-row justify-center items-center space-x-2 p-4">
-//     <FaEye />
-//     <ViewCounter lang={lang} />
-// </div>
-//                 </div>
-//             </div>
-//         </nav>
-//     );
-// }

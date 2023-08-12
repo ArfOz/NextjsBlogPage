@@ -2,9 +2,9 @@
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import ReactFlagsSelect from 'react-flags-select';
-import { Locale, languageObj, i18n } from '../../../../../i18n-config';
+import { Locale, languageObj, i18n } from 'i18n-config';
 
-export default function LanguageSwitcher({ lang }: { lang: Locale }) {
+export function LanguageSwitcher({ lang }: { lang: Locale }) {
     const router = useRouter();
     const currentPathname = usePathname();
 

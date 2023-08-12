@@ -1,4 +1,4 @@
-import { DictionaryType } from './../../contact/dictionary.type';
+import { DictionaryType } from './dictionary.type';
 export interface Navigate {
     name: keyof DictionaryType['navbar'];
     href: string;

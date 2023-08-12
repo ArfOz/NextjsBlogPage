@@ -1,6 +1,6 @@
-import profileImage from '../../../../public/images/profileLinkedin.jpg';
+import profileImage from '../../../../../public/images/profileLinkedin.jpg';
 import Image from 'next/image';
-export default function MyProfilePic() {
+export function MyProfilePic() {
     return (
         <section className="w-full mx-auto">
             <Image

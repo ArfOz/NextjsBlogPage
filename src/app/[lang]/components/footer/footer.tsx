@@ -1,11 +1,7 @@
-import { getDictionary } from '../../../../../get-dictionary';
-import { Locale } from '../../../../../i18n-config';
+import { getDictionary } from 'get-dictionary';
+import { Locale } from 'i18n-config';
 
-export default async function Footer({
-    lang,
-}: {
-    lang: Locale;
-}): Promise<JSX.Element> {
+export async function Footer({ lang }: { lang: Locale }): Promise<JSX.Element> {
     const dictionary = await getDictionary(lang);
     return (
         <footer

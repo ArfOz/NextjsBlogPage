@@ -1,13 +1,11 @@
 'use client';
 import './styles/globals.css';
 import { ThemeProvider } from 'next-themes';
-import Navbar from './components/navbar/navbar';
-import Footer from './components/footer/footer';
+import { Navbar, Footer } from '@components/index';
 // import { dir } from 'i18next';
 
-import { i18n, Locale } from '../../../i18n-config';
-import { getDictionary } from '../../../get-dictionary';
-import LangNotFound from '../not-found';
+import { Locale, i18n } from 'i18n-config';
+import { getDictionary } from 'get-dictionary';
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
@@ -18,7 +16,7 @@ export default async function RootLayout({
     params,
 }: {
     children: React.ReactNode;
-    params: { lang: any };
+    params: { lang: Locale };
 }) {
     const dictionary = await getDictionary(params.lang);
 
