@@ -7,12 +7,10 @@ const redis = new Redis({
 });
 
 export async function getViews(lang: Locale) {
-    return 1;
     return (await redis.get<Number>(['pageviews', lang].join(':'))) || 0;
 }
 
 export async function isNewUser(hash: string, lang: Locale) {
-    return false;
     return await redis.set(['deduplicate', hash, lang].join(':'), true, {
         nx: true,
         ex: 24 * 60 * 60,
@@ -20,6 +18,5 @@ export async function isNewUser(hash: string, lang: Locale) {
 }
 
 export async function incrViews(lang: Locale) {
-    return null;
     return await redis.incr(['pageviews', lang].join(':'));
 }
