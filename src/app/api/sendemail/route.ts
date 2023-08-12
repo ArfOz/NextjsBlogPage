@@ -1,9 +1,6 @@
 import { MailData } from './types';
-// import React from 'react';
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { SendMail } from '../../../libs/nodemailer';
+import { SendMail } from '@/libs/nodemailer';
 import { NextResponse } from 'next/server';
-import { corsHeaders } from '@/cors';
 
 // import { NextResponse } from 'next/server';
 export async function POST(req: Request) {
