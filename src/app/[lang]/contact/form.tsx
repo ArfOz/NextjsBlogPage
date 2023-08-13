@@ -7,7 +7,6 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
-    const [form, setForm] = useState(false);
 
     //   Form validation
     const [errors, setErrors] = useState({

@@ -1,5 +1,5 @@
 'use client';
-import React, { use, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Locale } from 'i18n-config';
 
 export const ReportIncr = ({ lang }: { lang: Locale }) => {

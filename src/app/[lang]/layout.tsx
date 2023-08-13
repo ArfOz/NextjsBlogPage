@@ -2,8 +2,6 @@
 import './styles/globals.css';
 import { ThemeProvider } from 'next-themes';
 import { Navbar, Footer } from '@components/index';
-// import { dir } from 'i18next';
-
 import { Locale, i18n } from 'i18n-config';
 import { getDictionary } from 'get-dictionary';
 
