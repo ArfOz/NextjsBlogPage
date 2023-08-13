@@ -9,7 +9,6 @@ export default async function Todos({
         <div className="p-4 mb-16">
             <ul className="list-disc mx-4">
                 -------------------Only in English-------------------
-                <li>French Translation</li>(High Priority)
                 <li>Live Weather</li>
                 <li>Photos</li>
             </ul>

@@ -13,7 +13,6 @@ export default async function Page({
         <div className="flex flex-col p-4 mb-24 w-full">
             <ReportIncr lang={lang} />
             <h1 className="text-center">{dictionary['title']}</h1>
-
             <p className="text-justify">
                 {parse(dictionary['home']['context'])}
             </p>
