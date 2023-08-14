@@ -2,7 +2,8 @@
     "name": "Arif Özkan",
     "title": "Merhabalar sayfama hoşgeldiniz",
     "navbar": {
-        "todos": "Yapılacaklar"
+        "todos": "Yapılacaklar",
+        "weather": "Weather"
     },
     "home": {
         "context": " Merhabalar ben Arif Özkan. Şu an İsviçre'de yaşıyorum. İsviçreye gelmeden önce Türkiye'de yaklaşık 2 sene boyunca Ekip.co firmasında Full Stack Developer olarak çalıştım. İsviçre'ye geldikten sonra Ekip.co'dan ayrıldım ve birkaç arkadaş bir projeye başladık. Bu projede backend developer ve proje yönetcisi görevlerini yaptım. Şu an N çalışma iznine sahip olmakla birlikte yakın zamanda B çalışma iznini alacağım. Anlık olarak çalışmayı düşünüyorum. Bu süre zarfında hem projeme devam ediyorum hem de Fransızca kursuna gidiyorum. <br /> Fransızca Seviyesi: A2(DELF) <br />İngilizce Seviyesi: B2(IELTS)",

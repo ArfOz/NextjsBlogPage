@@ -15,7 +15,10 @@ import {
 } from '@components/index';
 import { getDictionary } from 'get-dictionary';
 
-const navigation: [Navigate] = [{ name: 'todos', href: '/todos' }];
+const navigation: Array<Navigate> = [
+    { name: 'todos', href: '/todos' },
+    { name: 'weather', href: '/weather' },
+];
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ');
