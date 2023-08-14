@@ -1,6 +1,7 @@
 export interface DictionaryType {
     navbar: {
         todos: string;
+        weather: string;
     };
     contact: {
         left_title: string;
