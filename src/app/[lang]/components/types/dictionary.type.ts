@@ -15,4 +15,9 @@ export interface DictionaryType {
         right_send_button: string;
         link: string;
     };
+    weather: {
+        Weather_forecast: string;
+    };
 }
+
+export type Country = 'TR' | 'CH';
