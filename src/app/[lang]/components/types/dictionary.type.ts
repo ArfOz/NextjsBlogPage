@@ -16,7 +16,9 @@ export interface DictionaryType {
         link: string;
     };
     weather: {
-        Weather_forecast: string;
+        weather_forecast: string;
+        TR: string;
+        CH: string;
     };
 }
 

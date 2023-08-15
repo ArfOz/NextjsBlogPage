@@ -2,7 +2,6 @@ import { OpenWeather } from '@/libs/openweather';
 import { Locale } from 'i18n-config';
 import Cities from '@/libs/cities.json';
 import WeatherCard from '../components/weatherCard/weatherCard';
-import { OpenWeatherType } from '../components';
 
 export default async function WeatherPage({
     params: { lang },
@@ -10,6 +9,7 @@ export default async function WeatherPage({
     params: { lang: Locale };
 }) {
     let promises = [];
+    // To reduce take instant wetaher forecast multiple cities after for promise all
     for (let index = 0; index < Cities.length; index++) {
         let city = Cities[index];
         let tmpPromise = OpenWeather(city.Lat, city.Lon, lang);
