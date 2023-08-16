@@ -5,10 +5,10 @@ var requestOptions: RequestInit = {
     cache: 'no-store',
 };
 
-export async function OpenWeather(lat: string, lon: string, lang: string) {
+export async function OpenWeather(id: number, lang: string) {
     try {
         const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}&units=metric&lang=${lang}`,
+            `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${api_key}&units=metric&lang=${lang}`,
             requestOptions
         );
         const data = response.json();

@@ -23,3 +23,5 @@ export interface DictionaryType {
 }
 
 export type Country = 'TR' | 'CH';
+
+export type Details = 'family' | 'mine';
