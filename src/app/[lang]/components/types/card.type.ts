@@ -42,3 +42,11 @@ export interface CardType {
     name: string;
     cod: number;
 }
+
+export interface CityType {
+    Name?: string;
+    Lat?: string;
+    Lon?: string;
+    Details: string;
+    Id?: number;
+}

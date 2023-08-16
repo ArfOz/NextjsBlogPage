@@ -12,7 +12,7 @@ export default async function WeatherPage({
     // To reduce take instant wetaher forecast multiple cities after for promise all
     for (let index = 0; index < Cities.length; index++) {
         let city = Cities[index];
-        let tmpPromise = OpenWeather(city.Lat, city.Lon, lang);
+        let tmpPromise = OpenWeather(city.Id, lang);
         promises.push(tmpPromise);
     }
 
