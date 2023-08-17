@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Kırşehir",
+        "Lat": "39.146078",
+        "Lon": "34.159499",
+        "Details": "family",
+        "Id": 307515
+    },
+    {
+        "Name": "Crissier",
+        "Lat": "46.551869",
+        "Lon": "6.574346",
+        "Details": "mine",
+        "Id": 2661072
+    }
+]

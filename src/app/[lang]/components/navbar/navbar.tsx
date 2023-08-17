@@ -15,7 +15,10 @@ import {
 } from '@components/index';
 import { getDictionary } from 'get-dictionary';
 
-const navigation: [Navigate] = [{ name: 'todos', href: '/todos' }];
+const navigation: Array<Navigate> = [
+    { name: 'todos', href: '/todos' },
+    { name: 'weather', href: '/weather' },
+];
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ');
@@ -23,7 +26,7 @@ function classNames(...classes: string[]) {
 
 export function Navbar({ lang }: { lang: any }) {
     const pathname = usePathname();
-    const dictionary: DictionaryType = use(getDictionary(lang));
+    const dictionary = use(getDictionary(lang));
 
     return (
         <Disclosure as="nav" className="bg-slate-400 shadow-sm">

@@ -1,6 +1,7 @@
 export interface DictionaryType {
     navbar: {
         todos: string;
+        weather: string;
     };
     contact: {
         left_title: string;
@@ -14,4 +15,13 @@ export interface DictionaryType {
         right_send_button: string;
         link: string;
     };
+    weather: {
+        weather_forecast: string;
+        TR: string;
+        CH: string;
+    };
 }
+
+export type Country = 'TR' | 'CH';
+
+export type Details = 'family' | 'mine';
