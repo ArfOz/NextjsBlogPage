@@ -33,6 +33,7 @@
         "temp": "Hava sıcaklığı",
         "fells_like": "Hissedilen Sıcaklık",
         "humidity": "Nem oranı",
+        "wind_speed": " Rüzgar Hızı",
         "clear sky": "",
         "few clouds": "",
         "scattered clouds": "",

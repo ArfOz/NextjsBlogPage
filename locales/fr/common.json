@@ -33,6 +33,7 @@
         "temp": "Température de l'air",
         "fells_like": "Température détectée",
         "humidity": "Humidité",
+        "wind_speed": "Vitesse du vent",
         "clear sky": " ",
         "few clouds": "",
         "scattered clouds": "",

@@ -67,7 +67,10 @@ export default async function WeatherCard({
                     </div>
 
                     <div className="flex flex-row items-center m-2">
-                        <h1 className="pl-1 dark:text-white">5 Part</h1>
+                        <h1 className="pl-1 dark:text-white">
+                            {dictionary['weather'].wind_speed} :{' '}
+                            {data.wind.speed} m/s
+                        </h1>
                     </div>
                 </div>
             </div>
