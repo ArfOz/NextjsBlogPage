@@ -3,7 +3,8 @@
     "title": "Bonjour Bienvenue sur ma page",
     "navbar": {
         "todos": "Choses à faire",
-        "weather": "Météo"
+        "weather": "Météo",
+        "photos": "Photos"
     },
     "home": {
         "context": "Bonjour, Je suis Arif Ozkan. Je vis actuellement en Suisse.Avant de venir en Suisse, j'ai travaillé comme Développeur Full Stack chez Ekip.co pendant environ 2 ans en Turquie. J'ai quitté Ekip.co après mon arrivée en Suisse et quelques amis ont lancé un projet. Dans ce projet, J'ai travaillé en tant que développeur backend et chef de projet.Actuellement, J'ai un permis de travail N mais J'obtiendrai bientôt un permis de travail B. Je pense travailler pour le moment. Pendant ce temps, Je continue mon projet et participe à un cours de français. <br /> Niveau de francais: A2(DELF) <br />Niveau d'anglais: B2(IELTS)",
