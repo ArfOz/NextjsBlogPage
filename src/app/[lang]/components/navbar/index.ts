@@ -1,2 +1,2 @@
 export * from './navbar';
-export * from '../types/navigate.type';
+export * from './navbarUser';
