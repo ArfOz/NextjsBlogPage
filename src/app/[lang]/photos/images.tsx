@@ -2,9 +2,8 @@
 import Image from 'next/image'
 import Carousel from '../components/photo/Carousel'
 import { ImageProps } from '@/libs/types'
-import { Locale } from 'i18n-config'
 
-const Home = ({ images, lang }: { images: ImageProps[]; lang: Locale }) => {
+const Home = ({ images }: { images: ImageProps[] }) => {
     return (
         <Carousel loop>
             {images.map(({ id, public_id, format, blurDataUrl }) => {

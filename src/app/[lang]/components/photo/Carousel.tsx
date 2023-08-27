@@ -1,8 +1,8 @@
-// import the hook and options type
+'use client'
+
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react'
 import React from 'react'
 import { PropsWithChildren, useEffect, useState } from 'react'
-import CarouselControls from './CarouselControls'
 import Dots from './Dots'
 // import Dots from './Dots'
 

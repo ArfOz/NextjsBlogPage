@@ -9,5 +9,5 @@ export default async function Photos({
     const data = await getImages()
     const images = data.props.images
 
-    return <Images images={images} lang={lang} />
+    return <Images images={images} />
 }
