@@ -1,39 +1,39 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
-import { Fragment, use } from 'react';
-import { usePathname } from 'next/navigation';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { FaLinkedin, FaGithub, FaMedium, FaEye, FaHome } from 'react-icons/fa';
+import Link from 'next/link'
+import { Fragment, use } from 'react'
+import { usePathname } from 'next/navigation'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { FaLinkedin, FaGithub, FaMedium, FaEye, FaHome } from 'react-icons/fa'
 import {
     LanguageSwitcher,
     ThemeChanger,
     ViewCounter,
     Navigate,
     DictionaryType,
-} from '@components/index';
-import { getDictionary } from 'get-dictionary';
-import { Locale } from 'i18n-config';
+} from '@components/index'
+import { getDictionary } from 'get-dictionary'
+import { Locale } from 'i18n-config'
 
 const navigation: Array<Navigate> = [
     { name: 'todos', href: '/todos' },
     { name: 'weather', href: '/weather' },
     { name: 'photos', href: '/photos' },
-];
+]
 
 function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(' ');
+    return classes.filter(Boolean).join(' ')
 }
 
 export function NavbarComp({
     lang,
     dictionary,
 }: {
-    lang: Locale;
-    dictionary: any;
+    lang: Locale
+    dictionary: any
 }) {
-    const pathname = usePathname();
+    const pathname = usePathname()
 
     return (
         <Disclosure as="nav" className="bg-slate-400 shadow-sm">
@@ -165,5 +165,5 @@ export function NavbarComp({
                 </div>
             )}
         </Disclosure>
-    );
+    )
 }

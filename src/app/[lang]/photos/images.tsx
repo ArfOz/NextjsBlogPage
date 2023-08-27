@@ -1,62 +1,36 @@
 'use client'
-import React from 'react'
+import Image from 'next/image'
+import Carousel from '../components/photo/Carousel'
 import { ImageProps } from '@/libs/types'
-
-import { Carousel } from 'react-responsive-carousel'
 import { Locale } from 'i18n-config'
 
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-export default function Images({
-    images,
-    lang,
-}: {
-    images: ImageProps[]
-    lang: Locale
-}) {
+const Home = ({ images, lang }: { images: ImageProps[]; lang: Locale }) => {
     return (
-        <Carousel
-            showArrows={true}
-            showIndicators
-            // onChange={onChange}
-            // onClickItem={onClickItem}
-            // onClickThumb={onClickThumb}
-            useKeyboardArrows={true}
-            // autoPlay
-            // axis="vertical"
-            // infiniteLoop
-            // centerMode={true}
-            // centerSlidePercentage={80}
-            // dynamicHeight={true}
-            className="flex flex-col bg-center text-center origin-center object-center content-center self-center items-center justify-center snap-center center place-self-center place-items-center justify-self-center mt-4"
-        >
-            {images.map(({ id, public_id, format, blurDataUrl }) => (
-                <img
-                    src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${public_id}.${format}`}
-                    key={id}
-                    alt="selam"
-                    loading="lazy"
-                    className="flex flex-col max-w-lg bg-center text-center origin-center object-center content-center self-center items-center justify-center snap-center center place-self-center place-items-center justify-self-center"
-                />
-            ))}
+        <Carousel loop>
+            {images.map(({ id, public_id, format, blurDataUrl }) => {
+                return (
+                    // 👇 style each individual slide.
+                    // relative - needed since we use the fill prop from next/image component
+                    // h-64 - arbitrary height
+                    // flex[0_0_100%]
+                    //   - shorthand for flex-grow:0; flex-shrink:0; flex-basis:100%
+                    //   - we want this slide to not be able to grow or shrink and take up 100% width of the viewport.
+                    <div
+                        className="relative min-h-screen flex-[0_0_100%] justify-center items-center"
+                        key={id}
+                    >
+                        {/* use object-cover + fill since we don't know the height and width of the parent */}
+                        <Image
+                            src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${public_id}.${format}`}
+                            fill
+                            className="object-contain pb-4"
+                            alt="alt"
+                        />
+                    </div>
+                )
+            })}
         </Carousel>
     )
 }
 
-// 'use client';
-// import React from 'react';
-// import { ImageProps } from '@/libs/types';
-// import Image from 'next/image';
-// import { Locale } from 'i18n-config';
-// import b from '../../../../public/images/b.jpg';
-// // import b from './b.jpg';
-
-// import { Carousel } from 'react-responsive-carousel';
-
-// export default function Images() {
-//     return (
-//         <div className="flex">
-//             <Image src={b} alt="error" className="w-56" />
-//             <Image src={b} alt="error" className="w-56" />
-//         </div>
-//     );
-// }
+export default Home
