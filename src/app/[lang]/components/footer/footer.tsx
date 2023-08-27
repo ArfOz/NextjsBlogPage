@@ -1,8 +1,8 @@
-import { getDictionary } from 'get-dictionary';
-import { Locale } from 'i18n-config';
+import { getDictionary } from 'get-dictionary'
+import { Locale } from 'i18n-config'
 
 export async function Footer({ lang }: { lang: Locale }): Promise<JSX.Element> {
-    const dictionary = await getDictionary(lang);
+    const dictionary = await getDictionary(lang)
     return (
         <footer
             className="bg-slate-400
@@ -10,7 +10,8 @@ export async function Footer({ lang }: { lang: Locale }): Promise<JSX.Element> {
              fixed
              inset-x-0
              bottom-0
-             p-4
+             h-16
+             px-2
              flex
              flex-row
              justify-between
@@ -27,5 +28,5 @@ export async function Footer({ lang }: { lang: Locale }): Promise<JSX.Element> {
                 </li>
             </ul>
         </footer>
-    );
+    )
 }

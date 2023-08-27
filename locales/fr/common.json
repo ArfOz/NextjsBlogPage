@@ -3,12 +3,13 @@
     "title": "Bonjour Bienvenue sur ma page",
     "navbar": {
         "todos": "Choses à faire",
-        "weather": "Météo"
+        "weather": "Météo",
+        "photos": "Photos"
     },
     "home": {
-        "context": "Bonjour, Je suis Arif Ozkan. Je vis actuellement en Suisse.Avant de venir en Suisse, j'ai travaillé comme Développeur Full Stack chez Ekip.co pendant environ 2 ans en Turquie. J'ai quitté Ekip.co après mon arrivée en Suisse et quelques amis ont lancé un projet. Dans ce projet, J'ai travaillé en tant que développeur backend et chef de projet.Actuellement, J'ai un permis de travail N mais J'obtiendrai bientôt un permis de travail B. Je pense travailler pour le moment. Pendant ce temps, Je continue mon projet et participe à un cours de français. <br /> Niveau de francais: A2(DELF) <br />Niveau d'anglais: B2(IELTS)",
+        "context": "Bonjour, Je suis Arif Ozkan. Je vis actuellement en Suisse.Avant de venir en Suisse, j'ai travaillé comme Développeur Full Stack chez Ekip.co pendant environ 2 ans en Turquie. J'ai quitté Ekip.co après mon arrivée en Suisse et quelques amis ont lancé un projet. Dans ce projet, J'ai travaillé en tant que développeur backend et chef de projet.Actuellement, J'ai un permis de travail N mais J'obtiendrai bientôt un permis de travail B. Je pense travailler pour le moment. Pendant ce temps, Je continue mon projet et participe à un cours de français. <br /> Niveau de français: A2->B1(DELF) <br />Niveau d'anglais: B2(IELTS)",
         "course_title": "Heures de cours de français",
-        "course_times": "<li>Lundi: 13:20-15:55</li><li>Mercredi: 13:20-14:50</li><li>Jeudi: 13:20-15:55</li>",
+        "course_times": "<li>Mercredi: 08:50-11:25</li><li>Jeudi: 10:40-12:10</li><li>Vendredi: 08:50-11:25</li>",
         "working_history_title": "Mon Expérience",
         "working_history": "<li>2020(Mai)-2021(Février) -&gt; Éducation Clarusway Online Career IT Training School </li><li> 2021(Mars)-2022(Décembre) -&gt; Full Stack Web Développeur Ekip.co(Nodejs, Django, React js, Nestjs) </li> <li> 2022(Décembre)-2023(Jusqu'à aujourd'hui) -&gt; Chef de projet - Backend Développeur Meta.Sentez(Nestjs) </li>"
     },
