@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
-import Carousel from '../components/photo/Carousel'
 import { ImageProps } from '@/libs/types'
+import Carousel from '../components/photo/Carousel'
 
 const Home = ({ images }: { images: ImageProps[] }) => {
     return (
