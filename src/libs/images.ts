@@ -5,6 +5,7 @@ import getBase64ImageUrl from '@/utils/generateBlurPlaceholder'
 export async function getImages() {
     const results = await cloudinary.v2.search
         .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
+        .with_field('context')
         .sort_by('public_id', 'desc')
         .max_results(400)
         .execute()
@@ -18,6 +19,7 @@ export async function getImages() {
             width: result.width,
             public_id: result.public_id,
             format: result.format,
+            location: result.context?.alt,
         })
         i++
     }
