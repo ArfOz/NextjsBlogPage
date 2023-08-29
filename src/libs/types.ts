@@ -6,4 +6,5 @@ export interface ImageProps {
     public_id: string
     format: string
     blurDataUrl?: string
+    location?: string
 }

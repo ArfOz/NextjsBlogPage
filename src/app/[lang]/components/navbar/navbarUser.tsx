@@ -126,7 +126,7 @@ export function NavbarComp({
                     </div>
 
                     <Disclosure.Panel className="sm:hidden">
-                        <div className="space-y-1 pt-2 pb-3 flex-col">
+                        <div className="space-y-1 pt-2 flex-col">
                             {navigation.map((item: Navigate) => (
                                 <Disclosure.Button
                                     key={item.name}
