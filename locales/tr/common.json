@@ -99,5 +99,49 @@
         "scattered clouds: 25-50%": "scattered clouds: 25-50%",
         "broken clouds: 51-84%": "broken clouds: 51-84%",
         "overcast clouds: 85-100%": "overcast clouds: 85-100%"
-    }
+    },
+    "experience": [
+        {
+            "id": "0",
+            "company": "Shopify",
+            "title": "Senior Software Engineer",
+            "years": "08/2021 - present",
+            "technologies": ["React", "TypeScript", "Ruby on Rails", "Jest"]
+        },
+        {
+            "id": "1",
+            "company": "mimacom",
+            "title": "Frontend Software Engineer",
+            "years": "07/2020 - 08/2021",
+            "technologies": ["React", "Flow", "Redux", "Jest"]
+        },
+        {
+            "id": "2",
+            "company": "GFT",
+            "title": "Frontend Software Engineer",
+            "years": "10/2019 - 07/2020",
+            "technologies": ["React", "Angular", "Nest"]
+        },
+        {
+            "id": "3",
+            "company": "edicom",
+            "title": "EDI Senior Consultant",
+            "years": "03/2019 - 07/2020",
+            "technologies": ["Angular"]
+        },
+        {
+            "id": "4",
+            "company": "ti&m",
+            "title": "Software Engineer",
+            "years": "06/2017 - 02/2019",
+            "technologies": ["Angular", "React", "Java", "Srping"]
+        },
+        {
+            "id": "5",
+            "company": "MyEnergyMap",
+            "title": "Web developer (internship)",
+            "years": "04/2016 - 12/2016",
+            "technologies": ["JavaScript", "PHP"]
+        }
+    ]
 }
