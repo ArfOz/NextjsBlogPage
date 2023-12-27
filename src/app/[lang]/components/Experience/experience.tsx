@@ -1,161 +1,47 @@
-// 'use client'
-// // import React from 'react'
-// // import Badge from 'react-bootstrap/Badge'
-// import {
-//     VerticalTimeline,
-//     VerticalTimelineElement,
-// } from 'react-vertical-timeline-component'
-// import 'react-vertical-timeline-component/style.min.css'
-// import { BiWorld } from 'react-icons/bi'
-
-// // company": "Shopify",
-// // "title": "Senior Software Engineer",
-// // "years": "08/2021 - present",
-// // "technologies": ["React", "TypeScript", "Ruby on Rails", "Jest"]
-
-// export function Experience({ dictionary }: { dictionary: any }) {
-//     console.log('arif', dictionary['experience'])
-//     return (
-//         <section id="experience" className="full">
-//             <h3>
-//                 Create a vertical timeline component in React -{' '}
-//                 <a
-//                     href="https://www.cluemediator.com/"
-//                     target="_blank"
-//                     rel="noopener"
-//                 >
-//                     Clue Mediator
-//                 </a>
-//             </h3>
-
-//             <VerticalTimeline>
-//                 {dictionary['experience'].map((element: any) => {
-//                     console.log('element', element.years)
-//                     return (
-//                         <VerticalTimelineElement
-//                             key={element.id}
-//                             // date={element.years}
-//                             iconStyle={{
-//                                 backgroundColor: 'slateblue',
-//                                 alignContent: 'center',
-//                                 textAlign: 'center',
-//                             }}
-//                             contentStyle={{
-//                                 backgroundColor: '#22333b',
-//                             }}
-//                             contentArrowStyle={{
-//                                 borderRightColor: '#22333b',
-//                             }}
-//                             icon={<BiWorld />}
-//                         >
-//                             selam
-//                             <h3 className="heading text-red-700">
-//                                 {element.company}
-//                             </h3>
-//                             <h5 className="subHeading">{element.company}</h5>
-//                             <p className="description">{element['company']}</p>
-//                         </VerticalTimelineElement>
-//                     )
-//                 })}
-//             </VerticalTimeline>
-//         </section>
-//     )
-// }
-
 'use client'
-
-import React from 'react'
-
+// import React from 'react'
+// import Badge from 'react-bootstrap/Badge'
 import {
     VerticalTimeline,
     VerticalTimelineElement,
 } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import {
-//     faBriefcase,
-//     faSchool,
-//     faStar,
-// } from '@fortawesome/free-solid-svg-icons'
+import { BiWorld } from 'react-icons/bi'
+import React from 'react'
+import { MdWorkOutline } from 'react-icons/md'
+import { FaSchool } from 'react-icons/fa'
+import { TbTank } from 'react-icons/tb'
 
 const workIcon = {
-    // icon: <FontAwesomeIcon icon={faBriefcase} />,
+    icon: <MdWorkOutline />,
     iconStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
 }
+
 const schoolIcon = {
-    // icon: <FontAwesomeIcon icon={faSchool} />,
+    icon: <FaSchool />,
     iconStyle: { background: 'rgb(233, 30, 99)', color: '#fff' },
 }
-const starIcon = {
-    // icon: <FontAwesomeIcon icon={faStar} />,
+const armyIcon = {
+    icon: <TbTank />,
     iconStyle: { background: 'rgb(16, 204, 82)', color: '#fff' },
 }
 
-export function Experience() {
-    const timeline = [
-        {
-            icon: workIcon,
-            date: '2011 - present',
-            title: 'Creative Director',
-            subtitle: 'Miami, FL',
-            desc: 'Creative Direction, User Experience, Visual Design, Project Management, Team Leading',
-        },
-        {
-            icon: workIcon,
-            date: '2010 - 2011',
-            title: 'Art Director',
-            subtitle: 'San Francisco, CA',
-            desc: 'Creative Direction, User Experience, Visual Design, SEO, Online Marketing',
-        },
-        {
-            icon: workIcon,
-            date: '2008 - 2010',
-            title: 'Web Designer',
-            subtitle: 'Los Angeles, CA',
-            desc: 'User Experience, Visual Design',
-        },
-        {
-            icon: workIcon,
-            date: '2006 - 2008',
-            title: 'Web Designer',
-            subtitle: 'San Francisco, CA',
-            desc: 'User Experience, Visual Design',
-        },
-        {
-            icon: schoolIcon,
-            date: 'April 2013',
-            title: 'Content Marketing for Web, Mobile and Social Media',
-            subtitle: 'Online Course',
-            desc: 'Strategy, Social Media',
-        },
-        {
-            icon: schoolIcon,
-            date: 'November 2012',
-            title: 'Agile Development Scrum Master',
-            subtitle: 'Certification',
-            desc: 'Creative Direction, User Experience, Visual Design',
-        },
-        {
-            icon: schoolIcon,
-            date: '2002 - 2006',
-            title: 'Bachelor of Science in Interactive Digital Media Visual Imaging',
-            subtitle: 'Bachelor Degree',
-            desc: 'Creative Direction, Visual Design',
-        },
-        { icon: starIcon },
-    ]
-
+export function Experience({ dictionary }: { dictionary: any }) {
     return (
-        <div className="App">
+        <section id="experience" className="full">
             <h3>
-                Create a vertical timeline component in React -{' '}
-                {/* <a href="https://www.cluemediator.com/" target="_blank">
-                    Clue Mediator
+                My Experience{' '}
+                {/* <a
+                    href="https://www.cluemediator.com/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    My Experience
                 </a> */}
             </h3>
+
             <VerticalTimeline>
-                {timeline.map((t, i) => {
+                {dictionary['experience'].map((t: any, i: any) => {
                     const contentStyle =
                         i === 0
                             ? { background: 'rgb(33, 150, 243)', color: '#fff' }
@@ -165,6 +51,8 @@ export function Experience() {
                             ? { borderRight: '7px solid  rgb(33, 150, 243)' }
                             : undefined
 
+                    console.log('t', t)
+                    console.log('i', i)
                     return (
                         <VerticalTimelineElement
                             visible={true}
@@ -173,25 +61,31 @@ export function Experience() {
                             contentStyle={contentStyle}
                             contentArrowStyle={arrowStyle}
                             date={t.date}
-                            {...t.icon}
+                            icon={<MdWorkOutline />}
                         >
                             {t.title ? (
                                 <React.Fragment>
                                     <h3 className="vertical-timeline-element-title">
                                         {t.title}
+                                        {' - '}
+                                        <span className="vertical-timeline-element-title font-bold">
+                                            {t.company}
+                                        </span>
                                     </h3>
-                                    {t.subtitle && (
-                                        <h4 className="vertical-timeline-element-subtitle">
-                                            {t.subtitle}
-                                        </h4>
-                                    )}
-                                    {t.desc && <p>{t.desc}</p>}
+
+                                    <h4 className="vertical-timeline-element-subtitle text-sm">
+                                        {t.years}
+                                    </h4>
+
+                                    <p className="vertical-timeline-element-subtitle font-thin ">
+                                        {t.technologies.join(', ')}
+                                    </p>
                                 </React.Fragment>
                             ) : undefined}
                         </VerticalTimelineElement>
                     )
                 })}
             </VerticalTimeline>
-        </div>
+        </section>
     )
 }
