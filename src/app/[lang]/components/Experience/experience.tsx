@@ -1,16 +1,9 @@
 'use client'
-// import React from 'react'
-// import Badge from 'react-bootstrap/Badge'
-import {
-    VerticalTimeline,
-    VerticalTimelineElement,
-} from 'react-vertical-timeline-component'
-import 'react-vertical-timeline-component/style.min.css'
-import { BiWorld } from 'react-icons/bi'
+
 import React from 'react'
 import { MdWorkOutline } from 'react-icons/md'
 import { FaSchool } from 'react-icons/fa'
-import { TbTank } from 'react-icons/tb'
+// import { TbTank } from 'react-icons/tb'
 
 function iconSelector(icon: string) {
     switch (icon) {
@@ -18,8 +11,8 @@ function iconSelector(icon: string) {
             return <MdWorkOutline />
         case 'schoollIcon':
             return <FaSchool />
-        case 'armyIcon':
-            return <FaSchool />
+        // case 'armyIcon':
+        //     return <TbTank />
         default:
             return <FaSchool />
     }

@@ -102,46 +102,49 @@
     },
     "experience": [
         {
-            "id": "0",
-            "company": "Shopify",
-            "title": "Senior Software Engineer",
-            "years": "08/2021 - present",
-            "technologies": ["React", "TypeScript", "Ruby on Rails", "Jest"]
+            "icon": "workIcon",
+            "company": "Freelance",
+            "title": "Full Stack Developer",
+            "years": "12/2022 - Günümüz",
+            "technologies": ["Nestjs", "TypeScript", "Nx Monorepo, Nextjs"]
         },
         {
-            "id": "1",
-            "company": "mimacom",
-            "title": "Frontend Software Engineer",
-            "years": "07/2020 - 08/2021",
-            "technologies": ["React", "Flow", "Redux", "Jest"]
+            "icon": "workIcon",
+            "company": "MetaSentez",
+            "title": "Full Stack Developer / Proje Yöneticisi",
+            "years": "12/2022 - 8/2023",
+            "technologies": ["Nestjs", "TypeScript", "Nx Monorepo"]
         },
         {
-            "id": "2",
-            "company": "GFT",
-            "title": "Frontend Software Engineer",
-            "years": "10/2019 - 07/2020",
-            "technologies": ["React", "Angular", "Nest"]
+            "icon": "workIcon",
+            "company": "Ekip.co",
+            "title": "Full Stack Developer",
+            "years": "03/2021 - 12/2022",
+            "technologies": [
+                "React",
+                "Graphql",
+                "Nestjs",
+                "Jest",
+                "Django",
+                "TypeScript",
+                "Python",
+                "Cypress"
+            ]
         },
         {
-            "id": "3",
-            "company": "edicom",
-            "title": "EDI Senior Consultant",
-            "years": "03/2019 - 07/2020",
-            "technologies": ["Angular"]
+            "icon": "workIcon",
+            "company": "Clarusway",
+            "title": "Clarusway Öürencilerine Mentorluk Görevi",
+            "years": "10/2021 - 07/2022",
+            "technologies": ["React", "Python, Nodejs, Cypress, Javascript"]
         },
+
         {
-            "id": "4",
-            "company": "ti&m",
-            "title": "Software Engineer",
-            "years": "06/2017 - 02/2019",
-            "technologies": ["Angular", "React", "Java", "Srping"]
-        },
-        {
-            "id": "5",
-            "company": "MyEnergyMap",
-            "title": "Web developer (internship)",
-            "years": "04/2016 - 12/2016",
-            "technologies": ["JavaScript", "PHP"]
+            "icon": "schoolIcon",
+            "company": "Clarusway",
+            "title": "Full Stack Developer Öğrencisi",
+            "years": "05/2020 - 02/2021",
+            "technologies": ["React", "Python, Nodejs, Javascript"]
         }
     ]
 }

@@ -140,10 +140,10 @@
         },
 
         {
-            "icon": "schollIcon",
+            "icon": "schoolIcon",
             "company": "Clarusway",
             "title": "Full Stack Developer Student",
-            "years": "03/2021 - 02/2021",
+            "years": "05/2020 - 02/2021",
             "technologies": ["React", "Python, Nodejs, Javascript"]
         }
     ]
