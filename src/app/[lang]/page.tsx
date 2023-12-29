@@ -20,11 +20,11 @@ export default async function Page({
                 {dictionary['home']['course_title']}
             </h2>
             <ul>{parse(dictionary['home']['course_times'])}</ul>
+
+            <MyProfilePic />
             <h2 className="self-center">
                 {dictionary['home']['working_history_title']}
             </h2>
-            <ul>{parse(dictionary['home']['working_history'])}</ul>
-            <MyProfilePic />
             <Experience dictionary={dictionary} />
         </div>
     )

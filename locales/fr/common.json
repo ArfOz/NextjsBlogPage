@@ -111,9 +111,16 @@
         {
             "icon": "workIcon",
             "company": "MetaSentez",
-            "title": "Full Stack Developer / Project Manager",
+            "title": "Full Stack Developer / Chef de projet",
             "years": "12/2022 - 8/2023",
             "technologies": ["Nestjs", "TypeScript", "Nx Monorepo"]
+        },
+        {
+            "icon": "workIcon",
+            "company": "Clarusway",
+            "title": "Mentor pour les étudiants en informatique",
+            "years": "10/2021 - 07/2022",
+            "technologies": ["React Js", "Python, Nodejs, Cypress, Javascript"]
         },
         {
             "icon": "workIcon",
@@ -121,7 +128,7 @@
             "title": "Full Stack Developer",
             "years": "03/2021 - 12/2022",
             "technologies": [
-                "React",
+                "React Js",
                 "Graphql",
                 "Nestjs",
                 "Jest",
@@ -131,20 +138,22 @@
                 "Cypress"
             ]
         },
-        {
-            "icon": "workIcon",
-            "company": "Clarusway",
-            "title": "Mentor for IT students",
-            "years": "10/2021 - 07/2022",
-            "technologies": ["React", "Python, Nodejs, Cypress, Javascript"]
-        },
 
         {
             "icon": "schoolIcon",
             "company": "Clarusway",
-            "title": "Full Stack Developer Student",
+            "title": "Développeur Full Stack étudiant",
             "years": "05/2020 - 02/2021",
-            "technologies": ["React", "Python, Nodejs, Javascript"]
+            "technologies": [
+                "React Js",
+                "Python",
+                "Nodejs",
+                "Javascript",
+                "Django",
+                "HTML",
+                "CSS",
+                "React Native"
+            ]
         }
     ]
 }
