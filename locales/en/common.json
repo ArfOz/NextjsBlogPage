@@ -99,5 +99,61 @@
         "scattered clouds: 25-50%": "scattered clouds: 25-50%",
         "broken clouds: 51-84%": "broken clouds: 51-84%",
         "overcast clouds: 85-100%": "overcast clouds: 85-100%"
-    }
+    },
+    "experience": [
+        {
+            "icon": "workIcon",
+            "company": "Freelance",
+            "title": "Full Stack Developer",
+            "years": "12/2022 - Present",
+            "technologies": ["Nestjs", "TypeScript", "Nx Monorepo, Nextjs"]
+        },
+        {
+            "icon": "workIcon",
+            "company": "MetaSentez",
+            "title": "Full Stack Developer / Project Manager",
+            "years": "12/2022 - 8/2023",
+            "technologies": ["Nestjs", "TypeScript", "Nx Monorepo"]
+        },
+        {
+            "icon": "workIcon",
+            "company": "Clarusway",
+            "title": "Mentor for IT students",
+            "years": "10/2021 - 07/2022",
+            "technologies": ["React Js", "Python, Nodejs, Cypress, Javascript"]
+        },
+        {
+            "icon": "workIcon",
+            "company": "Ekip.co",
+            "title": "Full Stack Developer",
+            "years": "03/2021 - 12/2022",
+            "technologies": [
+                "React Js",
+                "Graphql",
+                "Nestjs",
+                "Jest",
+                "Django",
+                "TypeScript",
+                "Python",
+                "Cypress"
+            ]
+        },
+
+        {
+            "icon": "schoolIcon",
+            "company": "Clarusway",
+            "title": "Full Stack Developer Student",
+            "years": "05/2020 - 02/2021",
+            "technologies": [
+                "React Js",
+                "Python",
+                "Nodejs",
+                "Javascript",
+                "Django",
+                "HTML",
+                "CSS",
+                "React Native"
+            ]
+        }
+    ]
 }
