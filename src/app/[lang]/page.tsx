@@ -10,7 +10,7 @@ export default async function Page({
 }) {
     const dictionary = await getDictionary(lang)
     return (
-        <div className="flex flex-col p-4 mb-24 w-full">
+        <div className="flex flex-col p-4 mb-24 w-full ">
             <ReportIncr lang={lang} />
             <h1 className="text-center">{dictionary['title']}</h1>
             <p className="text-justify">
@@ -22,9 +22,7 @@ export default async function Page({
             <ul>{parse(dictionary['home']['course_times'])}</ul>
 
             <MyProfilePic />
-            <h2 className="self-center">
-                {dictionary['home']['working_history_title']}
-            </h2>
+
             <Experience dictionary={dictionary} />
         </div>
     )
