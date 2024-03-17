@@ -154,6 +154,12 @@
                 "CSS",
                 "React Native"
             ]
+        },
+        {
+            "icon": "armyIcon",
+            "company": "Forces Armées Turques",
+            "title": "Commandant de compagnie-commandant d'équipe",
+            "years": "08/2010 - 08/2019"
         }
     ]
 }

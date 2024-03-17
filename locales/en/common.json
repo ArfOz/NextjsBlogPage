@@ -154,6 +154,13 @@
                 "CSS",
                 "React Native"
             ]
+        },
+
+        {
+            "icon": "armyIcon",
+            "company": "Turkish Armend Forces",
+            "title": "Company Commander-Team Commander",
+            "years": "08/2010 - 08/2019"
         }
     ]
 }
