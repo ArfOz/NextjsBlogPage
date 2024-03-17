@@ -3,7 +3,7 @@
 import React from 'react'
 import { MdWorkOutline } from 'react-icons/md'
 import { FaSchool } from 'react-icons/fa'
-// import { TbTank } from 'react-icons/tb'
+import { TbTank } from 'react-icons/tb'
 
 function iconSelector(icon: string) {
     switch (icon) {
@@ -12,8 +12,8 @@ function iconSelector(icon: string) {
         case 'schoollIcon':
             return <FaSchool />
 
-        // case 'armyIcon':
-        //     return <TbTank />
+        case 'armyIcon':
+            return <TbTank />
         default:
             return <FaSchool />
     }
@@ -42,7 +42,7 @@ export function Experience({ dictionary }: { dictionary: any }) {
                                     </time>
                                 </div>
                                 <div className="text-slate-600">
-                                    {t.technologies.join(', ')}
+                                    {t.technologies?.join(', ')}
                                 </div>
                             </div>
                         </div>
