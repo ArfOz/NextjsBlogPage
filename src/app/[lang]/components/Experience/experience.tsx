@@ -11,6 +11,7 @@ function iconSelector(icon: string) {
             return <MdWorkOutline />
         case 'schoollIcon':
             return <FaSchool />
+
         // case 'armyIcon':
         //     return <TbTank />
         default:
