@@ -28,7 +28,7 @@
     "weather": {
         "TR": "Turquie",
         "CH": "Suisse",
-        "family": "Ma famille habite ici.",
+        "family": "Mes parents habitent ici.",
         "mine": "J'habite ici.",
         "weather_forecast": "Prévisions météorologiques",
         "temp": "Température de l'air",
@@ -158,7 +158,7 @@
         {
             "icon": "armyIcon",
             "company": "Forces Armées Turques",
-            "title": "Commandant de compagnie-commandant d'équipe",
+            "title": "Commandant de compagnie/commandant d'équipe",
             "years": "08/2010 - 08/2019"
         }
     ]

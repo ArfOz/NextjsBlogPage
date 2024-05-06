@@ -28,7 +28,7 @@
     "weather": {
         "TR": "Turkey",
         "CH": "Switzerland",
-        "family": "My family lives in here",
+        "family": "My parents live in here",
         "mine": "I live in here",
         "weather_forecast": "Weather Forecast",
         "temp": "Temperature",
@@ -158,8 +158,8 @@
 
         {
             "icon": "armyIcon",
-            "company": "Turkish Armend Forces",
-            "title": "Company Commander-Team Commander",
+            "company": "Turkish Armed Forces",
+            "title": "Company Commander/Team Commander",
             "years": "08/2010 - 08/2019"
         }
     ]
