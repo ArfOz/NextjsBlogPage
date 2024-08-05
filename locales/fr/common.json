@@ -28,7 +28,7 @@
     "weather": {
         "TR": "Turquie",
         "CH": "Suisse",
-        "family": "Mes parents habitent ici.",
+        "family": "Nous vivons ici.",
         "mine": "J'habite ici.",
         "weather_forecast": "Prévisions météorologiques",
         "temp": "Température de l'air",
