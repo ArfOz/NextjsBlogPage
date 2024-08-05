@@ -18,7 +18,7 @@ import { Locale } from 'i18n-config'
 
 const navigation: Array<Navigate> = [
     // { name: 'todos', href: '/todos' },
-    { name: 'weather', href: '/weather' },
+    // { name: 'weather', href: '/weather' },
     { name: 'photos', href: '/photos' },
 ]
 
