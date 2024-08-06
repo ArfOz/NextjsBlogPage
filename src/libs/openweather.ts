@@ -1,3 +1,6 @@
+import { Locale } from 'i18n-config'
+import { CityArray } from './types'
+
 const api_key = process.env.OPENWEATHER_API!
 var requestOptions: RequestInit = {
     method: 'GET',
@@ -33,11 +36,11 @@ export async function OpenWeatherIcon(id: string) {
     }
 }
 
-export async function WeatherData(Cities: any, lang: any) {
+export async function WeatherData(Cities: CityArray, lang: Locale) {
     let promises = []
     for (let index = 0; index < Cities.length; index++) {
         let city = Cities[index]
-        let tmpPromise = OpenWeather(city.Id, lang)
+        let tmpPromise = OpenWeather(city.id, lang)
         promises.push(tmpPromise)
     }
 
