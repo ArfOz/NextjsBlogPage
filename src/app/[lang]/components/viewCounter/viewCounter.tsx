@@ -1,17 +1,18 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { Locale } from '../../../../../i18n-config';
-import { getViews } from '@/libs/upstash.redis';
+'use client'
+import { useEffect, useState } from 'react'
+import { Locale } from 'i18n-config'
+import { getViews } from '@/libs/upstash.redis'
 
 export function ViewCounter({ lang }: { lang: Locale }) {
-    const [views, setViews] = useState('...');
+    console.log('lang', lang)
+    const [views, setViews] = useState('...')
     useEffect(() => {
         async function getView(lang: Locale) {
-            const res = (await getViews(lang)).toString();
-            setViews(res);
+            const res = (await getViews(lang)).toString()
+            setViews(res)
         }
-        getView(lang);
-    }, [lang]);
+        getView(lang)
+    }, [lang])
 
-    return <div>{views}</div>;
+    return <div>{views}</div>
 }

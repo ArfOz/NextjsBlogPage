@@ -12,6 +12,7 @@ import {
     ViewCounter,
     Navigate,
     DictionaryType,
+    Weathernavbar,
 } from '@components/index'
 import { getDictionary } from 'get-dictionary'
 import { Locale } from 'i18n-config'
@@ -88,6 +89,7 @@ export function NavbarComp({
                                     <div className="prose prose-xl mx-auto flex flex-row justify-center items-center space-x-2 p-4">
                                         <FaEye />
                                         <ViewCounter lang={lang} />
+                                        <Weathernavbar lang={lang} />
                                     </div>
                                 </div>
                                 <div className="hidden sm:ml-6 sm:flex sm:items-center">
