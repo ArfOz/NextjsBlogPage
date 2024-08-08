@@ -10,10 +10,6 @@ var requestOptions: RequestInit = {
 
 export async function OpenWeather(id: number, lang: string) {
     try {
-        console.log(
-            'resssssssssssss',
-            `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${api_key}&units=metric&lang=${lang}`
-        )
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${api_key}&units=metric&lang=${lang}`,
             requestOptions
