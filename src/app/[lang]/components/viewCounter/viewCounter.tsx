@@ -4,7 +4,6 @@ import { Locale } from 'i18n-config'
 import { getViews } from '@/libs/upstash.redis'
 
 export function ViewCounter({ lang }: { lang: Locale }) {
-    console.log('lang', lang)
     const [views, setViews] = useState('...')
     useEffect(() => {
         async function getView(lang: Locale) {

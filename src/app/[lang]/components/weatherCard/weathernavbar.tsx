@@ -12,16 +12,14 @@ export function Weathernavbar({ lang }: { lang: Locale }) {
     useEffect(() => {
         async function getWeather(lang: Locale) {
             let city = Cities[0]
-            console.log('useeffect', city.Id, lang)
             const data = await OpenWeather(city.Id, lang)
-
-            console.log('ic', data)
 
             setWeather(data)
         }
         getWeather(lang)
     }, [lang])
 
-    console.log('ariff', weather?.main?.temp)
-    return <div>{weather?.main?.temp}</div>
+    return (
+        <div className="ml-12">{`${weather?.name} : ${weather?.main?.temp} °C `}</div>
+    )
 }

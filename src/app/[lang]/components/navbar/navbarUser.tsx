@@ -86,10 +86,9 @@ export function NavbarComp({
                                 </div>
                                 <div className="flex flex-row">
                                     <ThemeChanger />
-                                    <div className="prose prose-xl mx-auto flex flex-row justify-center items-center space-x-2 p-4">
+                                    <div className="prose prose-xl mx-auto flex flex-row justify-around items-center space-x-2 p-4">
                                         <FaEye />
                                         <ViewCounter lang={lang} />
-                                        <Weathernavbar lang={lang} />
                                     </div>
                                 </div>
                                 <div className="hidden sm:ml-6 sm:flex sm:items-center">
@@ -105,6 +104,7 @@ export function NavbarComp({
                                         ></Transition>
                                     </Menu>
                                 </div>
+
                                 <div className="-mr-2 flex items-center sm:hidden">
                                     <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
                                         <span className="sr-only">
