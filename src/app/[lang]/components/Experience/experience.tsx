@@ -4,6 +4,7 @@ import React from 'react'
 import { MdWorkOutline } from 'react-icons/md'
 import { FaSchool } from 'react-icons/fa'
 import { TbTank } from 'react-icons/tb'
+import { JavascriptIcon, NestjsIcon } from '../icons'
 
 function iconSelector(icon: string) {
     switch (icon) {
@@ -18,6 +19,8 @@ function iconSelector(icon: string) {
             return <FaSchool />
     }
 }
+
+let iconStyles = { color: 'red', background: 'black', fontSize: '1.5em' }
 
 export function Experience({ dictionary }: { dictionary: any }) {
     return (
@@ -44,6 +47,8 @@ export function Experience({ dictionary }: { dictionary: any }) {
                                 <div className="text-slate-600">
                                     {t.technologies?.join(', ')}
                                 </div>
+                                <NestjsIcon />
+                                <JavascriptIcon />
                             </div>
                         </div>
                     )
