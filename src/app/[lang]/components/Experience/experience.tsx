@@ -1,10 +1,24 @@
 'use client'
 
-import React from 'react'
+import React, { useRef } from 'react'
 import { MdWorkOutline } from 'react-icons/md'
 import { FaSchool } from 'react-icons/fa'
 import { TbTank } from 'react-icons/tb'
-import { JavascriptIcon, NestjsIcon } from '../icons'
+import {
+    CypressIcon,
+    DjangoIcon,
+    ElasticSearchIcon,
+    GraphqlIcon,
+    JavascriptIcon,
+    JestIcon,
+    NestjsIcon,
+    NextjsIcon,
+    NodejsIcon,
+    PythonIcon,
+    ReactjsIcon,
+    TypescriptIcon,
+} from '../icons'
+import { motion, useInView } from 'framer-motion'
 
 function iconSelector(icon: string) {
     switch (icon) {
@@ -23,6 +37,8 @@ function iconSelector(icon: string) {
 let iconStyles = { color: 'red', background: 'black', fontSize: '1.5em' }
 
 export function Experience({ dictionary }: { dictionary: any }) {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true })
     return (
         <div className=" mt-10">
             <h2 className="self-center text-center">
@@ -47,8 +63,6 @@ export function Experience({ dictionary }: { dictionary: any }) {
                                 <div className="text-slate-600">
                                     {t.technologies?.join(', ')}
                                 </div>
-                                <NestjsIcon />
-                                <JavascriptIcon />
                             </div>
                         </div>
                     )

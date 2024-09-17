@@ -10,13 +10,17 @@ module.exports = {
     ],
     darkMode: 'class',
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                splash: ['var(--font-splash)'],
+            },
+        },
+        variants: {
+            extend: {},
+        },
+        plugins: [
+            require('@tailwindcss/typography'),
+            // ...
+        ],
     },
-    variants: {
-        extend: {},
-    },
-    plugins: [
-        require('@tailwindcss/typography'),
-        // ...
-    ],
-};
+}

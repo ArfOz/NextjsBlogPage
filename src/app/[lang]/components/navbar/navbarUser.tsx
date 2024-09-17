@@ -20,7 +20,7 @@ import { Locale } from 'i18n-config'
 const navigation: Array<Navigate> = [
     // { name: 'todos', href: '/todos' },
     // { name: 'weather', href: '/weather' },
-    { name: 'photos', href: '/photos' },
+    // { name: 'photos', href: '/photos' },
 ]
 
 function classNames(...classes: string[]) {
@@ -45,7 +45,9 @@ export function NavbarComp({
                             <div className="flex">
                                 <div className="flex flex-shrink-0 items-center">
                                     <Link href={`/${lang}`}>
-                                        <FaHome className="hover:text-gray-800 " />
+                                        <p className="font-splash  text-2xl text-black font-semibold">
+                                            {dictionary.name}
+                                        </p>
                                     </Link>
                                 </div>
                                 <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
