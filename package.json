@@ -12,6 +12,7 @@
     "dependencies": {
         "@headlessui/react": "^1.7.16",
         "@heroicons/react": "^2.0.18",
+        "@lottiefiles/react-lottie-player": "^3.5.4",
         "@types/negotiator": "^0.6.1",
         "@types/node": "18.15.3",
         "@types/nodemailer": "^6.4.8",

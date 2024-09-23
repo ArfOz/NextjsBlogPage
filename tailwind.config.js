@@ -14,6 +14,16 @@ module.exports = {
             fontFamily: {
                 splash: ['var(--font-splash)'],
             },
+
+            animation: {
+                'gradient-x': 'gradient-x 15s ease infinite',
+            },
+            keyframes: {
+                'gradient-x': {
+                    '0%, 100%': { 'background-position': 'left' },
+                    '50%': { 'background-position': 'right' },
+                },
+            },
         },
         variants: {
             extend: {},

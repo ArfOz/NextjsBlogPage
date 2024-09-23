@@ -33,6 +33,7 @@ function iconSelector(icon: string) {
             return <FaSchool />
     }
 }
+import { Player, Controls } from '@lottiefiles/react-lottie-player'
 
 let iconStyles = { color: 'red', background: 'black', fontSize: '1.5em' }
 
