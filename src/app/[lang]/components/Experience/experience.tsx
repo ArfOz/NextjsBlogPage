@@ -1,25 +1,16 @@
 'use client'
 
-import React from 'react'
-import { MdWorkOutline } from 'react-icons/md'
-import { FaSchool } from 'react-icons/fa'
-import { TbTank } from 'react-icons/tb'
+import React, { useRef, Component } from 'react'
 
-function iconSelector(icon: string) {
-    switch (icon) {
-        case 'workIcon':
-            return <MdWorkOutline />
-        case 'schoollIcon':
-            return <FaSchool />
+import { Icons, iconSelector } from '../icons'
 
-        case 'armyIcon':
-            return <TbTank />
-        default:
-            return <FaSchool />
-    }
-}
+// import { motion, useInView } from 'framer-motion'
+
+// let iconStyles = { color: 'red', background: 'black', fontSize: '1.5em' }
 
 export function Experience({ dictionary }: { dictionary: any }) {
+    // const ref = useRef(null)
+    // const isInView = useInView(ref, { once: true })
     return (
         <div className=" mt-10">
             <h2 className="self-center text-center">
@@ -41,8 +32,11 @@ export function Experience({ dictionary }: { dictionary: any }) {
                                         {t.years}
                                     </time>
                                 </div>
-                                <div className="text-slate-600">
-                                    {t.technologies?.join(', ')}
+                                <div className="text-slate-600 flex space-x-4">
+                                    {t.technologies.map((tech: string) => {
+                                        const IconComponent = Icons[`${tech}`]
+                                        return IconComponent
+                                    })}
                                 </div>
                             </div>
                         </div>

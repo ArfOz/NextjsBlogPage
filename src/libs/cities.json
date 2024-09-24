@@ -1,16 +1,9 @@
 [
     {
-        "Name": "Kırşehir",
-        "Lat": "39.146078",
-        "Lon": "34.159499",
+        "Name": "Corsier-sur-Vevey",
+        "Lat": "46.4612",
+        "Lon": "6.8433",
         "Details": "family",
-        "Id": 307515
-    },
-    {
-        "Name": "Crissier",
-        "Lat": "46.551869",
-        "Lon": "6.574346",
-        "Details": "mine",
-        "Id": 2661072
+        "Id": 2658145
     }
 ]

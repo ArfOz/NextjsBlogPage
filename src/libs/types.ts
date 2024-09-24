@@ -8,3 +8,12 @@ export interface ImageProps {
     blurDataUrl?: string
     location?: string
 }
+
+export interface CityArray extends Array<CitiesProps> {}
+interface CitiesProps {
+    name: string
+    lat: string
+    lon: string
+    details: string
+    id: number
+}

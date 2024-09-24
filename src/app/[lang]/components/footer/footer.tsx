@@ -3,6 +3,7 @@ import { Locale } from 'i18n-config'
 
 export async function Footer({ lang }: { lang: Locale }): Promise<JSX.Element> {
     const dictionary = await getDictionary(lang)
+
     return (
         <footer
             className="bg-slate-400

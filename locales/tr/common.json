@@ -1,5 +1,5 @@
 {
-    "name": "Arif Özkan",
+    "name": "Arif Özkan ÖZTÜRK",
     "title": "Merhabalar sayfama hoşgeldiniz",
     "navbar": {
         "todos": "Yapılacaklar",
@@ -7,7 +7,7 @@
         "photos": "Fotoğraflar"
     },
     "home": {
-        "context": " Merhabalar ben Arif Özkan. Şu an İsviçre'de yaşıyorum. İsviçreye gelmeden önce Türkiye'de yaklaşık 2 sene boyunca Ekip.co firmasında Full Stack Developer olarak çalıştım. İsviçre'ye geldikten sonra Ekip.co'dan ayrıldım ve birkaç arkadaş bir projeye başladık. Bu projede backend developer ve proje yöneticisi görevlerini yaptım. Şu an B çalışma iznine sahibim. Anlık olarak çalışmayı düşünüyorum. Bu süre zarfında hem projeme devam ediyorum hem de Fransızca kursuna gidiyorum. A2 seviyesinde Fransızcam var ve B1 kursuna gideceğim. <br /> Fransızca Seviyesi: A2 <br />İngilizce Seviyesi: B2(IELTS)",
+        "context": " Merhabalar ben Arif Özkan. Şu an İsviçre'de yaşıyorum. İsviçreye gelmeden önce Türkiye'de yaklaşık 2 sene boyunca Ekip.co firmasında Full Stack Developer olarak çalıştım. İsviçre'ye geldikten sonra Ekip.co'dan ayrıldım ve birkaç arkadaş bir projeye başladık. Bu projede backend developer ve proje yöneticisi görevlerini yaptım. Şu an B çalışma iznine sahibim. Anlık olarak çalışmayı düşünüyorum. Bu süre zarfında hem projeme devam ediyorum hem de Fransızca kursuna gidiyorum. B1 seviyesinde Fransızcam var ve B2 kursuna devam ediyorum. <br /> Fransızca Seviyesi: B1 <br />İngilizce Seviyesi: B2(IELTS)",
         "course_title": "",
         "course_times": "",
         "working_history_title": "Tecrübelerim",
@@ -28,7 +28,7 @@
     "weather": {
         "TR": "Türkiye",
         "CH": "İsviçre",
-        "family": "Ailem burada yaşıyor.",
+        "family": "Ailemle burada yaşıyoruz.",
         "mine": "Ben burada yaşıyorum.",
         "weather_forecast": "Hava Durumu",
         "temp": "Hava sıcaklığı",
@@ -106,21 +106,27 @@
             "company": "Freelance",
             "title": "Full Stack Developer",
             "years": "12/2022 - Günümüz",
-            "technologies": ["Nestjs", "TypeScript", "Nx Monorepo, Nextjs"]
+            "technologies": ["Nestjs", "Typescript", "Nextjs", "NxMonoRepo"]
         },
         {
             "icon": "workIcon",
             "company": "MetaSentez",
             "title": "Full Stack Developer / Proje Yöneticisi",
             "years": "12/2022 - 8/2023",
-            "technologies": ["Nestjs", "TypeScript", "Nx Monorepo"]
+            "technologies": ["Nestjs", "Typescript", "NxMonoRepo"]
         },
         {
             "icon": "workIcon",
             "company": "Clarusway",
             "title": "Clarusway öğrencilerine Mentorluk",
             "years": "10/2021 - 07/2022",
-            "technologies": ["React Js", "Python, Nodejs, Cypress, Javascript"]
+            "technologies": [
+                "Reactjs",
+                "Python",
+                "Nodejs",
+                "Cypress",
+                "Javascript"
+            ]
         },
 
         {
@@ -129,12 +135,12 @@
             "title": "Full Stack Developer",
             "years": "03/2021 - 12/2022",
             "technologies": [
-                "React Js",
+                "Reactjs",
                 "Graphql",
                 "Nestjs",
                 "Jest",
                 "Django",
-                "TypeScript",
+                "Typescript",
                 "Python",
                 "Cypress"
             ]
@@ -146,14 +152,14 @@
             "title": "Full Stack Developer Öğrencisi",
             "years": "05/2020 - 02/2021",
             "technologies": [
-                "React Js",
+                "Reactjs",
                 "Python",
                 "Nodejs",
                 "Javascript",
                 "Django",
                 "HTML",
                 "CSS",
-                "React Native"
+                "ReactNative"
             ]
         }
     ]

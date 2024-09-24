@@ -1,5 +1,5 @@
 {
-    "name": "Arif Özkan",
+    "name": "Arif Özkan ÖZTÜRK",
     "title": "Bonjour Bienvenue sur ma page",
     "navbar": {
         "todos": "Choses à faire",
@@ -7,7 +7,7 @@
         "photos": "Photos"
     },
     "home": {
-        "context": "Bonjour, Je suis Arif Ozkan. Je vis actuellement en Suisse.Avant de venir en Suisse, j'ai travaillé comme Développeur Full Stack chez Ekip.co pendant environ 2 ans en Turquie. J'ai quitté Ekip.co après mon arrivée en Suisse et quelques amis ont lancé un projet. Dans ce projet, J'ai travaillé en tant que développeur backend et chef de projet.Actuellement, J'ai un permis-B. Je pense travailler pour le moment. Pendant ce temps, Je continue mon projet et participe à un cours de français. J'ai un niveau de français A2 et je suivrai le cours B1. <br /> Niveau de français: A2 <br />Niveau d'anglais: B2(IELTS)",
+        "context": "Bonjour, Je suis Arif Ozkan. Je vis actuellement en Suisse.Avant de venir en Suisse, j'ai travaillé comme Développeur Full Stack chez Ekip.co pendant environ 2 ans en Turquie. J'ai quitté Ekip.co après mon arrivée en Suisse et quelques amis ont lancé un projet. Dans ce projet, J'ai travaillé en tant que développeur backend et chef de projet.Actuellement, J'ai un permis-B. Je pense travailler pour le moment. Pendant ce temps, Je continue mon projet et participe à un cours de français. J'ai un niveau de français B1 et je suivrai le cours B2. <br /> Niveau de français: B1 <br />Niveau d'anglais: B2(IELTS)",
         "course_title": "",
         "course_times": "",
         "working_history_title": "Mon Expérience",
@@ -28,7 +28,7 @@
     "weather": {
         "TR": "Turquie",
         "CH": "Suisse",
-        "family": "Ma famille habite ici.",
+        "family": "Nous vivons ici.",
         "mine": "J'habite ici.",
         "weather_forecast": "Prévisions météorologiques",
         "temp": "Température de l'air",
@@ -106,21 +106,27 @@
             "company": "Freelance",
             "title": "Full Stack Developer",
             "years": "12/2022 - Present",
-            "technologies": ["Nestjs", "TypeScript", "Nx Monorepo, Nextjs"]
+            "technologies": ["Nestjs", "Typescript", "Nextjs", "NxMonoRepo"]
         },
         {
             "icon": "workIcon",
             "company": "MetaSentez",
             "title": "Full Stack Developer / Chef de projet",
             "years": "12/2022 - 8/2023",
-            "technologies": ["Nestjs", "TypeScript", "Nx Monorepo"]
+            "technologies": ["Nestjs", "Typescript", "NxMonoRepo"]
         },
         {
             "icon": "workIcon",
             "company": "Clarusway",
             "title": "Mentor pour les étudiants en informatique",
             "years": "10/2021 - 07/2022",
-            "technologies": ["React Js", "Python, Nodejs, Cypress, Javascript"]
+            "technologies": [
+                "Reactjs",
+                "Python",
+                "Nodejs",
+                "Cypress",
+                "Javascript"
+            ]
         },
         {
             "icon": "workIcon",
@@ -128,12 +134,12 @@
             "title": "Full Stack Developer",
             "years": "03/2021 - 12/2022",
             "technologies": [
-                "React Js",
+                "Reactjs",
                 "Graphql",
                 "Nestjs",
                 "Jest",
                 "Django",
-                "TypeScript",
+                "Typescript",
                 "Python",
                 "Cypress"
             ]
@@ -145,21 +151,22 @@
             "title": "Développeur Full Stack étudiant",
             "years": "05/2020 - 02/2021",
             "technologies": [
-                "React Js",
+                "Reactjs",
                 "Python",
                 "Nodejs",
                 "Javascript",
                 "Django",
                 "HTML",
                 "CSS",
-                "React Native"
+                "ReactNative"
             ]
         },
         {
             "icon": "armyIcon",
             "company": "Forces Armées Turques",
-            "title": "Commandant de compagnie-commandant d'équipe",
-            "years": "08/2010 - 08/2019"
+            "title": "Commandant de compagnie/commandant d'équipe",
+            "years": "08/2010 - 08/2019",
+            "technologies": []
         }
     ]
 }

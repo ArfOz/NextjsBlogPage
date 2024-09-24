@@ -12,14 +12,15 @@ import {
     ViewCounter,
     Navigate,
     DictionaryType,
+    Weathernavbar,
 } from '@components/index'
 import { getDictionary } from 'get-dictionary'
 import { Locale } from 'i18n-config'
 
 const navigation: Array<Navigate> = [
     // { name: 'todos', href: '/todos' },
-    { name: 'weather', href: '/weather' },
-    { name: 'photos', href: '/photos' },
+    // { name: 'weather', href: '/weather' },
+    // { name: 'photos', href: '/photos' },
 ]
 
 function classNames(...classes: string[]) {
@@ -44,7 +45,9 @@ export function NavbarComp({
                             <div className="flex">
                                 <div className="flex flex-shrink-0 items-center">
                                     <Link href={`/${lang}`}>
-                                        <FaHome className="hover:text-gray-800 " />
+                                        <p className="font-splash  text-2xl text-black font-semibold">
+                                            {dictionary.name}
+                                        </p>
                                     </Link>
                                 </div>
                                 <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
@@ -85,7 +88,7 @@ export function NavbarComp({
                                 </div>
                                 <div className="flex flex-row">
                                     <ThemeChanger />
-                                    <div className="prose prose-xl mx-auto flex flex-row justify-center items-center space-x-2 p-4">
+                                    <div className="prose prose-xl mx-auto flex flex-row justify-around items-center space-x-2 p-4">
                                         <FaEye />
                                         <ViewCounter lang={lang} />
                                     </div>
@@ -103,6 +106,7 @@ export function NavbarComp({
                                         ></Transition>
                                     </Menu>
                                 </div>
+
                                 <div className="-mr-2 flex items-center sm:hidden">
                                     <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
                                         <span className="sr-only">
