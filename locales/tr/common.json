@@ -106,21 +106,27 @@
             "company": "Freelance",
             "title": "Full Stack Developer",
             "years": "12/2022 - Günümüz",
-            "technologies": ["Nestjs", "TypeScript", "Nx Monorepo, Nextjs"]
+            "technologies": ["Nestjs", "Typescript", "Nextjs", "NxMonoRepo"]
         },
         {
             "icon": "workIcon",
             "company": "MetaSentez",
             "title": "Full Stack Developer / Proje Yöneticisi",
             "years": "12/2022 - 8/2023",
-            "technologies": ["Nestjs", "TypeScript", "Nx Monorepo"]
+            "technologies": ["Nestjs", "Typescript", "NxMonoRepo"]
         },
         {
             "icon": "workIcon",
             "company": "Clarusway",
             "title": "Clarusway öğrencilerine Mentorluk",
             "years": "10/2021 - 07/2022",
-            "technologies": ["React Js", "Python, Nodejs, Cypress, Javascript"]
+            "technologies": [
+                "Reactjs",
+                "Python",
+                "Nodejs",
+                "Cypress",
+                "Javascript"
+            ]
         },
 
         {
@@ -129,12 +135,12 @@
             "title": "Full Stack Developer",
             "years": "03/2021 - 12/2022",
             "technologies": [
-                "React Js",
+                "Reactjs",
                 "Graphql",
                 "Nestjs",
                 "Jest",
                 "Django",
-                "TypeScript",
+                "Typescript",
                 "Python",
                 "Cypress"
             ]
@@ -146,14 +152,14 @@
             "title": "Full Stack Developer Öğrencisi",
             "years": "05/2020 - 02/2021",
             "technologies": [
-                "React Js",
+                "ReactJs",
                 "Python",
                 "Nodejs",
                 "Javascript",
                 "Django",
                 "HTML",
                 "CSS",
-                "React Native"
+                "ReactNative"
             ]
         }
     ]

@@ -1,24 +1,12 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useRef, Component } from 'react'
 import { MdWorkOutline } from 'react-icons/md'
 import { FaSchool } from 'react-icons/fa'
 import { TbTank } from 'react-icons/tb'
-import {
-    CypressIcon,
-    DjangoIcon,
-    ElasticSearchIcon,
-    GraphqlIcon,
-    JavascriptIcon,
-    JestIcon,
-    NestjsIcon,
-    NextjsIcon,
-    NodejsIcon,
-    PythonIcon,
-    ReactjsIcon,
-    TypescriptIcon,
-} from '../icons'
-import { motion, useInView } from 'framer-motion'
+import { Icons } from '../icons'
+
+// import { motion, useInView } from 'framer-motion'
 
 function iconSelector(icon: string) {
     switch (icon) {
@@ -26,20 +14,18 @@ function iconSelector(icon: string) {
             return <MdWorkOutline />
         case 'schoollIcon':
             return <FaSchool />
-
         case 'armyIcon':
             return <TbTank />
         default:
             return <FaSchool />
     }
 }
-import { Player, Controls } from '@lottiefiles/react-lottie-player'
 
-let iconStyles = { color: 'red', background: 'black', fontSize: '1.5em' }
+// let iconStyles = { color: 'red', background: 'black', fontSize: '1.5em' }
 
 export function Experience({ dictionary }: { dictionary: any }) {
-    const ref = useRef(null)
-    const isInView = useInView(ref, { once: true })
+    // const ref = useRef(null)
+    // const isInView = useInView(ref, { once: true })
     return (
         <div className=" mt-10">
             <h2 className="self-center text-center">
@@ -60,9 +46,25 @@ export function Experience({ dictionary }: { dictionary: any }) {
                                     <time className="font-caveat font-medium text-indigo-700">
                                         {t.years}
                                     </time>
-                                </div>
-                                <div className="text-slate-600">
-                                    {t.technologies?.join(', ')}
+
+                                    {t.technologies.map((tech: string) => {
+                                        // const IconComponent = tech?.icon
+                                        console.log(
+                                            'techmap ici',
+                                            tech
+                                            // IconComponent
+                                        )
+
+                                        const IconComponent = Icons[`${tech}`]
+                                        console.log(
+                                            'Iconcomponent',
+                                            IconComponent
+                                        )
+                                        return IconComponent
+                                    })}
+
+                                    {/* <NestjsIcon /> */}
+                                    {/* {<Icons.NestJs />} */}
                                 </div>
                             </div>
                         </div>

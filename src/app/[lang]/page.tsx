@@ -1,13 +1,7 @@
 import { getDictionary } from 'get-dictionary'
 import { Locale } from 'i18n-config'
-import {
-    DeveleoperGif,
-    Experience,
-    MyProfilePic,
-    ReportIncr,
-} from '@components/index'
-import parse from 'html-react-parser'
-import { Controls, Player } from '@lottiefiles/react-lottie-player'
+import { Experience, ReportIncr } from '@components/index'
+
 import { AboutComponent } from './components/about'
 
 export default async function Page({
@@ -21,7 +15,6 @@ export default async function Page({
             <ReportIncr lang={lang} />
             <AboutComponent dictionary={dictionary} />
 
-            {/* <MyProfilePic /> */}
             <Experience dictionary={dictionary} />
         </div>
     )
