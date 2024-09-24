@@ -46,25 +46,12 @@ export function Experience({ dictionary }: { dictionary: any }) {
                                     <time className="font-caveat font-medium text-indigo-700">
                                         {t.years}
                                     </time>
-
+                                </div>
+                                <div className="text-slate-600 flex space-x-4">
                                     {t.technologies.map((tech: string) => {
-                                        // const IconComponent = tech?.icon
-                                        console.log(
-                                            'techmap ici',
-                                            tech
-                                            // IconComponent
-                                        )
-
                                         const IconComponent = Icons[`${tech}`]
-                                        console.log(
-                                            'Iconcomponent',
-                                            IconComponent
-                                        )
                                         return IconComponent
                                     })}
-
-                                    {/* <NestjsIcon /> */}
-                                    {/* {<Icons.NestJs />} */}
                                 </div>
                             </div>
                         </div>
