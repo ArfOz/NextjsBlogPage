@@ -1,25 +1,10 @@
 'use client'
 
 import React, { useRef, Component } from 'react'
-import { MdWorkOutline } from 'react-icons/md'
-import { FaSchool } from 'react-icons/fa'
-import { TbTank } from 'react-icons/tb'
-import { Icons } from '../icons'
+
+import { Icons, iconSelector } from '../icons'
 
 // import { motion, useInView } from 'framer-motion'
-
-function iconSelector(icon: string) {
-    switch (icon) {
-        case 'workIcon':
-            return <MdWorkOutline />
-        case 'schoollIcon':
-            return <FaSchool />
-        case 'armyIcon':
-            return <TbTank />
-        default:
-            return <FaSchool />
-    }
-}
 
 // let iconStyles = { color: 'red', background: 'black', fontSize: '1.5em' }
 

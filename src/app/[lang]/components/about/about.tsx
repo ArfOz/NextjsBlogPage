@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-    DeveleoperGif,
-    Experience,
-    MyProfilePic,
-    ReportIncr,
-} from '@components/index'
+import { DeveleoperGif } from '@components/index'
 import parse from 'html-react-parser'
 
 const AboutComponent = ({ dictionary }: { dictionary: any }) => {

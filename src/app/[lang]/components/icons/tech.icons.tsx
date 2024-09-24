@@ -1,4 +1,7 @@
 import { ReactElement } from 'react'
+import { FaSchool } from 'react-icons/fa'
+import { MdWorkOutline } from 'react-icons/md'
+import { TbTank } from 'react-icons/tb'
 
 const JavascriptIcon = () => {
     return (
@@ -282,4 +285,17 @@ export const Icons: iconInfo = {
     Django: DjangoIcon(),
     ElasticSearch: ElasticSearchIcon(),
     NxMonoRepo: NxMonoRepoIcon(),
+}
+
+export function iconSelector(icon: string) {
+    switch (icon) {
+        case 'workIcon':
+            return <MdWorkOutline />
+        case 'schoollIcon':
+            return <FaSchool />
+        case 'armyIcon':
+            return <TbTank />
+        default:
+            return <FaSchool />
+    }
 }
