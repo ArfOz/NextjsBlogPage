@@ -631,11 +631,7 @@ const DockerIcon = () => {
 
 const GithubIcon = () => {
     return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 128 128"
-            className="h-5 w-5"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
             <g fill="#181616">
                 <path
                     fill-rule="evenodd"
@@ -690,7 +686,13 @@ interface iconInfo {
     [key: string]: ReactElement
 }
 
-export const Icons: iconInfo = {
+export const SvgIcon = (params: string) => {
+    const SvgComp = Icons[`${params}`]
+
+    return <div className="h-5 w-5 hover:opacity-50">{SvgComp}</div>
+}
+
+const Icons: iconInfo = {
     Nestjs: NestjsIcon(),
     Nextjs: NextjsIcon(),
     Javascript: JavascriptIcon(),

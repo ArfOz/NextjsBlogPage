@@ -3,7 +3,7 @@ import { DictionaryType } from '../types'
 
 import React, { useRef, Component } from 'react'
 
-import { Icons, iconSelector } from '../icons'
+import { SvgIcon, iconSelector } from '../icons'
 
 // import { motion, useInView } from 'framer-motion'
 
@@ -40,9 +40,7 @@ export function Experience({
                                 <div>
                                     <div className="text-slate-600 flex space-x-4">
                                         {t.technologies.map((tech: string) => {
-                                            const IconComponent =
-                                                Icons[`${tech}`]
-
+                                            const IconComponent = SvgIcon(tech)
                                             return IconComponent
                                         })}
                                     </div>
