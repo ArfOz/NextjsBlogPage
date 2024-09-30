@@ -1,8 +1,8 @@
 import React from 'react'
-import { DeveleoperGif } from '@components/index'
+import { DeveleoperGif, DictionaryType } from '@components/index'
 import parse from 'html-react-parser'
 
-const AboutComponent = ({ dictionary }: { dictionary: any }) => {
+const AboutComponent = ({ dictionary }: { dictionary: DictionaryType }) => {
     return (
         <div className="container mx-auto p-4">
             <div className="flex flex-col md:flex-row ">
