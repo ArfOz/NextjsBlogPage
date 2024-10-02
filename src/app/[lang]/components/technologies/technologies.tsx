@@ -4,10 +4,10 @@ import { SvgIcon } from '../icons'
 
 const Technologies = ({ techs }: { techs: DictionaryType['technologies'] }) => {
     return (
-        <div className="container mx-auto p-4">
-            <div className="flex flex-col md:flex-row ">
+        <div className="container mx-auto p-4 ">
+            <div className="flex flex-row space-x-8 flex-wrap justify-center items-center space-y-8">
                 {techs.map((tech: string) => {
-                    const IconComponent = SvgIcon(tech) || <div> No Icon</div>
+                    const IconComponent = SvgIcon(tech, true)
                     return IconComponent
                 })}
             </div>

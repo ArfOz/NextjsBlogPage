@@ -17,7 +17,7 @@ export function Experience({
     // const ref = useRef(null)
     // const isInView = useInView(ref, { once: true })
     return (
-        <div className=" mt-10">
+        <div className="container mx-auto p-4">
             <h2 className="self-center text-center">
                 {/* {dictionary['home']['working_history_title']} */}
             </h2>
@@ -37,10 +37,14 @@ export function Experience({
                                         {t.years}
                                     </time>
                                 </div>
-                                <div>
-                                    <div className="text-slate-600 flex space-x-4">
+
+                                <div className="container mx-auto p-4">
+                                    <div className="flex space-x-8 ">
                                         {t.technologies.map((tech: string) => {
-                                            const IconComponent = SvgIcon(tech)
+                                            const IconComponent = SvgIcon(
+                                                tech,
+                                                false
+                                            )
                                             return IconComponent
                                         })}
                                     </div>
