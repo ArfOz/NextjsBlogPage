@@ -189,11 +189,11 @@
         }
     ],
     "technologies": [
-        "Nextjs",
-        "NxMonoRepo",
-        "TailwindCSS",
         "Github",
         "Javascript",
+        "TailwindCSS",
+        "NxMonoRepo",
+        "Nextjs",
         "HTML",
         "CSS",
         "DjangoRest",
