@@ -38,8 +38,8 @@ export function Experience({
                                     </time>
                                 </div>
 
-                                <div className="container mx-auto p-4">
-                                    <div className="flex space-x-8 ">
+                                <div className="container mx-auto">
+                                    <div className="flex space-x-8 content-center ">
                                         {t.technologies.map((tech: string) => {
                                             const IconComponent = SvgIcon(
                                                 tech,

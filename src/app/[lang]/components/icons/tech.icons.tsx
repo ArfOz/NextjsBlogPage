@@ -597,11 +597,11 @@ export const SvgIcon = (params: string, big: boolean) => {
     const SvgComp = Icons[`${params}`]
 
     return (
-        <div className="relative flex flex-col items-center group/icon">
+        <div className="relative flex flex-col group/icon ">
             <div
                 className={`${
                     big ? 'h-10 w-10' : 'h-5 w-5'
-                }   focus:outline-none relative`}
+                }   focus:outline-none relative `}
             >
                 {SvgComp}
             </div>
