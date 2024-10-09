@@ -31,7 +31,13 @@ export interface DictionaryType {
         working_history: string
     }
     experience: Experience[]
-    technologies: string[]
+    technologies: {
+        title: string
+        answer: string
+        qualities: string[]
+        context: string
+        techs: string[]
+    }
 }
 
 export type Country = 'TR' | 'CH'

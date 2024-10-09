@@ -14,7 +14,7 @@ export default async function Page({
         <div className="flex flex-col p-4 mb-24 w-full ">
             <ReportIncr lang={lang} />
             <AboutComponent dictionary={dictionary} />
-            <Technologies techs={dictionary['technologies']} />
+            <Technologies technologies={dictionary['technologies']} />
             <Experience experience={dictionary['experience']} />
         </div>
     )

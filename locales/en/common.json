@@ -171,27 +171,32 @@
         }
     ],
 
-    "technologies": [
-        "Nextjs",
-        "NxMonoRepo",
-        "TailwindCSS",
-        "Github",
-        "Javascript",
-        "HTML",
-        "CSS",
-        "DjangoRest",
-        "Graphql",
-        "Nestjs",
-        "Jest",
-        "Django",
-        "Typescript",
-        "Python",
-        "Cypress",
-        "Postgresql",
-        "Firebase",
-        "Docker",
-        "Postman",
-        "Reactjs",
-        "Nodejs"
-    ]
+    "technologies": {
+        "title": "Who am I?",
+        "answer": "Dedicated Full Stack Developer with a passion for exploring diverse technologies",
+        "qualities": [
+            "Experience in building robust and user-friendly applications using Nx Monorepo, NestJS, Tailwind CSS, Next.js, Graphql, and PostgreSQL.",
+            "Skilled in writing end-to-end tests with Cypress.",
+            "Problem solving, communication, eagerness to learn "
+        ],
+        "context": "Full Stack Development",
+        "techs": [
+            "Javascript",
+            "Typescript",
+            "Nestjs",
+            "Nextjs",
+            "Reactjs",
+            "Nodejs",
+            "Github",
+            "TailwindCSS",
+            "NxMonoRepo",
+            "Graphql",
+            "Jest",
+            "Python",
+            "Cypress",
+            "Postgresql",
+            "Firebase",
+            "Postman"
+        ]
+    }
 }
