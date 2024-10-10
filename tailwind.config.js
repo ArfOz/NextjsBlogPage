@@ -27,6 +27,7 @@ module.exports = {
         },
         variants: {
             extend: {},
+            fill: ['hover', 'focus'],
         },
         plugins: [
             require('@tailwindcss/typography'),
