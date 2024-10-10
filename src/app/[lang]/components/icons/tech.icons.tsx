@@ -594,7 +594,9 @@ export const SvgIcon = (params: string, big: boolean) => {
     return (
         <div
             className={`${
-                big ? 'h-10 w-10 mx-5 my-2' : 'h-5 w-5 mx-2'
+                big
+                    ? 'h-14 w-14 mx-5 my-2 rounded-full p-3 bg-white'
+                    : 'h-5 w-5 mx-2'
             }   focus:outline-none relative  group/icon hover:scale-110 `}
         >
             {SvgComp}
