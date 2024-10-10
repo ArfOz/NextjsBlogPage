@@ -189,9 +189,13 @@
         }
     ],
     "technologies": {
-        "title": "Who am I?",
-        "answer": "Dedicated Full Stack Developer with a passion for exploring diverse technologies",
-        "qualities": "<li>Experience in building robust and user-friendly applications using Nx Monorepo, NestJS, Tailwind CSS, Next.js, and PostgreSQL.</li> <li>Proficient in Full Stack Development with technologies like Single SPA, Monorepo, NestJS, Graphql, SCSS, NextJS, PostgreSQL, Docker.</li> <li>Skilled in writing end-to-end tests with Cypress and Playwright to ensure the scalability and quality of applications.</li>",
+        "title": "Ben kimim ?",
+        "answer": "Çeşitli teknolojileri keşfetme tutkusuna sahip Full Stack Developer",
+        "qualities": [
+            "Nx Monorepo, NestJS, Tailwind CSS, Next.js, Graphql, and PostgreSQL gibi araçları kullanarak kullanıcı dostu uygulamalar ortaya çıkarmak.",
+            "Cypress ile uçtan uca testler yazma becerisine sahip.",
+            "Problem çözme, iletişim, öğrenme isteği, liderlik, takım yönetimi"
+        ],
         "context": "Full Stack Development",
         "techs": [
             "Javascript",

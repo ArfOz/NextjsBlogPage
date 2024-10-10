@@ -7,7 +7,7 @@ const AboutComponent = ({ dictionary }: { dictionary: DictionaryType }) => {
         <div className="container mx-auto p-4 ">
             <div className="flex flex-col md:flex-row">
                 <div className="flex-1">
-                    <h1 className="text-center">{dictionary['title']}</h1>
+                    {/* <h1 className="text-center">{dictionary['title']}</h1> */}
                     <p className="text-justify  first-letter:text-5xl first-letter:font-bold first-letter:mr-1 first-letter:float-left">
                         {parse(dictionary['home']['context'])}
                     </p>

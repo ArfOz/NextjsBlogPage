@@ -18,10 +18,10 @@ const Technologies = ({
                 <p>{technologies['answer']}</p>
             </div>
             <div className="container mx-auto p-4 flex flex-col md:flex-row">
-                <div className="flex-1 ">
+                <div className="flex-1">
                     {technologies.qualities.map((tech: string) => {
                         return (
-                            <div className="flex flex-col ">
+                            <div className="flex ">
                                 <IoMdFlash className="fill-yellow-400 h-8 w-8 flex-none" />
                                 <p className="grow">{tech}</p>
                             </div>
