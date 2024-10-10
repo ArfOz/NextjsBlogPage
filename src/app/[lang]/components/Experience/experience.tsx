@@ -28,9 +28,9 @@ export function Experience({
                             <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white group-[.is-active]:bg-red-700 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                                 {iconSelector(t.icon)}
                             </div>
-                            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-emerald-200 dark:bg-sky-300 p-4 rounded border border-slate-200 shadow">
+                            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-zinc-200 dark:bg-zinc-900 p-4 rounded border border-slate-200 shadow">
                                 <div className="flex items-center justify-between space-x-2 mb-1">
-                                    <div className="font-bold text-slate-900">
+                                    <div className="font-bold text-slate-900 dark:text-slate-200">
                                         {t.title} - {t.company}
                                     </div>
                                     <time className="font-caveat font-medium text-indigo-700">
