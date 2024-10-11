@@ -106,14 +106,30 @@
             "company": "Freelance",
             "title": "Full Stack Developer",
             "years": "12/2022 - Günümüz",
-            "technologies": ["Nestjs", "Typescript", "Nextjs", "NxMonoRepo"]
+            "technologies": [
+                "Nestjs",
+                "Typescript",
+                "Nextjs",
+                "NxMonoRepo",
+                "TailwindCSS",
+                "Github"
+            ]
         },
         {
             "icon": "workIcon",
             "company": "MetaSentez",
             "title": "Full Stack Developer / Proje Yöneticisi",
             "years": "12/2022 - 8/2023",
-            "technologies": ["Nestjs", "Typescript", "NxMonoRepo"]
+            "technologies": [
+                "Nestjs",
+                "Typescript",
+                "NxMonoRepo",
+                "Postgresql",
+                "MySQL",
+                "MongoDB",
+                "Github",
+                "Postman"
+            ]
         },
         {
             "icon": "workIcon",
@@ -125,7 +141,9 @@
                 "Python",
                 "Nodejs",
                 "Cypress",
-                "Javascript"
+                "Javascript",
+                "TailwindCSS",
+                "Github"
             ]
         },
 
@@ -142,7 +160,12 @@
                 "Django",
                 "Typescript",
                 "Python",
-                "Cypress"
+                "Cypress",
+                "Postgresql",
+                "Firebase",
+                "Docker",
+                "Github",
+                "Postman"
             ]
         },
 
@@ -159,8 +182,38 @@
                 "Django",
                 "HTML",
                 "CSS",
-                "ReactNative"
+                "ReactNative",
+                "DjangoRest",
+                "Github"
             ]
         }
-    ]
+    ],
+    "technologies": {
+        "title": "Ben kimim ?",
+        "answer": "Çeşitli teknolojileri keşfetme tutkusuna sahip Full Stack Developer",
+        "qualities": [
+            "Nx Monorepo, NestJS, Tailwind CSS, Next.js, Graphql, and PostgreSQL gibi araçları kullanarak kullanıcı dostu uygulamalar ortaya çıkarmak.",
+            "Cypress ile uçtan uca testler yazma becerisine sahip.",
+            "Problem çözme, iletişim, öğrenme isteği, liderlik, takım yönetimi"
+        ],
+        "context": "Full Stack Development",
+        "techs": [
+            "Javascript",
+            "Typescript",
+            "Nestjs",
+            "Nextjs",
+            "Reactjs",
+            "Nodejs",
+            "Github",
+            "TailwindCSS",
+            "NxMonoRepo",
+            "Graphql",
+            "Jest",
+            "Python",
+            "Cypress",
+            "Postgresql",
+            "Firebase",
+            "Postman"
+        ]
+    }
 }
