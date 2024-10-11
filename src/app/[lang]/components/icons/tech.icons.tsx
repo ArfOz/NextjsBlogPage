@@ -615,7 +615,13 @@ export const SvgIcon = (params: string, big: boolean) => {
         >
             {SvgComp}
             {/* Hover ile yazı */}
-            <span className="absolute  bottom-[-2rem] text-gray-600 bg-gray-100 text-sm px-2 py-1 rounded opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300 text-center items-center left-1/2 transform -translate-x-1/2">
+            <span
+                className={`${
+                    big
+                        ? 'bottom-[-2rem] text-sm px-2 py-1'
+                        : 'bottom-[-1rem] text-xs px-1'
+                } absolute  text-gray-600 bg-gray-100  rounded opacity-0 group-hover/icon:opacity-100 transition-opacity duration-300 text-center items-center left-1/2 transform -translate-x-1/2`}
+            >
                 {params}
             </span>
         </div>

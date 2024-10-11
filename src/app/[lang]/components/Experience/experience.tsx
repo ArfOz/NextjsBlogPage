@@ -38,16 +38,14 @@ export function Experience({
                                     </time>
                                 </div>
 
-                                <div className="container mx-auto">
-                                    <div className="flex space-x-8 content-center grow">
-                                        {t.technologies.map((tech: string) => {
-                                            const IconComponent = SvgIcon(
-                                                tech,
-                                                false
-                                            )
-                                            return IconComponent
-                                        })}
-                                    </div>
+                                <div className="flex flex-row flex-wrap place-items-center flex-1 mt-2 gap-y-6">
+                                    {t.technologies.map((tech: string) => {
+                                        const IconComponent = SvgIcon(
+                                            tech,
+                                            false
+                                        )
+                                        return IconComponent
+                                    })}
                                 </div>
                             </div>
                         </div>
