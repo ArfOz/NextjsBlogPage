@@ -33,13 +33,13 @@ export function Experience({
                                     <div className="font-bold text-slate-900 dark:text-slate-200">
                                         {t.title} - {t.company}
                                     </div>
-                                    <time className="font-caveat font-medium text-indigo-700">
+                                    <time className="font-caveat font-medium text-indigo-700 dark:text-lime-200">
                                         {t.years}
                                     </time>
                                 </div>
 
                                 <div className="container mx-auto">
-                                    <div className="flex space-x-8 content-center ">
+                                    <div className="flex space-x-8 content-center grow">
                                         {t.technologies.map((tech: string) => {
                                             const IconComponent = SvgIcon(
                                                 tech,
