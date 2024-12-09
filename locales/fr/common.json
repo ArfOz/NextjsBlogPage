@@ -189,8 +189,8 @@
         {
             "icon": "armyIcon",
             "company": "Forces Armées Turques",
-            "title": "Commandant de compagnie/commandant d'équipe",
-            "years": "08/2010 - 08/2019",
+            "title": "Commandant de compagnie / Commandant d'équipe",
+            "years": "08/2010 - 03/2021",
             "technologies": []
         }
     ],
@@ -220,6 +220,7 @@
             "Postgresql",
             "Firebase",
             "Postman"
-        ]
+        ],
+        "download_CV": "Télécharger CV"
     }
 }
