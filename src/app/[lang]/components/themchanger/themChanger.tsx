@@ -1,20 +1,20 @@
-'use client';
-import { useTheme } from 'next-themes';
-import { SunIcon, MoonIcon } from '@heroicons/react/24/solid';
-import { useEffect, useState } from 'react';
+'use client'
+import { useTheme } from 'next-themes'
+import { SunIcon, MoonIcon } from '@heroicons/react/24/solid'
+import { useEffect, useState } from 'react'
 
 export function ThemeChanger() {
-    const { systemTheme, theme, setTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
+    const { systemTheme, theme, setTheme } = useTheme()
+    const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
-        setMounted(true);
-    }, []);
+        setMounted(true)
+    }, [])
 
     const renderThemeChanger = () => {
-        if (!mounted) return null;
+        if (!mounted) return null
 
-        const currentTheme = theme === 'system' ? systemTheme : theme;
+        const currentTheme = theme === 'system' ? systemTheme : theme
 
         if (currentTheme === 'dark') {
             return (
@@ -23,7 +23,7 @@ export function ThemeChanger() {
                     role="button"
                     onClick={() => setTheme('light')}
                 />
-            );
+            )
         } else {
             return (
                 <MoonIcon
@@ -31,18 +31,9 @@ export function ThemeChanger() {
                     role="button"
                     onClick={() => setTheme('dark')}
                 />
-            );
+            )
         }
-    };
+    }
 
-    return (
-        <header className="h-15 shadow-sm dark:border-gray-700">
-            <div className="container  px-4 sm:px-6 py-4 flex justify-between items-center">
-                {/* Logo */}
-                {/* <Logo /> */}
-
-                {renderThemeChanger()}
-            </div>
-        </header>
-    );
+    return <div className="container  py-4 flex">{renderThemeChanger()}</div>
 }

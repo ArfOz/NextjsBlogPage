@@ -1,6 +1,7 @@
 import React from 'react'
-import { DeveleoperGif, DictionaryType } from '@components/index'
+import { DeveloperGif, DictionaryType } from '@components/index'
 import parse from 'html-react-parser'
+import DownloadButton from '../downloadcv/cv'
 
 const AboutComponent = ({ dictionary }: { dictionary: DictionaryType }) => {
     return (
@@ -17,7 +18,7 @@ const AboutComponent = ({ dictionary }: { dictionary: DictionaryType }) => {
                     <ul>{parse(dictionary['home']['course_times'])}</ul>
                 </div>
                 <div className="flex-1 ">
-                    <DeveleoperGif />
+                    <DeveloperGif />
                 </div>
             </div>
         </div>

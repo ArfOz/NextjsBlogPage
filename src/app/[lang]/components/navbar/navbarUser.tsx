@@ -45,12 +45,12 @@ export function NavbarComp({
                             <div className="flex">
                                 <div className="flex flex-shrink-0 items-center">
                                     <Link href={`/${lang}`}>
-                                        <p className="font-splash  text-2xl text-black font-semibold">
+                                        <p className="font-splash text-2xl text-black font-semibold">
                                             {dictionary.name}
                                         </p>
                                     </Link>
                                 </div>
-                                <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
+                                <div className="hidden min-[720px]:-my-px sm:ml-6 sm:flex sm:space-x-8 grow">
                                     {navigation.map((item) => (
                                         <a
                                             key={item.name}
@@ -73,8 +73,8 @@ export function NavbarComp({
                                 </div>
                             </div>
 
-                            <div className="flex">
-                                <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8 items-center">
+                            <div className="flex grow-0 ">
+                                <div className="hidden  min-[720px]:flex sm:space-x-4 items-center ">
                                     <Link href="https://github.com/ArfOz/">
                                         <FaGithub />
                                     </Link>
@@ -84,16 +84,17 @@ export function NavbarComp({
                                     <Link href="https://www.linkedin.com/in/arifozkanozturk/">
                                         <FaLinkedin />
                                     </Link>
-                                    <LanguageSwitcher lang={lang} />
-                                </div>
-                                <div className="flex flex-row">
                                     <ThemeChanger />
-                                    <div className="prose prose-xl mx-auto flex flex-row justify-around items-center space-x-2 p-4">
+
+                                    <div className=" mx-auto flex flex-row justify-around items-center space-x-2">
                                         <FaEye />
                                         <ViewCounter lang={lang} />
                                     </div>
+
+                                    <LanguageSwitcher lang={lang} />
                                 </div>
-                                <div className="hidden sm:ml-6 sm:flex sm:items-center">
+
+                                <div className="hidden min-[720px]:ml-6 sm:flex sm:items-center">
                                     <Menu as="div" className="relative ml-3">
                                         <Transition
                                             as={Fragment}
@@ -107,7 +108,7 @@ export function NavbarComp({
                                     </Menu>
                                 </div>
 
-                                <div className="-mr-2 flex items-center sm:hidden">
+                                <div className="-mr-2 flex items-center min-[720px]:hidden">
                                     <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
                                         <span className="sr-only">
                                             Open main menu
@@ -129,8 +130,8 @@ export function NavbarComp({
                         </div>
                     </div>
 
-                    <Disclosure.Panel className="sm:hidden">
-                        <div className="space-y-1 pt-2 flex-col">
+                    <Disclosure.Panel className="min-[720px]:hidden">
+                        <div className="flex space-y-1 pt-2 max-[380px]:flex-col grow min-[380px]:flex:row">
                             {navigation.map((item: Navigate) => (
                                 <Disclosure.Button
                                     key={item.name}
@@ -151,7 +152,7 @@ export function NavbarComp({
                                     {dictionary.navbar[item.name]}
                                 </Disclosure.Button>
                             ))}
-                            <div className="flex flex-row py-2 px-4 space-x-4">
+                            <div className="flex flex:col py-2 min-[400px]:px-4 max-[400px]:px-2 space-x-4 justify-center items-center">
                                 <Link href="https://github.com/ArfOz/">
                                     <FaGithub />
                                 </Link>
@@ -162,8 +163,14 @@ export function NavbarComp({
                                     <FaLinkedin />
                                 </Link>
                             </div>
-
-                            <LanguageSwitcher lang={lang} />
+                            <div className="flex flex:col py-2 min-[400px]:px-4 max-[400px]:px-2 space-x-4 justify-center items-center">
+                                <ThemeChanger />
+                                <div className="prose prose-xl mx-auto flex flex-row justify-around items-center space-x-2">
+                                    <FaEye />
+                                    <ViewCounter lang={lang} />
+                                </div>
+                                <LanguageSwitcher lang={lang} />
+                            </div>
                         </div>
                     </Disclosure.Panel>
                 </div>
