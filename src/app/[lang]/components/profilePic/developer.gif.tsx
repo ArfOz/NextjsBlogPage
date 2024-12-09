@@ -1,14 +1,14 @@
 'use client'
-import { Controls, Player } from '@lottiefiles/react-lottie-player'
 import React from 'react'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 
-export function DeveleoperGif() {
+const DeveloperGif = () => {
     return (
-        <Player
-            autoplay
+        <DotLottieReact
+            src="https://lottie.host/405c262f-0a8a-438c-a804-55d0d7865d54/HIyc7esJou.lottie"
             loop
-            src="https://lottie.host/60a62152-2d03-4b10-9a60-0339deb5f26a/MkPZbo92Ck.json"
-            style={{ height: '300px', width: '300px' }}
-        ></Player>
+            autoplay
+        />
     )
 }
+export { DeveloperGif }

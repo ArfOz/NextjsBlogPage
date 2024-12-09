@@ -37,6 +37,7 @@ export interface DictionaryType {
         qualities: string[]
         context: string
         techs: string[]
+        download_CV: string
     }
 }
 

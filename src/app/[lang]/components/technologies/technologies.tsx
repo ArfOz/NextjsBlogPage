@@ -3,10 +3,14 @@ import { DictionaryType } from '../types'
 import { SvgIcon } from '../icons'
 import parse from 'html-react-parser'
 import { IoMdFlash } from 'react-icons/io'
+import DownloadButton from '../downloadcv/cv'
+// import { DownloadCVButton } from '../downloadcv'
 
 const Technologies = ({
+    lang,
     technologies,
 }: {
+    lang: string
     technologies: DictionaryType['technologies']
 }) => {
     return (
@@ -27,6 +31,10 @@ const Technologies = ({
                             </div>
                         )
                     })}
+                    <DownloadButton
+                        lang={lang}
+                        download={technologies.download_CV}
+                    />
                 </div>
                 <div className="flex flex-row flex-wrap place-content-center place-items-center flex-1 gap-y-6 ">
                     {technologies.techs.map((tech: string) => {
