@@ -103,9 +103,27 @@
     "experience": [
         {
             "icon": "workIcon",
+            "company": "Association Mon Eco Pote - My Eco Best Friend",
+            "title": "Développeur Full Stack",
+            "years": "12/2024 - Aujourd'hui",
+            "technologies": [
+                "Nestjs",
+                "Nextjs",
+                "TailwindCSS",
+                "Typescript",
+                "NxMonoRepo",
+                "Postgresql",
+                "MySQL",
+                "Microsoft Azure",
+                "Github",
+                "Postman"
+            ]
+        },
+        {
+            "icon": "workIcon",
             "company": "Freelance",
-            "title": "Full Stack Developer",
-            "years": "12/2022 - Present",
+            "title": "Développeur Full Stack",
+            "years": "12/2022 - Aujourd'hui",
             "technologies": [
                 "Nestjs",
                 "Typescript",
@@ -118,7 +136,7 @@
         {
             "icon": "workIcon",
             "company": "MetaSentez",
-            "title": "Full Stack Developer / Chef de projet",
+            "title": "Développeur Full Stack / Chef de projet",
             "years": "12/2022 - 8/2023",
             "technologies": [
                 "Nestjs",
@@ -149,7 +167,7 @@
         {
             "icon": "workIcon",
             "company": "Ekip.co",
-            "title": "Full Stack Developer",
+            "title": "Développeur Full Stack",
             "years": "03/2021 - 12/2022",
             "technologies": [
                 "Reactjs",
@@ -167,7 +185,6 @@
                 "Postman"
             ]
         },
-
         {
             "icon": "schoolIcon",
             "company": "Clarusway",
@@ -219,7 +236,10 @@
             "Cypress",
             "Postgresql",
             "Firebase",
-            "Postman"
+            "Postman",
+            "Docker",
+            "MySQL",
+            "MicrosoftAzure"
         ],
         "download_CV": "Télécharger CV"
     }

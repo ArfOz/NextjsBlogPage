@@ -103,6 +103,24 @@
     "experience": [
         {
             "icon": "workIcon",
+            "company": "Association Mon Eco Pote - My Eco Best Friend",
+            "title": "Full Stack Developer",
+            "years": "12/2024 - Present",
+            "technologies": [
+                "Nestjs",
+                "Nextjs",
+                "TailwindCSS",
+                "Typescript",
+                "NxMonoRepo",
+                "Postgresql",
+                "MySQL",
+                "Microsoft Azure",
+                "Github",
+                "Postman"
+            ]
+        },
+        {
+            "icon": "workIcon",
             "company": "Freelance",
             "title": "Full Stack Developer",
             "years": "12/2022 - Present",
@@ -221,7 +239,10 @@
             "Cypress",
             "Postgresql",
             "Firebase",
-            "Postman"
+            "Postman",
+            "Docker",
+            "MySQL",
+            "MicrosoftAzure"
         ],
         "download_CV": "Download CV"
     }
