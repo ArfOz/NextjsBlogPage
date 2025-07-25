@@ -1,11 +1,10 @@
 import React from 'react'
 import { DictionaryType } from '../types'
 import { SvgIcon } from '../icons'
-import parse from 'html-react-parser'
 import { IoMdFlash } from 'react-icons/io'
 import DownloadButton from '../downloadcv/cv'
 
-const Technologies = ({
+export const Technologies = ({
     lang,
     technologies,
 }: {
@@ -74,29 +73,36 @@ const Technologies = ({
                     <h3 className="text-2xl font-bold text-purple-400 neon-text mb-6 font-['Orbitron']">
                         TECH STACK
                     </h3>
-                    <div className="tech-grid">
+                    <div className="tech-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10 place-items-center">
                         {technologies.techs.map(
                             (tech: string, index: number) => {
                                 const IconComponent = SvgIcon(tech, true)
                                 return (
                                     <div
                                         key={index}
-                                        className="tech-icon group relative overflow-visible"
+                                        className="tech-icon group relative flex flex-col items-center overflow-visible pb-8"
                                         style={{
                                             animationDelay: `${index * 0.1}s`,
                                         }}
                                         title={tech}
                                     >
-                                        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                        <div className="relative z-10 flex items-center justify-center">
+                                        {/* Beyaz yuvarlak arka plan içinde SvgIcon */}
+                                        <span className="text-6xl flex items-center justify-center w-full h-full">
                                             {IconComponent}
-                                        </div>
+                                        </span>
+
                                         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
 
                                         {/* Custom Tooltip */}
-                                        <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black/90 text-cyan-300 px-3 py-1 rounded-lg text-sm font-medium border border-cyan-500/30 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap z-50">
+                                        <div
+                                            className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-black/90 text-cyan-300 px-3 py-1 rounded-lg text-sm font-medium border border-cyan-500/30 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap z-50"
+                                            style={{
+                                                zIndex: 50,
+                                                minWidth: 'max-content',
+                                            }}
+                                        >
                                             {tech}
-                                            <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-black/90"></div>
+                                            <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 border-4 border-transparent border-b-black/90"></div>
                                         </div>
                                     </div>
                                 )
@@ -128,4 +134,3 @@ const Technologies = ({
         </div>
     )
 }
-export { Technologies }

@@ -1,6 +1,6 @@
 import { getDictionary } from 'get-dictionary'
 import { AboutComponent } from './components/about'
-import { Technologies } from './components/technologies'
+import { Technologies } from './components'
 import { Locale } from 'i18n-config'
 import {
     DictionaryType,
