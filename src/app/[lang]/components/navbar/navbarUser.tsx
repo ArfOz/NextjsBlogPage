@@ -37,7 +37,10 @@ export function NavbarComp({
     const pathname = usePathname()
 
     return (
-        <Disclosure as="nav" className="bg-slate-400 shadow-sm">
+        <Disclosure
+            as="nav"
+            className="futuristic-card fixed top-0 inset-x-0 z-40 border-b border-cyan-500/30 backdrop-blur-md bg-black/20"
+        >
             {({ open }) => (
                 <div>
                     <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
@@ -45,7 +48,7 @@ export function NavbarComp({
                             <div className="flex">
                                 <div className="flex flex-shrink-0 items-center">
                                     <Link href={`/${lang}`}>
-                                        <p className="font-splash text-2xl text-black font-semibold">
+                                        <p className="font-splash text-2xl neon-text-pink font-semibold">
                                             {dictionary.name}
                                         </p>
                                     </Link>
@@ -57,8 +60,8 @@ export function NavbarComp({
                                             href={`/${lang}${item.href}`}
                                             className={classNames(
                                                 pathname === item.href
-                                                    ? 'border-slate-500 text-gray-900'
-                                                    : 'border-transparent dark:text-gray-800 hover:text-gray-500 hover:border-gray-300',
+                                                    ? 'border-cyan-500 text-cyan-300 neon-text'
+                                                    : 'border-transparent text-cyan-200 hover:text-cyan-100 hover:border-cyan-400 transition-all duration-300',
                                                 'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
                                             )}
                                             aria-current={
@@ -73,25 +76,38 @@ export function NavbarComp({
                                 </div>
                             </div>
 
-                            <div className="flex grow-0 ">
-                                <div className="hidden  min-[720px]:flex sm:space-x-4 items-center ">
-                                    <Link href="https://github.com/ArfOz/">
-                                        <FaGithub />
+                            <div className="flex grow-0">
+                                <div className="hidden min-[720px]:flex sm:space-x-4 items-center">
+                                    <Link
+                                        href="https://github.com/ArfOz/"
+                                        className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 hover:scale-110 transform"
+                                    >
+                                        <FaGithub size={20} />
                                     </Link>
-                                    <Link href="https://medium.com/@arfoz1245">
-                                        <FaMedium />
+                                    <Link
+                                        href="https://medium.com/@arfoz1245"
+                                        className="text-purple-400 hover:text-purple-200 transition-colors duration-300 hover:scale-110 transform"
+                                    >
+                                        <FaMedium size={20} />
                                     </Link>
-                                    <Link href="https://www.linkedin.com/in/arifozkanozturk/">
-                                        <FaLinkedin />
+                                    <Link
+                                        href="https://www.linkedin.com/in/arifozkanozturk/"
+                                        className="text-blue-400 hover:text-blue-200 transition-colors duration-300 hover:scale-110 transform"
+                                    >
+                                        <FaLinkedin size={20} />
                                     </Link>
-                                    <ThemeChanger />
+                                    <div className="border-l border-cyan-500/30 pl-4">
+                                        <ThemeChanger />
+                                    </div>
 
-                                    <div className=" mx-auto flex flex-row justify-around items-center space-x-2">
-                                        <FaEye />
+                                    <div className="mx-auto flex flex-row justify-around items-center space-x-2 text-cyan-300">
+                                        <FaEye className="neon-text" />
                                         <ViewCounter lang={lang} />
                                     </div>
 
-                                    <LanguageSwitcher lang={lang} />
+                                    <div className="border-l border-cyan-500/30 pl-4">
+                                        <LanguageSwitcher lang={lang} />
+                                    </div>
                                 </div>
 
                                 <div className="hidden min-[720px]:ml-6 sm:flex sm:items-center">
@@ -109,7 +125,7 @@ export function NavbarComp({
                                 </div>
 
                                 <div className="-mr-2 flex items-center min-[720px]:hidden">
-                                    <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
+                                    <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-black/40 p-2 text-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-100 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black border border-cyan-500/30 transition-all duration-300">
                                         <span className="sr-only">
                                             Open main menu
                                         </span>
@@ -130,7 +146,7 @@ export function NavbarComp({
                         </div>
                     </div>
 
-                    <Disclosure.Panel className="min-[720px]:hidden">
+                    <Disclosure.Panel className="min-[720px]:hidden bg-black/40 backdrop-blur-md border-t border-cyan-500/30">
                         <div className="flex space-y-1 pt-2 max-[380px]:flex-col grow min-[380px]:flex:row">
                             {navigation.map((item: Navigate) => (
                                 <Disclosure.Button
@@ -139,8 +155,8 @@ export function NavbarComp({
                                     href={`/${lang}${item.href}`}
                                     className={classNames(
                                         pathname === item.href
-                                            ? 'bg-slate-50 border-slate-500 text-slate-700'
-                                            : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800',
+                                            ? 'bg-cyan-500/20 border-cyan-500 text-cyan-300 neon-text'
+                                            : 'border-transparent text-cyan-200 hover:bg-cyan-500/10 hover:border-cyan-400 hover:text-cyan-100 transition-all duration-300',
                                         'block pl-3 pr-4 py-2 border-l-4 text-base font-medium'
                                     )}
                                     aria-current={
@@ -152,21 +168,30 @@ export function NavbarComp({
                                     {dictionary.navbar[item.name]}
                                 </Disclosure.Button>
                             ))}
-                            <div className="flex flex:col py-2 min-[400px]:px-4 max-[400px]:px-2 space-x-4 justify-center items-center">
-                                <Link href="https://github.com/ArfOz/">
-                                    <FaGithub />
+                            <div className="flex flex:col py-2 min-[400px]:px-4 max-[400px]:px-2 space-x-4 justify-center items-center border-t border-cyan-500/30">
+                                <Link
+                                    href="https://github.com/ArfOz/"
+                                    className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 hover:scale-110 transform"
+                                >
+                                    <FaGithub size={20} />
                                 </Link>
-                                <Link href="https://medium.com/@arfoz1245">
-                                    <FaMedium />
+                                <Link
+                                    href="https://medium.com/@arfoz1245"
+                                    className="text-purple-400 hover:text-purple-200 transition-colors duration-300 hover:scale-110 transform"
+                                >
+                                    <FaMedium size={20} />
                                 </Link>
-                                <Link href="https://www.linkedin.com/in/arifozkanozturk/">
-                                    <FaLinkedin />
+                                <Link
+                                    href="https://www.linkedin.com/in/arifozkanozturk/"
+                                    className="text-blue-400 hover:text-blue-200 transition-colors duration-300 hover:scale-110 transform"
+                                >
+                                    <FaLinkedin size={20} />
                                 </Link>
                             </div>
-                            <div className="flex flex:col py-2 min-[400px]:px-4 max-[400px]:px-2 space-x-4 justify-center items-center">
+                            <div className="flex flex:col py-2 min-[400px]:px-4 max-[400px]:px-2 space-x-4 justify-center items-center border-t border-cyan-500/30">
                                 <ThemeChanger />
-                                <div className="prose prose-xl mx-auto flex flex-row justify-around items-center space-x-2">
-                                    <FaEye />
+                                <div className="prose prose-xl mx-auto flex flex-row justify-around items-center space-x-2 text-cyan-300">
+                                    <FaEye className="neon-text" />
                                     <ViewCounter lang={lang} />
                                 </div>
                                 <LanguageSwitcher lang={lang} />
