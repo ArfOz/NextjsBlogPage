@@ -626,7 +626,7 @@ export const SvgIcon = (params: string, big: boolean) => {
             className={`flex items-center justify-center ${
                 big
                     ? 'h-14 w-14 mx-5 my-2 rounded-full p-3 bg-white'
-                    : 'h-6 w-6 mx-2 rounded-full bg'
+                    : 'h-6 w-6 mx-2 rounded-full bg-white'
             }   focus:outline-none relative  group/icon hover:scale-110 `}
         >
             {SvgComp}
