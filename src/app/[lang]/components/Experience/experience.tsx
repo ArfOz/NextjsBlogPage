@@ -200,34 +200,38 @@ export function Experience({
                                                         (
                                                             tech: string,
                                                             techIndex: number
-                                                        ) => {
-                                                            const IconComponent =
-                                                                SvgIcon(
-                                                                    tech,
-                                                                    false
-                                                                )
-                                                            return (
-                                                                <div
-                                                                    key={
-                                                                        techIndex
-                                                                    }
-                                                                    className="relative group/tech"
-                                                                    style={{
-                                                                        animationDelay: `${
-                                                                            techIndex *
-                                                                            0.1
-                                                                        }s`,
-                                                                    }}
-                                                                >
-                                                                    <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/30 to-purple-400/30 rounded-lg blur opacity-0 group-hover/tech:opacity-100 transition duration-300"></div>
-                                                                    <div className="relative bg-black/60 p-3 rounded-lg border border-cyan-500/30 hover:border-cyan-500/60 transition-all duration-300 transform hover:scale-110 hover:rotate-3">
-                                                                        {
-                                                                            IconComponent
-                                                                        }
+                                                        ) => (
+                                                            <div
+                                                                key={techIndex}
+                                                                className="relative group/tech"
+                                                                style={{
+                                                                    animationDelay: `${
+                                                                        techIndex *
+                                                                        0.1
+                                                                    }s`,
+                                                                }}
+                                                            >
+                                                                {/* Gray background for better icon visibility */}
+                                                                <div className="flex items-center justify-center rounded-full bg-gray-200 shadow border border-cyan-100 w-10 h-10 p-0 transition-transform duration-200 group-hover/tech:scale-150 overflow-hidden">
+                                                                    {/* Make SVG fill the entire area */}
+                                                                    <div className="w-full h-full flex items-center justify-center [&>svg]:w-full [&>svg]:h-full">
+                                                                        {/* Ensure the icon is rendered if present */}
+                                                                        {SvgIcon(
+                                                                            tech,
+                                                                            false
+                                                                        ) || (
+                                                                            <span className="text-xs text-gray-400">
+                                                                                {tech}
+                                                                            </span>
+                                                                        )}
                                                                     </div>
                                                                 </div>
-                                                            )
-                                                        }
+                                                                {/* If Azure, add a fallback label for debugging */}
+                                                                {tech === 'MicrosoftAzure' && (
+                                                                    <span className="sr-only">Azure</span>
+                                                                )}
+                                                            </div>
+                                                        )
                                                     )}
                                                 </div>
                                             </div>

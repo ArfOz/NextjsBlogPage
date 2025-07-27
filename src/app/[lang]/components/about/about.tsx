@@ -27,14 +27,14 @@ const AboutComponent = ({ dictionary }: { dictionary: DictionaryType }) => {
                     </div>
 
                     {/* Course Information */}
-                    <div className="bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
+                    {/* <div className="bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
                         <h3 className="text-2xl font-bold text-purple-400 neon-text mb-4 font-['Orbitron']">
                             {dictionary['home']['course_title']}
                         </h3>
                         <div className="text-gray-300 space-y-2">
                             {parse(dictionary['home']['course_times'])}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Developer GIF Section */}
