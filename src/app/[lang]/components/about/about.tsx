@@ -7,12 +7,12 @@ const AboutComponent = ({ dictionary }: { dictionary: DictionaryType }) => {
     return (
         <div className="space-y-8">
             {/* Section Title */}
-            <div className="text-center mb-12">
+            {/* <div className="text-center mb-12">
                 <h2 className="text-4xl lg:text-5xl font-bold gradient-text neon-text font-['Orbitron'] mb-4">
                     ABOUT
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto rounded-full"></div>
-            </div>
+            </div> */}
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Text Content */}
