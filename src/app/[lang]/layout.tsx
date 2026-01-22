@@ -10,28 +10,6 @@ export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }))
 }
 
-const splash = Splash({
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-splash',
-    weight: '400',
-    style: ['normal'],
-})
-
-const orbitron = Orbitron({
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-orbitron',
-    weight: ['400', '700', '900'],
-})
-
-const exo2 = Exo_2({
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-exo2',
-    weight: ['300', '400', '500', '700'],
-})
-
 export default async function RootLayout({
     children,
     params,
@@ -42,10 +20,7 @@ export default async function RootLayout({
     const dictionary = await getDictionary(params.lang)
 
     return (
-        <html
-            lang={params.lang}
-            className={`${splash.variable} ${orbitron.variable} ${exo2.variable}`}
-        >
+        <html lang={params.lang}>
             <head>
                 <title>{dictionary['title']}</title>
                 <meta
@@ -60,9 +35,9 @@ export default async function RootLayout({
             <body>
                 <ThemeProvider attribute="class">
                     {/* Main content */}
-                    <div className="relative z-10">
+                    <div className="relative z-10 w-full overflow-x-hidden">
                         <Navbar lang={params.lang} />
-                        <main className="min-h-screen">{children}</main>
+                        <main className="min-h-screen w-full">{children}</main>
                         <Footer lang={params.lang} />
                     </div>
                 </ThemeProvider>

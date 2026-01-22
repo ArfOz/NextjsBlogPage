@@ -1,3 +1,48 @@
+/* ReactFlagsSelect dark mode override */
+.ReactFlagsSelect-module_selectOption__3pcgW {
+    color: #1e293b !important;
+    background: #f8fafc !important;
+    border: 1px solid #e5e7eb !important;
+}
+.dark .ReactFlagsSelect-module_selectOption__3pcgW {
+    color: #f1f5f9 !important;
+    background: #1e2233 !important;
+    border: 1px solid #334155 !important;
+}
+.ReactFlagsSelect-module_selectOption__3pcgW:hover,
+.ReactFlagsSelect-module_selectOption__3pcgW:focus {
+    background: #e0e7ef !important;
+    color: #1e293b !important;
+}
+.dark .ReactFlagsSelect-module_selectOption__3pcgW:hover,
+.dark .ReactFlagsSelect-module_selectOption__3pcgW:focus {
+    background: #334155 !important;
+    color: #f1f5f9 !important;
+}
+.ReactFlagsSelect-module_selectOptions__3LNBJ {
+    background: #f8fafc !important;
+    border: 1px solid #e5e7eb !important;
+}
+.dark .ReactFlagsSelect-module_selectOptions__3LNBJ {
+    background: #1e2233 !important;
+    border: 1px solid #334155 !important;
+}
+.ReactFlagsSelect-module_label__27pw9 {
+    color: #1e293b !important;
+}
+.dark .ReactFlagsSelect-module_label__27pw9 {
+    color: #f1f5f9 !important;
+}
+.ReactFlagsSelect-module_selectBtn__19wW7 {
+    background: #f8fafc !important;
+    color: #1e293b !important;
+    border: 1px solid #e5e7eb !important;
+}
+.dark .ReactFlagsSelect-module_selectBtn__19wW7 {
+    background: #1e2233 !important;
+    color: #f1f5f9 !important;
+    border: 1px solid #334155 !important;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

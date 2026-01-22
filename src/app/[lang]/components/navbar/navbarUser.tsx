@@ -47,11 +47,11 @@ export function NavbarComp({
     return (
         <Disclosure
             as="nav"
-            className="fixed top-0 inset-x-0 z-40 border-b border-gray-200 bg-white/90 backdrop-blur-md shadow-sm"
+            className="w-full max-w-none top-0 inset-x-0 z-40 border-b border-[#e5e7eb] dark:border-[#334155] bg-[#f8fafc] dark:bg-[#1e2233] backdrop-blur-md shadow-sm"
         >
             {({ open }) => (
-                <div>
-                    <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
+                <div className="w-full">
+                    <div className="w-full px-4 sm:px-6 lg:px-8">
                         <div className="flex h-16 justify-between">
                             <div className="flex">
                                 <div className="flex flex-shrink-0 items-center">
@@ -88,19 +88,19 @@ export function NavbarComp({
                                 <div className="hidden min-[720px]:flex sm:space-x-4 items-center">
                                     <Link
                                         href="https://github.com/ArfOz/"
-                                        className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                                        className="text-zinc-700 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white transition-colors duration-200"
                                     >
                                         <FaGithub size={20} />
                                     </Link>
                                     <Link
                                         href="https://medium.com/@arfoz1245"
-                                        className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                                        className="text-zinc-700 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white transition-colors duration-200"
                                     >
                                         <FaMedium size={20} />
                                     </Link>
                                     <Link
                                         href="https://www.linkedin.com/in/arifozkanozturk/"
-                                        className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                                        className="text-zinc-700 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white transition-colors duration-200"
                                     >
                                         <FaLinkedin size={20} />
                                     </Link>
@@ -108,7 +108,7 @@ export function NavbarComp({
                                         <ThemeToggle />
                                     </div>
 
-                                    <div className="mx-auto flex flex-row justify-around items-center space-x-2 text-gray-600">
+                                    <div className="mx-auto flex flex-row justify-around items-center space-x-2 text-zinc-700 dark:text-zinc-200">
                                         <FaEye />
                                         <ViewCounter lang={lang} />
                                     </div>
