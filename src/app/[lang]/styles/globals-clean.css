@@ -31,31 +31,6 @@
 }
 
 @layer components {
-    /* Futuristic particles background */
-    .particles-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: radial-gradient(
-                circle at 20% 50%,
-                rgba(120, 119, 198, 0.1) 0%,
-                transparent 50%
-            ),
-            radial-gradient(
-                circle at 80% 20%,
-                rgba(255, 0, 255, 0.1) 0%,
-                transparent 50%
-            ),
-            radial-gradient(
-                circle at 40% 80%,
-                rgba(0, 255, 255, 0.1) 0%,
-                transparent 50%
-            );
-    }
-
     /* Futuristic card styling */
     .futuristic-card {
         background: rgba(0, 0, 0, 0.4);
@@ -97,19 +72,28 @@
     /* Neon text effects */
     .neon-text {
         color: #00ffff;
-        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff,
+        text-shadow:
+            0 0 5px #00ffff,
+            0 0 10px #00ffff,
+            0 0 15px #00ffff,
             0 0 20px #00ffff;
     }
 
     .neon-text-purple {
         color: #8a2be2;
-        text-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2, 0 0 15px #8a2be2,
+        text-shadow:
+            0 0 5px #8a2be2,
+            0 0 10px #8a2be2,
+            0 0 15px #8a2be2,
             0 0 20px #8a2be2;
     }
 
     .neon-text-pink {
         color: #ff00ff;
-        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff,
+        text-shadow:
+            0 0 5px #ff00ff,
+            0 0 10px #ff00ff,
+            0 0 15px #ff00ff,
             0 0 20px #ff00ff;
     }
 
@@ -230,7 +214,8 @@
             box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
         }
         50% {
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+            box-shadow:
+                0 0 20px rgba(0, 255, 255, 0.8),
                 0 0 30px rgba(0, 255, 255, 0.6);
         }
     }

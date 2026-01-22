@@ -57,19 +57,8 @@ export default async function RootLayout({
                     content="Futuristic developer portfolio with cutting-edge design"
                 />
             </head>
-            <body className="antialiased">
-                <ThemeProvider
-                    enableSystem={false}
-                    attribute="class"
-                    defaultTheme="dark"
-                    forcedTheme="dark"
-                >
-                    {/* Futuristic background overlay */}
-                    <div className="fixed inset-0 z-0 pointer-events-none">
-                        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
-                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-purple-900/20"></div>
-                    </div>
-
+            <body>
+                <ThemeProvider attribute="class">
                     {/* Main content */}
                     <div className="relative z-10">
                         <Navbar lang={params.lang} />

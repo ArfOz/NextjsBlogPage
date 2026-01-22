@@ -1,18 +1,26 @@
 'use client'
 
 import Link from 'next/link'
+import React from 'react'
+import ThemeToggle from './ThemeToggle'
 import { Fragment, use } from 'react'
 import { usePathname } from 'next/navigation'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { FaLinkedin, FaGithub, FaMedium, FaEye, FaHome } from 'react-icons/fa'
+import {
+    FaLinkedin,
+    FaGithub,
+    FaMedium,
+    FaEye,
+    FaHome,
+    FaSun,
+    FaMoon,
+} from 'react-icons/fa'
 import {
     LanguageSwitcher,
-    ThemeChanger,
     ViewCounter,
     Navigate,
     DictionaryType,
-    Weathernavbar,
 } from '@components/index'
 import { getDictionary } from 'get-dictionary'
 import { Locale } from 'i18n-config'
@@ -39,7 +47,7 @@ export function NavbarComp({
     return (
         <Disclosure
             as="nav"
-            className="futuristic-card fixed top-0 inset-x-0 z-40 border-b border-cyan-500/30 backdrop-blur-md bg-black/20"
+            className="fixed top-0 inset-x-0 z-40 border-b border-gray-200 bg-white/90 backdrop-blur-md shadow-sm"
         >
             {({ open }) => (
                 <div>
@@ -48,9 +56,9 @@ export function NavbarComp({
                             <div className="flex">
                                 <div className="flex flex-shrink-0 items-center">
                                     <Link href={`/${lang}`}>
-                                        <p className="font-splash text-2xl neon-text-pink font-semibold">
+                                        <span className="font-exo2 text-3xl font-bold text-gray-800 tracking-tight px-2 py-1 rounded-lg bg-white/80 shadow-sm">
                                             {dictionary.name}
-                                        </p>
+                                        </span>
                                     </Link>
                                 </div>
                                 <div className="hidden min-[720px]:-my-px sm:ml-6 sm:flex sm:space-x-8 grow">
@@ -60,9 +68,9 @@ export function NavbarComp({
                                             href={`/${lang}${item.href}`}
                                             className={classNames(
                                                 pathname === item.href
-                                                    ? 'border-cyan-500 text-cyan-300 neon-text'
-                                                    : 'border-transparent text-cyan-200 hover:text-cyan-100 hover:border-cyan-400 transition-all duration-300',
-                                                'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                                    ? 'border-gray-800 text-gray-900'
+                                                    : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-400 transition-all duration-200',
+                                                'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium',
                                             )}
                                             aria-current={
                                                 pathname === item.href
@@ -80,32 +88,32 @@ export function NavbarComp({
                                 <div className="hidden min-[720px]:flex sm:space-x-4 items-center">
                                     <Link
                                         href="https://github.com/ArfOz/"
-                                        className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 hover:scale-110 transform"
+                                        className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
                                     >
                                         <FaGithub size={20} />
                                     </Link>
                                     <Link
                                         href="https://medium.com/@arfoz1245"
-                                        className="text-purple-400 hover:text-purple-200 transition-colors duration-300 hover:scale-110 transform"
+                                        className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
                                     >
                                         <FaMedium size={20} />
                                     </Link>
                                     <Link
                                         href="https://www.linkedin.com/in/arifozkanozturk/"
-                                        className="text-blue-400 hover:text-blue-200 transition-colors duration-300 hover:scale-110 transform"
+                                        className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
                                     >
                                         <FaLinkedin size={20} />
                                     </Link>
-                                    <div className="border-l border-cyan-500/30 pl-4">
-                                        <ThemeChanger />
+                                    <div className="border-l border-gray-200 pl-4 flex gap-2">
+                                        <ThemeToggle />
                                     </div>
 
-                                    <div className="mx-auto flex flex-row justify-around items-center space-x-2 text-cyan-300">
-                                        <FaEye className="neon-text" />
+                                    <div className="mx-auto flex flex-row justify-around items-center space-x-2 text-gray-600">
+                                        <FaEye />
                                         <ViewCounter lang={lang} />
                                     </div>
 
-                                    <div className="border-l border-cyan-500/30 pl-4">
+                                    <div className="border-l border-gray-200 pl-4">
                                         <LanguageSwitcher lang={lang} />
                                     </div>
                                 </div>
@@ -146,7 +154,7 @@ export function NavbarComp({
                         </div>
                     </div>
 
-                    <Disclosure.Panel className="min-[720px]:hidden bg-black/40 backdrop-blur-md border-t border-cyan-500/30">
+                    <Disclosure.Panel className="min-[720px]:hidden bg-white/90 backdrop-blur-md border-t border-gray-200">
                         <div className="flex space-y-1 pt-2 max-[380px]:flex-col grow min-[380px]:flex:row">
                             {navigation.map((item: Navigate) => (
                                 <Disclosure.Button
@@ -155,9 +163,9 @@ export function NavbarComp({
                                     href={`/${lang}${item.href}`}
                                     className={classNames(
                                         pathname === item.href
-                                            ? 'bg-cyan-500/20 border-cyan-500 text-cyan-300 neon-text'
-                                            : 'border-transparent text-cyan-200 hover:bg-cyan-500/10 hover:border-cyan-400 hover:text-cyan-100 transition-all duration-300',
-                                        'block pl-3 pr-4 py-2 border-l-4 text-base font-medium'
+                                            ? 'bg-gray-200 border-gray-800 text-gray-900'
+                                            : 'border-transparent text-gray-600 hover:bg-gray-100 hover:border-gray-400 hover:text-gray-900 transition-all duration-200',
+                                        'block pl-3 pr-4 py-2 border-l-4 text-base font-medium',
                                     )}
                                     aria-current={
                                         pathname === item.href
@@ -168,30 +176,10 @@ export function NavbarComp({
                                     {dictionary.navbar[item.name]}
                                 </Disclosure.Button>
                             ))}
-                            <div className="flex flex:col py-2 min-[400px]:px-4 max-[400px]:px-2 space-x-4 justify-center items-center border-t border-cyan-500/30">
-                                <Link
-                                    href="https://github.com/ArfOz/"
-                                    className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 hover:scale-110 transform"
-                                >
-                                    <FaGithub size={20} />
-                                </Link>
-                                <Link
-                                    href="https://medium.com/@arfoz1245"
-                                    className="text-purple-400 hover:text-purple-200 transition-colors duration-300 hover:scale-110 transform"
-                                >
-                                    <FaMedium size={20} />
-                                </Link>
-                                <Link
-                                    href="https://www.linkedin.com/in/arifozkanozturk/"
-                                    className="text-blue-400 hover:text-blue-200 transition-colors duration-300 hover:scale-110 transform"
-                                >
-                                    <FaLinkedin size={20} />
-                                </Link>
-                            </div>
-                            <div className="flex flex:col py-2 min-[400px]:px-4 max-[400px]:px-2 space-x-4 justify-center items-center border-t border-cyan-500/30">
-                                <ThemeChanger />
-                                <div className="prose prose-xl mx-auto flex flex-row justify-around items-center space-x-2 text-cyan-300">
-                                    <FaEye className="neon-text" />
+                            <div className="flex flex:col py-2 min-[400px]:px-4 max-[400px]:px-2 space-x-4 justify-center items-center border-t border-gray-200">
+                                <ThemeToggle />
+                                <div className="prose prose-xl mx-auto flex flex-row justify-around items-center space-x-2 text-gray-600">
+                                    <FaEye />
                                     <ViewCounter lang={lang} />
                                 </div>
                                 <LanguageSwitcher lang={lang} />
