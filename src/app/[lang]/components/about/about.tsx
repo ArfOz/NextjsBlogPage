@@ -18,9 +18,8 @@ const AboutComponent = ({ dictionary }: { dictionary: DictionaryType }) => {
                 {/* Text Content */}
                 <div className="space-y-6">
                     <div className="relative">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg blur opacity-25"></div>
-                        <div className="relative bg-black/50 backdrop-blur-sm p-6 rounded-lg border border-cyan-500/30">
-                            <p className="text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:text-cyan-400 first-letter:neon-text">
+                        <div className="relative bg-gray-100 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+                            <p className="text-lg leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:text-sky-500 dark:first-letter:text-sky-400">
                                 {parse(dictionary['home']['context'])}
                             </p>
                         </div>
