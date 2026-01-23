@@ -118,7 +118,7 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
                 onSubmit={handleSubmit}
                 className="rounded-lg shadow-xl dark:shadow-2xl flex flex-col px-8 py-8 bg-white dark:bg-[#1e293b] border border-gray-200 dark:border-gray-700"
             >
-                <h1 className="text-2xl font-bold dark:text-gray-50">
+                <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-50">
                     {dictionary['contact']['right_title']}
                 </h1>
 

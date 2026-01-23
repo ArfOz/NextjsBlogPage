@@ -11,7 +11,7 @@ const AboutComponent = ({ dictionary }: { dictionary: DictionaryType }) => {
                 {/* Text Content */}
                 <div className="lg:col-span-3 space-y-6">
                     <div className="bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] dark:from-[#1e2233] dark:to-[#171b2e] p-10 rounded-xl border border-[#e5e7eb] dark:border-[#334155] shadow-md hover:shadow-lg transition-all duration-300">
-                        <p className="text-lg leading-relaxed text-[#1e293b] dark:text-[#f1f5f9] first-letter:text-[3.5rem] first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:text-blue-600 dark:first-letter:text-blue-400 first-letter:leading-[3.5rem]">
+                        <p className="text-xl leading-loose text-[#1e293b] dark:text-[#f1f5f9] tracking-wide text-justify font-light first-letter:text-[4rem] first-letter:font-extrabold first-letter:mr-3 first-letter:float-left first-letter:text-transparent first-letter:bg-clip-text first-letter:bg-gradient-to-r first-letter:from-blue-600 first-letter:to-purple-600 dark:first-letter:from-blue-400 dark:first-letter:to-purple-400 first-letter:leading-[4rem] first-letter:drop-shadow-lg">
                             {parse(dictionary['home']['context'])}
                         </p>
                     </div>
