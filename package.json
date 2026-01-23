@@ -28,7 +28,7 @@
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-next": "13.2.4",
         "framer-motion": "^12.29.0",
-        "html-react-parser": "^4.0.0",
+        "html-react-parser": "^5.2.12",
         "i18next": "^23.2.8",
         "i18next-resources-to-backend": "^1.1.4",
         "imagemin": "^9.0.1",
