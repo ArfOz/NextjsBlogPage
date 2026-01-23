@@ -17,7 +17,7 @@ export function Experience({
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         const index = parseInt(
-                            entry.target.getAttribute('data-index') || '0'
+                            entry.target.getAttribute('data-index') || '0',
                         )
                         setVisibleItems((prev) => {
                             const newSet = new Set([...prev, index])
@@ -29,7 +29,7 @@ export function Experience({
             {
                 threshold: 0.1,
                 rootMargin: '50px 0px 50px 0px',
-            }
+            },
         )
 
         return () => {
@@ -65,16 +65,16 @@ export function Experience({
         <div className="space-y-4 md:space-y-8">
             {/* Section Header */}
             <div className="text-center space-y-2 md:space-y-4">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text neon-text font-['Orbitron']">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Inter'] text-gray-900 dark:text-gray-100">
                     EXPERIENCE
                 </h2>
-                <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto rounded-full"></div>
+                <div className="w-32 h-1 bg-gray-300 dark:bg-gray-700 mx-auto rounded-full"></div>
             </div>
 
             {/* Timeline */}
             <div className="relative max-w-6xl mx-auto">
                 {/* Central timeline line */}
-                <div className="absolute left-8 md:left-1/2 transform translate-x-0 md:-translate-x-0.5 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 via-purple-400 to-pink-400 rounded-full shadow-lg shadow-cyan-400/50"></div>
+                <div className="absolute left-8 md:left-1/2 transform translate-x-0 md:-translate-x-0.5 top-0 bottom-0 w-1 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
 
                 <div className="space-y-4 md:space-y-8">
                     {experience?.map((exp: any, index: number) => {
@@ -120,22 +120,11 @@ export function Experience({
                                             : '0s',
                                     }}
                                 >
-                                    <div className="w-16 h-16 rounded-full bg-black border-4 border-cyan-400 flex items-center justify-center shadow-xl shadow-cyan-400/50 group-hover:border-purple-400 group-hover:shadow-purple-400/50 transition-all duration-500 group-hover:scale-110">
-                                        <div className="text-cyan-400 group-hover:text-purple-400 transition-colors duration-300 text-xl">
+                                    <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-800 border-4 border-gray-300 dark:border-gray-700 flex items-center justify-center transition-all duration-500">
+                                        <div className="text-gray-700 dark:text-gray-100 text-xl">
                                             {iconSelector(exp.icon)}
                                         </div>
                                     </div>
-                                    {/* Animated glowing rings */}
-                                    <div
-                                        className={`absolute inset-0 w-16 h-16 rounded-full border-2 border-cyan-400/30 ${
-                                            isVisible ? 'animate-ping' : ''
-                                        }`}
-                                    ></div>
-                                    <div
-                                        className={`absolute inset-2 w-12 h-12 rounded-full border border-purple-400/20 ${
-                                            isVisible ? 'animate-pulse' : ''
-                                        }`}
-                                    ></div>
                                 </div>
 
                                 {/* Experience card */}
@@ -158,48 +147,40 @@ export function Experience({
                                 >
                                     <div className="relative group/card">
                                         {/* Enhanced glow effect */}
-                                        <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl opacity-0 group-hover/card:opacity-100 transition duration-500"></div>
+                                        {/* Removed glow/gradient background */}
 
                                         {/* Card content with better styling */}
-                                        <div className="relative futuristic-card p-8 hover:border-cyan-500/70 transition-all duration-500 mt-0 md:mt-0">
+                                        <div className="relative bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 transition-all duration-500 mt-0 md:mt-0">
                                             {/* Card direction indicator */}
-                                            <div
-                                                className={`absolute top-6 ${
-                                                    isEven
-                                                        ? 'right-6'
-                                                        : 'left-6'
-                                                } w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse`}
-                                            ></div>
+                                            {/* Removed decorative glowing dot */}
 
                                             {/* Header with better spacing */}
                                             <div className="flex flex-col space-y-3 mb-6">
                                                 <div className="flex items-center justify-between">
-                                                    <h3 className="text-2xl font-bold gradient-text neon-text font-['Orbitron']">
+                                                    <h3 className="text-2xl font-bold font-['Inter'] text-gray-900 dark:text-gray-100">
                                                         {exp.title}
                                                     </h3>
                                                     <div className="flex items-center space-x-2">
-                                                        <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                                                        <time className="text-purple-400 font-bold text-sm font-['Orbitron'] neon-text-purple">
+                                                        <time className="text-gray-500 dark:text-gray-400 font-bold text-sm font-['Inter']">
                                                             {exp.years}
                                                         </time>
                                                     </div>
                                                 </div>
-                                                <p className="text-cyan-400 font-semibold text-lg neon-text">
+                                                <p className="text-sky-700 dark:text-sky-300 font-semibold text-lg">
                                                     {exp.company}
                                                 </p>
                                             </div>
 
                                             {/* Technologies with enhanced styling */}
                                             <div className="space-y-4">
-                                                <h4 className="text-sm text-gray-400 uppercase tracking-wider font-['Orbitron'] flex items-center">
-                                                    <div className="w-1 h-4 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mr-2"></div>
+                                                <h4 className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wider font-['Inter']">
                                                     Technologies Used
                                                 </h4>
                                                 <div className="flex flex-wrap gap-3">
                                                     {exp.technologies.map(
                                                         (
                                                             tech: string,
-                                                            techIndex: number
+                                                            techIndex: number,
                                                         ) => (
                                                             <div
                                                                 key={techIndex}
@@ -212,67 +193,43 @@ export function Experience({
                                                                 }}
                                                             >
                                                                 {/* Gray background for better icon visibility */}
-                                                                <div className="flex items-center justify-center rounded-full bg-gray-200 shadow border border-cyan-100 w-10 h-10 p-0 transition-transform duration-200 group-hover/tech:scale-150 overflow-hidden">
+                                                                <div className="flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 w-10 h-10 p-0 transition-transform duration-200 group-hover/tech:scale-150 overflow-hidden">
                                                                     {/* Make SVG fill the entire area */}
                                                                     <div className="w-full h-full flex items-center justify-center [&>svg]:w-full [&>svg]:h-full">
                                                                         {/* Ensure the icon is rendered if present */}
                                                                         {SvgIcon(
                                                                             tech,
-                                                                            false
+                                                                            false,
                                                                         ) || (
                                                                             <span className="text-xs text-gray-400">
-                                                                                {tech}
+                                                                                {
+                                                                                    tech
+                                                                                }
                                                                             </span>
                                                                         )}
                                                                     </div>
                                                                 </div>
                                                                 {/* If Azure, add a fallback label for debugging */}
-                                                                {tech === 'MicrosoftAzure' && (
-                                                                    <span className="sr-only">Azure</span>
+                                                                {tech ===
+                                                                    'MicrosoftAzure' && (
+                                                                    <span className="sr-only">
+                                                                        Azure
+                                                                    </span>
                                                                 )}
                                                             </div>
-                                                        )
+                                                        ),
                                                     )}
                                                 </div>
                                             </div>
 
                                             {/* Scan line effect */}
-                                            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+                                            {/* Removed scan line effect */}
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Enhanced connection line to timeline */}
-                                <div
-                                    className={`
-                                    hidden md:block absolute top-1/2 w-12 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full shadow-lg
-                                    ${
-                                        isEven
-                                            ? 'right-1/2 mr-8'
-                                            : 'left-1/2 ml-8'
-                                    }
-                                    group-hover:shadow-cyan-400/50 transition-all duration-600
-                                    ${
-                                        isVisible
-                                            ? 'opacity-100 scale-x-100'
-                                            : 'opacity-0 scale-x-0'
-                                    }
-                                `}
-                                    style={{
-                                        transitionDelay: isVisible
-                                            ? `${index * 0.15 + 0.4}s`
-                                            : '0s',
-                                        transformOrigin: isEven
-                                            ? 'right'
-                                            : 'left',
-                                    }}
-                                >
-                                    <div
-                                        className={`absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full opacity-50 ${
-                                            isVisible ? 'animate-pulse' : ''
-                                        }`}
-                                    ></div>
-                                </div>
+                                {/* Removed connection line and glow */}
                             </div>
                         )
                     })}
@@ -280,17 +237,7 @@ export function Experience({
             </div>
 
             {/* Bottom decorative elements */}
-            <div className="flex justify-center space-x-4 pt-8">
-                <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce"></div>
-                <div
-                    className="w-3 h-3 bg-purple-400 rounded-full animate-bounce"
-                    style={{ animationDelay: '0.1s' }}
-                ></div>
-                <div
-                    className="w-3 h-3 bg-pink-400 rounded-full animate-bounce"
-                    style={{ animationDelay: '0.2s' }}
-                ></div>
-            </div>
+            {/* Removed bottom decorative elements */}
         </div>
     )
 }

@@ -5,32 +5,15 @@ export async function Footer({ lang }: { lang: Locale }): Promise<JSX.Element> {
     const dictionary = await getDictionary(lang)
 
     return (
-        <footer
-            className="futuristic-card
-             fixed
-             inset-x-0
-             bottom-0
-             h-16
-             px-4
-             flex
-             flex-row
-             justify-between
-             items-center
-             z-50
-             border-t
-             border-cyan-500/30
-             backdrop-blur-md
-             bg-black/20
-             "
-        >
-            <p className="flex items-center text-sm font-medium text-cyan-300">
+        <footer className="w-full max-w-none h-16 px-4 flex flex-row justify-between items-center border-t border-[#e5e7eb] dark:border-[#334155] bg-[#f8fafc] dark:bg-[#1e2233] fixed inset-x-0 bottom-0 z-50 shadow">
+            <p className="flex items-center text-sm font-medium text-[#1e293b] dark:text-[#f1f5f9]">
                 &copy; 2025 Arif Özkan ÖZTÜRK. All rights reserved.
             </p>
             <ul className="flex items-center text-sm font-medium">
                 <li>
                     <a
                         href={`/${lang}/contact`}
-                        className="text-cyan-300 hover:text-cyan-100 hover:underline transition-colors duration-300 neon-text"
+                        className="text-[#1e293b] dark:text-[#f1f5f9] hover:text-[#0f172a] dark:hover:text-white hover:underline transition-colors duration-300"
                     >
                         {dictionary['contact'].link}
                     </a>
