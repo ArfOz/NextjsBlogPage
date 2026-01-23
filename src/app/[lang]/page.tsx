@@ -3,8 +3,13 @@ import { AboutComponent } from './components/about'
 import { Locale } from 'i18n-config'
 import { Experience, Technologies } from './components'
 
-export default async function Page({ params }: { params: { lang: Locale } }) {
-    const dictionary = await getDictionary(params.lang)
+export default async function Page({
+    params,
+}: {
+    params: Promise<{ lang: Locale }>
+}) {
+    const { lang } = await params
+    const dictionary = await getDictionary(lang)
     return (
         <main className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
             <section className="w-full max-w-6xl mx-auto text-center py-24 px-8 text-gray-900 dark:text-gray-100">
@@ -18,7 +23,7 @@ export default async function Page({ params }: { params: { lang: Locale } }) {
 
                 <section className="p-8 lg:p-12 text-gray-900 dark:text-gray-100">
                     <Technologies
-                        lang={params.lang}
+                        lang={lang}
                         technologies={dictionary['technologies']}
                     />
                 </section>

@@ -1,13 +1,13 @@
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 
 interface ErrorProps {
-    children: ReactNode;
+    children: ReactNode
 }
 
 export default function GlobalError({ children }: ErrorProps) {
     return (
-        <html>
+        <html suppressHydrationWarning>
             <body>{children}</body>
         </html>
-    );
+    )
 }

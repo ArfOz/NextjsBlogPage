@@ -3,13 +3,11 @@ import React from 'react'
 import { FaSun, FaMoon } from 'react-icons/fa'
 
 export default function ThemeToggle() {
-    const [isDark, setIsDark] = React.useState(
-        typeof window !== 'undefined'
-            ? document.documentElement.classList.contains('dark')
-            : false,
-    )
+    const [isDark, setIsDark] = React.useState(false)
+    const [mounted, setMounted] = React.useState(false)
 
     React.useEffect(() => {
+        setMounted(true)
         setIsDark(document.documentElement.classList.contains('dark'))
         const observer = new MutationObserver(() => {
             setIsDark(document.documentElement.classList.contains('dark'))
@@ -29,6 +27,15 @@ export default function ThemeToggle() {
             document.documentElement.classList.add('dark')
             setIsDark(true)
         }
+    }
+
+    // Prevent hydration mismatch by not rendering until mounted
+    if (!mounted) {
+        return (
+            <button aria-label="Toggle theme">
+                <div style={{ width: 22, height: 22 }} />
+            </button>
+        )
     }
 
     return (
