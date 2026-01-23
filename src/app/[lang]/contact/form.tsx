@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
-import { MailData } from '@api/index';
-import { DictionaryType } from '../components/index';
+'use client'
+
+import React, { useState } from 'react'
+import { MailData } from '@api/index'
+import { DictionaryType } from '../components/index'
 
 const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
-    const [fullname, setFullname] = useState('');
-    const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
+    const [fullname, setFullname] = useState('')
+    const [email, setEmail] = useState('')
+    const [subject, setSubject] = useState('')
+    const [message, setMessage] = useState('')
 
     //   Form validation
     const [errors, setErrors] = useState({
@@ -14,54 +16,54 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
         email: '',
         subject: '',
         message: '',
-    });
+    })
 
     //   Setting button text
     const [buttonText, setButtonText] = useState(
-        dictionary['contact']['right_send_button']
-    );
+        dictionary['contact']['right_send_button'],
+    )
 
-    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-    const [showFailureMessage, setShowFailureMessage] = useState(false);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false)
+    const [showFailureMessage, setShowFailureMessage] = useState(false)
 
     const handleValidation = () => {
-        let tempErrors: any = {};
-        let isValid = true;
+        let tempErrors: any = {}
+        let isValid = true
 
         if (fullname.length <= 0) {
-            tempErrors['fullname'] = true;
-            isValid = false;
+            tempErrors['fullname'] = true
+            isValid = false
         }
         if (email.length <= 0) {
-            tempErrors['email'] = true;
-            isValid = false;
+            tempErrors['email'] = true
+            isValid = false
         }
         if (subject.length <= 0) {
-            tempErrors['subject'] = true;
-            isValid = false;
+            tempErrors['subject'] = true
+            isValid = false
         }
         if (message.length <= 0) {
-            tempErrors['message'] = true;
-            isValid = false;
+            tempErrors['message'] = true
+            isValid = false
         }
 
-        setErrors({ ...tempErrors });
-        console.log('errors', errors);
-        return isValid;
-    };
+        setErrors({ ...tempErrors })
+        console.log('errors', errors)
+        return isValid
+    }
 
     const handleSubmit = async (e: { preventDefault: () => void }) => {
-        e.preventDefault();
+        e.preventDefault()
         try {
-            let isValidForm = handleValidation();
+            let isValidForm = handleValidation()
             if (isValidForm) {
-                setButtonText('Sending');
+                setButtonText('Sending')
                 let data: MailData = {
                     Email: email,
                     Fullname: fullname,
                     Subject: subject,
                     Message: message,
-                };
+                }
 
                 const res = await fetch('/api/sendemail', {
                     body: JSON.stringify(data),
@@ -69,36 +71,36 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
                         'Content-Type': 'application/json',
                     },
                     method: 'POST',
-                });
+                })
 
-                const response = await res.json();
+                const response = await res.json()
                 if (response.Data.Error) {
-                    setShowSuccessMessage(false);
-                    setShowFailureMessage(true);
-                    setButtonText('Send');
+                    setShowSuccessMessage(false)
+                    setShowFailureMessage(true)
+                    setButtonText('Send')
                     // Reset form fields
-                    setFullname('');
-                    setEmail('');
-                    setMessage('');
-                    setSubject('');
-                    return;
+                    setFullname('')
+                    setEmail('')
+                    setMessage('')
+                    setSubject('')
+                    return
                 }
-                setShowSuccessMessage(true);
-                setShowFailureMessage(false);
-                setButtonText('Send');
+                setShowSuccessMessage(true)
+                setShowFailureMessage(false)
+                setButtonText('Send')
                 // Reset form fields
-                setFullname('');
-                setEmail('');
-                setMessage('');
-                setSubject('');
+                setFullname('')
+                setEmail('')
+                setMessage('')
+                setSubject('')
             }
         } catch (error) {
-            console.log(error);
+            console.log(error)
         }
-    };
+    }
 
     return (
-        <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 lg:px-40  md:h-96">
+        <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 lg:px-40 md:h-96">
             <div className="mx-auto mb-10 md:mt-20">
                 <div className="badge bg-green-500 inline-block rounded-xl">
                     <p className="font-light text-base px-4 py-1 text-gray-50">
@@ -114,7 +116,7 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
             </div>
             <form
                 onSubmit={handleSubmit}
-                className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-slate-800"
+                className="rounded-lg shadow-xl dark:shadow-2xl flex flex-col px-8 py-8 bg-white dark:bg-[#1e293b] border border-gray-200 dark:border-gray-700"
             >
                 <h1 className="text-2xl font-bold dark:text-gray-50">
                     {dictionary['contact']['right_title']}
@@ -132,10 +134,10 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
                     type="text"
                     value={fullname}
                     onChange={(e) => {
-                        setFullname(e.target.value);
+                        setFullname(e.target.value)
                     }}
                     name="fullname"
-                    className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+                    className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500 dark:text-gray-200 dark:border-gray-600"
                 />
                 {errors.fullname && (
                     <p className="text-red-500">Fullname cannot be empty.</p>
@@ -153,9 +155,9 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
                     name="email"
                     value={email}
                     onChange={(e) => {
-                        setEmail(e.target.value);
+                        setEmail(e.target.value)
                     }}
-                    className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+                    className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500 dark:text-gray-200 dark:border-gray-600"
                 />
                 {errors?.email && (
                     <p className="text-red-500">Email cannot be empty.</p>
@@ -173,9 +175,9 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
                     name="subject"
                     value={subject}
                     onChange={(e) => {
-                        setSubject(e.target.value);
+                        setSubject(e.target.value)
                     }}
-                    className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+                    className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500 dark:text-gray-200 dark:border-gray-600"
                 />
                 {errors?.subject && (
                     <p className="text-red-500">Subject cannot be empty.</p>
@@ -191,9 +193,9 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
                     name="message"
                     value={message}
                     onChange={(e) => {
-                        setMessage(e.target.value);
+                        setMessage(e.target.value)
                     }}
-                    className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+                    className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500 dark:text-gray-200 dark:border-gray-600"
                 ></textarea>
                 {errors?.message && (
                     <p className="text-red-500">
@@ -203,7 +205,7 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
                 <div className="flex flex-row items-center justify-start">
                     <button
                         type="submit"
-                        className="px-10 mt-8 py-2 bg-[#130F49] text-gray-50 font-light rounded-md text-lg flex flex-row items-center"
+                        className="px-10 mt-8 py-2 bg-[#130F49] dark:bg-blue-600 text-gray-50 font-light rounded-md text-lg flex flex-row items-center hover:bg-opacity-90 transition-all"
                     >
                         {buttonText}
                         <svg
@@ -235,7 +237,7 @@ const Form = ({ dictionary }: { dictionary: DictionaryType }) => {
                 </div>
             </form>
         </div>
-    );
-};
+    )
+}
 
-export default Form;
+export default Form

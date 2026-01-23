@@ -56,7 +56,7 @@ export function NavbarComp({
                             <div className="flex">
                                 <div className="flex flex-shrink-0 items-center">
                                     <Link href={`/${lang}`}>
-                                        <span className="font-exo2 text-3xl font-bold text-gray-800 tracking-tight px-2 py-1 rounded-lg bg-white/80 shadow-sm">
+                                        <span className="font-exo2 text-3xl font-bold text-gray-800 dark:text-gray-100 tracking-tight px-2 py-1 rounded-lg bg-white/80 dark:bg-gray-800/80 shadow-sm dark:shadow-gray-900/50">
                                             {dictionary.name}
                                         </span>
                                     </Link>

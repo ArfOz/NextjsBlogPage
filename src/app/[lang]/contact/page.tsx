@@ -1,15 +1,19 @@
-'use client';
-import { getDictionary } from 'get-dictionary';
-import { Locale } from 'i18n-config';
-import Form from './form';
-import { DictionaryType } from '../components';
+import { getDictionary } from 'get-dictionary'
+import { Locale } from 'i18n-config'
+import Form from './form'
+import { DictionaryType } from '../components'
 
 export default async function ContactUs({
-    params: { lang },
+    params,
 }: {
-    params: { lang: Locale };
+    params: Promise<{ lang: Locale }>
 }) {
-    const dictionary: DictionaryType = await getDictionary(lang);
+    const { lang } = await params
+    const dictionary: DictionaryType = await getDictionary(lang)
 
-    return <Form dictionary={dictionary} />;
+    return (
+        <div className="min-h-screen bg-gray-50 dark:bg-[#0f172a]">
+            <Form dictionary={dictionary} />
+        </div>
+    )
 }
