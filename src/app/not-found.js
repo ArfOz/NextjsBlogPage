@@ -1,9 +1,7 @@
-'use client';
-
-import Link from 'next/link';
-import errorIcon from '../../public/images/icons8-error-96.png';
-import Image from 'next/image';
-import './[lang]/styles//globals.css';
+import Link from 'next/link'
+import errorIcon from '../../public/images/icons8-error-96.png'
+import Image from 'next/image'
+import './[locale]/styles/globals.css'
 
 export default function LangNotFound() {
     return (
@@ -21,5 +19,5 @@ export default function LangNotFound() {
                 </Link>
             </div>
         </div>
-    );
+    )
 }

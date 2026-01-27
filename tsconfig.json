@@ -1,65 +1,53 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@components/*": [
-        "./src/app/[lang]/components/*"
-      ],
-      "@api/*": [
-        "./src/app/api/*"
-      ]
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "react-jsx",
+        "incremental": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@components/*": ["src/app/[locale]/components/*"],
+            "@api/*": ["./src/app/api/*"]
+        },
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
     },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/app/page.js",
-    ".next/types/**/*.ts",
-    "src/app/api/sendemail/route.ts",
-    "src/app/index.jsx",
-    "src/app/_app.jsx",
-    "src/app/layout.jsx",
-    "src/app/_document.js",
-    "src/app/[lng]/components/navbar.jsx",
-    "src/app/[lng]/page.tsx",
-    "src/app/[lng]/components/languageChanger/languageChanger.js",
-    "src/app/[lng]/components/languageChanger/index.jsx",
-    "src/app/[lng]/headtssx",
-    "src/app/[lng]/headtssx",
-    "src/app/not-found.jsx",
-    "src/app/[lang]/not-found.tsx",
-    "src/app/layouttsx",
-    "src/app/not-found.js",
-    ".next/dev/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        "src/app/page.js",
+        ".next/types/**/*.ts",
+        "src/app/api/sendemail/route.ts",
+        "src/app/index.jsx",
+        "src/app/_app.jsx",
+        "src/app/layout.jsx",
+        "src/app/_document.js",
+        "src/app/[lng]/components/navbar.jsx",
+        "src/app/[lng]/page.tsx",
+        "src/app/[lng]/components/languageChanger/languageChanger.js",
+        "src/app/[lng]/components/languageChanger/index.jsx",
+        "src/app/[lng]/headtssx",
+        "src/app/[lng]/headtssx",
+        "src/app/not-found.jsx",
+        "src/app/[locale]/not-found.tsx",
+        "src/app/layouttsx",
+        "src/app/not-found.js",
+        ".next/dev/types/**/*.ts"
+    ],
+    "exclude": ["node_modules"]
 }

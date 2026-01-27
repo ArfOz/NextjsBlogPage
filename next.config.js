@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+import createNextIntlPlugin from 'next-intl/plugin'
 
 const nextConfig = {
     pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
@@ -19,5 +20,5 @@ const nextConfig = {
         formats: ['image/avif', 'image/webp'],
     },
 }
-
-module.exports = nextConfig
+const withNextIntl = createNextIntlPlugin()
+export default withNextIntl(nextConfig)
