@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { DictionaryType } from '@/app/[locale]/components/types'
 import parse from 'html-react-parser'

@@ -1,6 +1,6 @@
-'use client';
-import { useEffect } from 'react';
-import { Locale } from 'i18n-config';
+'use client'
+import { Locale } from 'next-intl'
+import { useEffect } from 'react'
 
 export const ReportIncr = ({ lang }: { lang: Locale }) => {
     useEffect(() => {
@@ -10,8 +10,8 @@ export const ReportIncr = ({ lang }: { lang: Locale }) => {
                 'Content-Type': 'application/json',
             },
             method: 'POST',
-        });
-    }, [lang]);
+        })
+    }, [lang])
 
-    return null;
-};
+    return null
+}

@@ -1,4 +1,4 @@
-import { Locale } from 'i18n-config'
+import { Locale } from 'next-intl'
 import { CityArray } from './types'
 
 const api_key = process.env.OPENWEATHER_API!
@@ -12,7 +12,7 @@ export async function OpenWeather(id: number, lang: string) {
     try {
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${api_key}&units=metric&lang=${lang}`,
-            requestOptions
+            requestOptions,
         )
         const data = response.json()
 
@@ -26,7 +26,7 @@ export async function OpenWeatherIcon(id: string) {
     try {
         const response = await fetch(
             `https://openweathermap.org/img/wn/${id}@2x.png`,
-            requestOptions
+            requestOptions,
         )
         const data = response.json()
 

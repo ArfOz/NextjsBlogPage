@@ -1,6 +1,6 @@
 import { getImages } from '@/libs/images'
 import Images from './images'
-import { Locale } from 'i18n-config'
+import { Locale } from 'next-intl'
 export default async function Photos({
     params: { lang },
 }: {

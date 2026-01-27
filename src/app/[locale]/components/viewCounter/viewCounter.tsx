@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { Locale } from 'i18n-config'
 import { getViews } from '@/libs/upstash.redis'
+import { Locale } from 'next-intl'
 
 export function ViewCounter({ lang }: { lang: Locale }) {
     const [views, setViews] = useState('...')
