@@ -1,6 +1,6 @@
 import { AboutComponent } from './components/about'
 import { DictionaryType, Experience, Technologies } from './components'
-import { setRequestLocale, getTranslations } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
 import { Locale, useTranslations } from 'next-intl'
 import { use } from 'react'
 
