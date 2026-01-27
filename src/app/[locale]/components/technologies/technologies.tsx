@@ -2,7 +2,7 @@ import React from 'react'
 import { DictionaryType } from '../types'
 import { SvgIcon } from '../icons'
 import { IoMdFlash } from 'react-icons/io'
-import DownloadButton from '../downloadcv/cv'
+import { DownloadButton } from '../downloadcv'
 import { Locale } from 'next-intl'
 
 export const Technologies = ({

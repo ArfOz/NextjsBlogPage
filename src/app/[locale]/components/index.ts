@@ -1,5 +1,4 @@
 export * from './about'
-export * from './background'
 export * from './downloadcv'
 export * from './experience'
 export * from './footer'
@@ -13,4 +12,3 @@ export * from './profilePic'
 export * from './technologies'
 export * from './types'
 export * from './viewCounter'
-// export * from './weatherCard';

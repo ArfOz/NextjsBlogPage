@@ -24,4 +24,5 @@ const DownloadButton = ({
     )
 }
 
+export { DownloadButton }
 export default DownloadButton
