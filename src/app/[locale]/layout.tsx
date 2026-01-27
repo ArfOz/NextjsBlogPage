@@ -4,6 +4,7 @@ import { Locale, hasLocale, NextIntlClientProvider } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 import { routing } from '../../i18n/routing'
+import { Footer, Navbar } from './components'
 
 export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }))
@@ -37,7 +38,11 @@ export default async function LocaleLayout({
     return (
         <html className="h-full" lang={locale}>
             <body>
-                <NextIntlClientProvider>{children}</NextIntlClientProvider>
+                <NextIntlClientProvider>
+                    <Navbar lang={locale} />
+                    {children}
+                    <Footer lang={locale} />
+                </NextIntlClientProvider>
             </body>
         </html>
     )
