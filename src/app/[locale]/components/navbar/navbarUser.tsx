@@ -79,18 +79,24 @@ export function NavbarComp({ lang }: { lang: string }) {
                                 <div className="hidden min-[720px]:flex sm:space-x-4 items-center">
                                     <Link
                                         href="https://github.com/ArfOz/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="text-zinc-700 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white transition-colors duration-200"
                                     >
                                         <FaGithub size={20} />
                                     </Link>
                                     <Link
                                         href="https://medium.com/@arfoz1245"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="text-zinc-700 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white transition-colors duration-200"
                                     >
                                         <FaMedium size={20} />
                                     </Link>
                                     <Link
                                         href="https://www.linkedin.com/in/arifozkanozturk/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="text-zinc-700 dark:text-zinc-200 hover:text-zinc-900 dark:hover:text-white transition-colors duration-200"
                                     >
                                         <FaLinkedin size={20} />
