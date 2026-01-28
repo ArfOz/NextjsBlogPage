@@ -37,7 +37,7 @@ export default async function LocaleLayout({
 
     return (
         <html className="h-full" lang={locale}>
-            <body>
+            <body className="w-full h-full overflow-x-hidden">
                 <NextIntlClientProvider>
                     <Navbar lang={locale} />
                     {children}
