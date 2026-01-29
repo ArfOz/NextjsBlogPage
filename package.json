@@ -31,7 +31,7 @@
         "html-react-parser": "^5.2.12",
         "imagemin": "^9.0.1",
         "imagemin-jpegtran": "^7.0.0",
-        "negotiator": "^0.6.3",
+        "negotiator": "^1.0.0",
         "next": "^16.1.4",
         "next-intl": "^4.7.0",
         "next-themes": "^0.2.1",
