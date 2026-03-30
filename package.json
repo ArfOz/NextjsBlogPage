@@ -32,7 +32,7 @@
         "imagemin": "^9.0.1",
         "imagemin-jpegtran": "^7.0.0",
         "negotiator": "^0.6.3",
-        "next": "^16.1.4",
+        "next": "^16.2.1",
         "next-intl": "^4.7.0",
         "next-themes": "^0.2.1",
         "nodemailer": "^7.0.13",
